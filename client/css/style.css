@@ -1,0 +1,22 @@
+#text {
+	font-size: 4em;
+	text-align: center;
+}
+
+@font-face {
+	font-family: '20db';
+	src: url("/20db.otf");
+}
+
+@font-face {
+	font-family: 'open-sans';
+	src: url("/OpenSans-Bold.ttf");
+}
+
+.font-20db{
+	font-family: '20db';
+}
+
+.font-open-sans{
+	font-family: 'open-sans';
+}
