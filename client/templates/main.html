@@ -37,7 +37,7 @@
 <template name="serifList">
   <div id="serif-list" class="btn-group font-lists">
   	<button id="serif-list-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-  	 Serif Type <span class="caret"></span>
+  	 {{firstFont}} <span class="caret"></span>
   	</button>
   	<ul id='ul-serifs' class="dropdown-menu">
   		{{#each serifs}}
@@ -50,9 +50,9 @@
 <template name="sansSerifList">
   <div id="sans-serif-list" class="btn-group font-lists">
   	<button id="sans-serif-list-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-  	 Sans Serif Type <span class="caret"></span>
+  	 {{firstFont}} <span class="caret"></span>
   	</button>
-  	<ul id='ul-sansserifs' class="dropdown-menu">
+  	<ul id='ul-sans-serifs' class="dropdown-menu">
   		{{#each sansSerifs}}
   			<li><a class="font-type" href="#">{{this}}</a></li>
   		{{/each}}

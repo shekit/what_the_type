@@ -1,4 +1,8 @@
 var fonts = ['font-20db', 'font-open-sans']
+
+var serifFonts = ['font-20db','font-lala', 'font-chambu', 'font-like']
+var sansSerifFonts = ['font-open-sans', 'font-no-sans', 'font-nonsense']
+
 var counter = 0;
 var leftKeyPressed = false;
 var rightKeyPressed = false;
@@ -38,11 +42,10 @@ Template.body.events({
 				counter++
 			}
 
-			console.log($(fontListId + ' li').eq(counter)[0]['innerHTML']);
+			var fontName = $(fontListId + ' li').eq(counter)[0]['innerText'];
+			console.log($(fontListId + ' li').eq(counter))
+			$(fontListId+"-btn").html(fontName);
 			console.log("RIGHT KEY COUNTER: "+ counter);
-
-
-
 			
 		}
 
@@ -55,7 +58,8 @@ Template.body.events({
 				counter--
 			}
 
-			console.log($(fontListId + ' li').eq(counter)[0]['innerHTML']);
+			var fontName = $(fontListId + ' li').eq(counter)[0]['innerText'];
+			$(fontListId+"-btn").html(fontName);
 			console.log("LEFT KEY COUNTER: "+ counter);
 
 		}
@@ -133,10 +137,22 @@ Template.fontClassificationList.helpers({
 })
 
 Template.serifList.helpers({
-	"serifs": ['font-20db','font-lala', 'font-chambu', 'font-like']
+	"serifs": function(){
+		return serifFonts
+	},
+
+	"firstFont" : function(){
+		return serifFonts[0]
+	}
 })
 
 Template.sansSerifList.helpers({
-	"sansSerifs": ['font-open-sans', 'font-no-sans', 'font-nonsense']
+	"sansSerifs": function(){
+		return sansSerifFonts
+	},
+
+	"firstFont": function(){
+		return sansSerifFonts[0]
+	}
 })
 
