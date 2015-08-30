@@ -1,6 +1,6 @@
 var fonts = ['font-20db', 'font-open-sans']
 
-var serifFonts = ['font-20db','font-lala', 'font-chambu', 'font-like']
+var serifFonts = ['font-20db','font-bebas', 'font-chunkfive', 'font-ostrich-regular']
 var sansSerifFonts = ['font-open-sans', 'font-no-sans', 'font-nonsense']
 
 var fontSizes = [12,14,16,18,24,32,44,48,64,72];
@@ -11,6 +11,19 @@ var rightKeyPressed = false;
 
 var fontListId = '';
 var fontListLength = 0
+
+function setFontOnKeyPress(){
+
+	//get current list element
+	var listElement = $(fontListId + ' li').eq(counter)[0];
+	// find data attr of a tag in li to set font class
+	var fontClass = $(listElement).find("a").attr("data-font-class")
+	// set text of btn
+	$(fontListId+"-btn").html(fontClass);
+	// set font class
+	$("#text").removeClass();
+	$("#text").addClass(fontClass);
+}
 
 Template.body.events({
 	"keydown": function(event){
@@ -36,7 +49,7 @@ Template.body.events({
 				currentFontSize-=2;
 				$("#text").css('font-size',currentFontSize);
 			}
-			
+
 			//set btn text to current font size
 			$("#font-size-list-btn").html(currentFontSize + " px");
 		}
@@ -50,11 +63,7 @@ Template.body.events({
 				counter++
 			}
 
-			var fontName = $(fontListId + ' li').eq(counter)[0]['innerText'];
-			console.log($(fontListId + ' li').eq(counter))
-			$(fontListId+"-btn").html(fontName);
-			console.log("RIGHT KEY COUNTER: "+ counter);
-			
+			setFontOnKeyPress();			
 		}
 
 		// LEFT KEY
@@ -66,10 +75,7 @@ Template.body.events({
 				counter--
 			}
 
-			var fontName = $(fontListId + ' li').eq(counter)[0]['innerText'];
-			$(fontListId+"-btn").html(fontName);
-			console.log("LEFT KEY COUNTER: "+ counter);
-
+			setFontOnKeyPress();
 		}
 	}
 })
@@ -123,6 +129,8 @@ Template.font.events({
 		//set counter to index of element
 		counter = $(self).parent().index();
 		console.log("COUNTERRR: "+counter)
+
+		console.log($(self).attr("data-name"));
 	}
 })
 

@@ -42,7 +42,7 @@
   	</button>
   	<ul id='ul-serifs' class="dropdown-menu">
   		{{#each serifs}}
-  			<li><a class="font-type" href="#">{{this}}</a></li>
+  			<li><a class="font-type" data-font-class="{{this}}" href="#">{{this}}</a></li>
   		{{/each}}
   	</ul>
   </div>
@@ -55,7 +55,7 @@
   	</button>
   	<ul id='ul-sans-serifs' class="dropdown-menu">
   		{{#each sansSerifs}}
-  			<li><a class="font-type" href="#">{{this}}</a></li>
+  			<li><a class="font-type" data-font-class="{{this}}" href="#">{{this}}</a></li>
   		{{/each}}
   	</ul>
   </div>

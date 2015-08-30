@@ -1,20 +1,38 @@
 
 @font-face {
 	font-family: '20db';
-	src: url("/20db.otf");
+	src: url("/display/20db.otf");
 }
 
 @font-face {
-	font-family: 'open-sans';
-	src: url("/OpenSans-Bold.ttf");
+	font-family: 'bebas';
+	src: url("/display/bebas.ttf");
+}
+
+@font-face {
+	font-family: 'chunkfive';
+	src: url("/display/chunkfive.otf");
+}
+
+@font-face {
+	font-family: 'ostrich-regular';
+	src: url("/display/ostrich-regular.ttf");
 }
 
 .font-20db{
 	font-family: '20db';
 }
 
-.font-open-sans{
-	font-family: 'open-sans';
+.font-bebas{
+	font-family: 'bebas';
+}
+
+.font-chunkfive{
+	font-family: 'chunkfive';
+}
+
+.font-ostrich-regular {
+	font-family: 'ostrich-regular';
 }
 
 /* MY STYLES */
