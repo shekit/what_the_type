@@ -43,27 +43,7 @@ Template.body.events({
 
 
 
-			// rightKeyPressed = true;
-			// console.log("next");
-			// var selectList = $(".font-lists").not(":hidden")[0];
-			// var ulListId = $(selectList).find("ul")[0]['id']
-			// console.log(ulListId)
-			// var ulLength = $('#'+ ulListId + ' li').length;
-			// if(leftKeyPressed && counter==ulLength-1){
-			// 	counter=1;
-			// } else if(leftKeyPressed && counter == ulLength){
-			// 	counter = 0
-			// } else if(leftKeyPressed && counter != ulLength-1){
-			// 	counter+=2
-			// }
-			// console.log("COUNTER: "+counter);
-			// console.log($('#'+ ulListId + ' li').eq(counter)[0]['innerHTML']);
-			// counter++;
-			// if(counter>ulLength-1){
-			// 	counter = 0;
-			// }
-			// console.log("COUNTER AGAIN: "+counter);
-			// leftKeyPressed = false;
+			
 		}
 
 		// LEFT KEY
@@ -78,26 +58,6 @@ Template.body.events({
 			console.log($(fontListId + ' li').eq(counter)[0]['innerHTML']);
 			console.log("LEFT KEY COUNTER: "+ counter);
 
-
-			// leftKeyPressed = true;
-			// console.log("prev")
-			// var selectList = $(".font-lists").not(":hidden")[0];
-			// var ulListId = $(selectList).find("ul")[0]['id']
-			// console.log(ulListId)
-			// var ulLength = $('#'+ ulListId + ' li').length;
-			// if(rightKeyPressed && counter==0){
-			// 	counter = ulLength - 2;
-			// } else if(rightKeyPressed && counter!=0){
-			// 	counter-=2;
-			// }
-			// console.log("COUNTER: "+counter);
-			// console.log($('#'+ ulListId + ' li').eq(counter)[0]['innerHTML']);
-			// counter--;
-			// if(counter<0){
-			// 	counter = ulLength-1;
-			// }
-			// console.log("COUNTER AGAIN: "+counter);
-			// rightKeyPressed = false;
 		}
 	}
 })
