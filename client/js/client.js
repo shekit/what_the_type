@@ -1,9 +1,30 @@
-var fonts = ['font-20db', 'font-open-sans']
+var fontTypes = ["all","serif", "sans-serif", "display", "script"]
 
 var serifFonts = ['font-20db','font-bebas', 'font-chunkfive', 'font-ostrich-regular']
 var sansSerifFonts = ['font-open-sans', 'font-no-sans', 'font-nonsense']
 
 var fontSizes = [12,14,16,18,24,32,44,48,64,72];
+
+var serifFontDicts = [{
+							"name":"20db",
+							"class":"font-20db",
+							"styles":[]
+						},
+						{
+							"name":"bebas",
+							"class":"font-bebas",
+							"styles":[]
+						},
+						{
+							"name":"chunkfive",
+							"class":"font-chunkfive",
+							"styles":[]
+						},
+						{
+							"name":"ostrich",
+							"class":"font-ostrich",
+							"styles":["regular","black","bold","dashed","light","rounded"]
+						}]
 
 var counter = 0;
 var leftKeyPressed = false;
@@ -36,10 +57,12 @@ function setFontOnKeyPress(){
 
 	//get current list element
 	var listElement = $(fontListId + ' li').eq(counter)[0];
-	// find data attr of a tag in li to set font class
-	var fontClass = $(listElement).find("a").attr("data-font-class")
+	// find data attr of a tag in li to set font class and btn name
+	var aElement = $(listElement).find("a")
+	var fontClass = aElement.attr("data-font-class")
+	var fontName = aElement.html()
 	// set text of btn
-	$(fontListId+"-btn").html(fontClass);
+	$(fontListId+"-btn").html(fontName);
 	// set font class
 	setFont(fontClass);
 }
@@ -107,22 +130,12 @@ Template.font.events({
 
 	"click .increase-font-size": function(event){
 		event.preventDefault();
-		var currentFontSize = parseInt($("#text").css('font-size'));
-		console.log(currentFontSize);
-		if(currentFontSize <= 100){
-			currentFontSize+=2;
-			$("#text").css('font-size',currentFontSize);
-		}
+		setFontSizeOnKeyPress(true);
 	},
 
 	"click .decrease-font-size": function(event){
 		event.preventDefault();
-		var currentFontSize = parseInt($("#text").css('font-size'));
-		console.log(currentFontSize);
-		if(currentFontSize >= 10){
-			currentFontSize-=2;
-			$("#text").css('font-size',currentFontSize);
-		}
+		setFontSizeOnKeyPress(false);
 	},
 
 	"click .font-type": function(event){
@@ -175,16 +188,22 @@ Template.fontSize.events({
 })
 
 Template.fontClassificationList.helpers({
-	"fontTypes": ["all","serif", "sans-serif", "display", "script"]
+	"fontTypes": function(){
+		return fontTypes
+	},
+
+	"firstType":function(){
+		return fontTypes[0]
+	}
 })
 
 Template.serifList.helpers({
 	"serifs": function(){
-		return serifFonts
+		return serifFontDicts
 	},
 
 	"firstFont" : function(){
-		return serifFonts[0]
+		return serifFontDicts[0]["name"]
 	}
 })
 

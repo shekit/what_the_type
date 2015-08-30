@@ -19,6 +19,32 @@
 	src: url("/display/ostrich-regular.ttf");
 }
 
+@font-face {
+	font-family: 'ostrich-black';
+	src: url("/display/ostrich-regular.ttf");
+}
+
+@font-face {
+	font-family: 'ostrich-bold';
+	src: url("/display/ostrich-regular.ttf");
+}
+
+@font-face {
+	font-family: 'ostrich-dashed';
+	src: url("/display/ostrich-regular.ttf");
+}
+
+@font-face {
+	font-family: 'ostrich-light';
+	src: url("/display/ostrich-regular.ttf");
+}
+
+@font-face {
+	font-family: 'ostrich-rounded';
+	src: url("/display/ostrich-regular.ttf");
+}
+
+
 .font-20db{
 	font-family: '20db';
 }
@@ -31,14 +57,36 @@
 	font-family: 'chunkfive';
 }
 
-.font-ostrich-regular {
+.font-ostrich {
 	font-family: 'ostrich-regular';
 }
+
+.font-ostrich-black {
+	font-family: 'ostrich-black';
+}
+
+.font-ostrich-bold {
+	font-family: 'ostrich-bold';
+}
+
+.font-ostrich-dashed {
+	font-family: 'ostrich-dashed';
+}
+
+.font-ostrich-light {
+	font-family: 'ostrich-light';
+}
+
+.font-ostrich-rounded {
+	font-family: 'ostrich-rounded';
+}
+
+
 
 /* MY STYLES */
 
 #text {
-	font-size: 4em;
+	font-size: 64px;
 	text-align: center;
 	width: 100%;
 	border: none;
