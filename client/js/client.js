@@ -12,6 +12,26 @@ var rightKeyPressed = false;
 var fontListId = '';
 var fontListLength = 0
 
+function nextFont(){
+	if(counter == fontListLength-1){
+		counter = 0
+	} else {
+		counter++
+	}
+
+	setFontOnKeyPress();
+}
+
+function prevFont(){
+	if(counter == 0){
+		counter = fontListLength - 1
+	} else {
+		counter--
+	}
+
+	setFontOnKeyPress();
+}
+
 function setFontOnKeyPress(){
 
 	//get current list element
@@ -21,8 +41,31 @@ function setFontOnKeyPress(){
 	// set text of btn
 	$(fontListId+"-btn").html(fontClass);
 	// set font class
+	setFont(fontClass);
+}
+
+function setFont(fontClass){
 	$("#text").removeClass();
 	$("#text").addClass(fontClass);
+}
+
+function setFontSizeOnKeyPress(increase){
+	var currentFontSize = parseInt($("#text").css('font-size'));
+	console.log(currentFontSize);
+
+	if(increase){
+		if(currentFontSize <= 100){
+			currentFontSize+=2;
+		}
+	} else {
+		if(currentFontSize >= 10){
+			currentFontSize-=2;
+		}
+	}
+	
+	$("#text").css('font-size',currentFontSize);
+	//set btn text to current font size
+	$("#font-size-list-btn").html(currentFontSize + " px");
 }
 
 Template.body.events({
@@ -30,57 +73,28 @@ Template.body.events({
 
 		//UP KEY
 		if(event.keyCode == 38){
-			var currentFontSize = parseInt($("#text").css('font-size'));
-			console.log(currentFontSize);
-			if(currentFontSize <= 100){
-				currentFontSize+=2;
-				$("#text").css('font-size',currentFontSize);
-			}
-
-			//set btn text to current font size
-			$("#font-size-list-btn").html(currentFontSize + " px");
+			setFontSizeOnKeyPress(true);
 		}
 
 		// DOWN KEY
 		if(event.keyCode == 40){
-			var currentFontSize = parseInt($("#text").css('font-size'));
-			console.log(currentFontSize);
-			if(currentFontSize >= 10){
-				currentFontSize-=2;
-				$("#text").css('font-size',currentFontSize);
-			}
-
-			//set btn text to current font size
-			$("#font-size-list-btn").html(currentFontSize + " px");
+			setFontSizeOnKeyPress(false);
 		}
 
 		// RIGHT KEY
 		if(event.keyCode == 39){
-
-			if(counter == fontListLength-1){
-				counter = 0
-			} else {
-				counter++
-			}
-
-			setFontOnKeyPress();			
+			nextFont()	
 		}
 
 		// LEFT KEY
 		if(event.keyCode == 37){
-
-			if(counter == 0){
-				counter = fontListLength - 1
-			} else {
-				counter--
-			}
-
-			setFontOnKeyPress();
+			prevFont()
 		}
 	}
 })
 
 Template.font.onRendered(function(){
+	//set cursor to end of textarea
 	var fontField = $("#text");
 	var field = fontField.get(0);
 	var fieldLength = field.value.length;
@@ -90,15 +104,6 @@ Template.font.onRendered(function(){
 })
 
 Template.font.events({
-	"click .change": function(event){
-		event.preventDefault();
-		$("#text").removeClass();
-		$("#text").addClass(fonts[counter]);
-		counter++;
-		if(counter>fonts.length){
-			counter = 0;
-		}
-	},
 
 	"click .increase-font-size": function(event){
 		event.preventDefault();
@@ -128,9 +133,9 @@ Template.font.events({
 
 		//set counter to index of element
 		counter = $(self).parent().index();
-		console.log("COUNTERRR: "+counter)
 
-		console.log($(self).attr("data-name"));
+		var fontClass = $(self).attr("data-font-class")
+		setFont(fontClass);
 	}
 })
 
