@@ -23,6 +23,8 @@ Template.body.events({
 				currentFontSize+=2;
 				$("#text").css('font-size',currentFontSize);
 			}
+
+			//set btn text to current font size
 			$("#font-size-list-btn").html(currentFontSize + " px");
 		}
 
@@ -34,6 +36,8 @@ Template.body.events({
 				currentFontSize-=2;
 				$("#text").css('font-size',currentFontSize);
 			}
+			
+			//set btn text to current font size
 			$("#font-size-list-btn").html(currentFontSize + " px");
 		}
 
