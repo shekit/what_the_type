@@ -3,6 +3,8 @@ var fonts = ['font-20db', 'font-open-sans']
 var serifFonts = ['font-20db','font-lala', 'font-chambu', 'font-like']
 var sansSerifFonts = ['font-open-sans', 'font-no-sans', 'font-nonsense']
 
+var fontSizes = [12,14,16,18,24,32,42,48,64,72];
+
 var counter = 0;
 var leftKeyPressed = false;
 var rightKeyPressed = false;
@@ -104,6 +106,17 @@ Template.font.events({
 			currentFontSize-=2;
 			$("#text").css('font-size',currentFontSize);
 		}
+	},
+
+	"click .font-type": function(event){
+		event.preventDefault();
+		var self = event.target
+		var fontName = self.innerHTML;
+		$(self).parents("ul").siblings("button").html(fontName);
+
+		//set counter to index of element
+		counter = $(self).parent().index();
+		console.log("COUNTERRR: "+counter)
 	}
 })
 
@@ -153,6 +166,12 @@ Template.sansSerifList.helpers({
 
 	"firstFont": function(){
 		return sansSerifFonts[0]
+	}
+})
+
+Template.fontSize.helpers({
+	"sizes" : function(){
+		return fontSizes
 	}
 })
 
