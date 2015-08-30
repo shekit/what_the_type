@@ -9,5 +9,69 @@
 
 <template name="font">
   <a href="#" class="change">Change Font</a>
-  <h1 id="text">Hello</h1>
+
+  <a href="#" class="increase-font-size">+</a>
+  <a href="#" class="decrease-font-size">-</a>
+  {{>fontClassificationList}}
+  {{>serifList}}
+  {{>sansSerifList}}
+  <br><br>
+
+  <input id="text" type="text" value="Your Text Here">
+  
+</template>
+
+<template name="fontClassificationList">
+  <div class="btn-group">
+  	<button id="font-type-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  	 Font Type <span class="caret"></span>
+  	</button>
+  	<ul class="dropdown-menu">
+  		{{#each fontTypes}}
+  			<li><a class="font-class-type" href="#">{{this}}</a></li>
+  		{{/each}}
+  	</ul>
+  </div>
+</template>
+
+<template name="serifList">
+  <div id="serif-list" class="btn-group font-lists">
+  	<button id="serif-list-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  	 Serif Type <span class="caret"></span>
+  	</button>
+  	<ul id='ul-serifs' class="dropdown-menu">
+  		{{#each serifs}}
+  			<li><a class="font-type" href="#">{{this}}</a></li>
+  		{{/each}}
+  	</ul>
+  </div>
+</template>
+
+<template name="sansSerifList">
+  <div id="sans-serif-list" class="btn-group font-lists">
+  	<button id="sans-serif-list-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  	 Sans Serif Type <span class="caret"></span>
+  	</button>
+  	<ul id='ul-sansserifs' class="dropdown-menu">
+  		{{#each sansSerifs}}
+  			<li><a class="font-type" href="#">{{this}}</a></li>
+  		{{/each}}
+  	</ul>
+  </div>
+</template>
+
+<template name="serifList2">
+	<select id="serif-list" class="font-lists">
+		{{#each serifs}}
+			<option value='font-{{this}}'>{{this}}</option>
+		{{/each}}
+	</select>
+</template>
+
+<template name="sansSerifList2">
+	<select id="sans-serif-list" class="font-lists">
+		{{#each sansSerifs}}
+			<option value='font-{{this}}'>{{this}}</option>
+		{{/each}}
+	</select>
 </template>
