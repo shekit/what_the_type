@@ -3,7 +3,7 @@ var fonts = ['font-20db', 'font-open-sans']
 var serifFonts = ['font-20db','font-lala', 'font-chambu', 'font-like']
 var sansSerifFonts = ['font-open-sans', 'font-no-sans', 'font-nonsense']
 
-var fontSizes = [12,14,16,18,24,32,42,48,64,72];
+var fontSizes = [12,14,16,18,24,32,44,48,64,72];
 
 var counter = 0;
 var leftKeyPressed = false;
@@ -23,6 +23,7 @@ Template.body.events({
 				currentFontSize+=2;
 				$("#text").css('font-size',currentFontSize);
 			}
+			$("#font-size-list-btn").html(currentFontSize + " px");
 		}
 
 		// DOWN KEY
@@ -33,6 +34,7 @@ Template.body.events({
 				currentFontSize-=2;
 				$("#text").css('font-size',currentFontSize);
 			}
+			$("#font-size-list-btn").html(currentFontSize + " px");
 		}
 
 		// RIGHT KEY
@@ -142,6 +144,16 @@ Template.fontClassificationList.events({
 		//reset counter to zero
 		counter = 0;
 
+	}
+})
+
+Template.fontSize.events({
+	"click .font-size": function(event){
+		event.preventDefault();
+		var fontSize = parseInt(event.target.innerHTML);
+		console.log(fontSize);
+		$("#text").css('font-size',fontSize);
+		$(event.target).parents("ul").siblings("button").html(fontSize + " px");
 	}
 })
 

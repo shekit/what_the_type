@@ -48,19 +48,6 @@
   </div>
 </template>
 
-<template name="fontSize">
-	<div id="font-size-list" class="btn-group">
-		<button id="font-size-list-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-  	 	56 px <span class="caret"></span>
-	  	</button>
-	  	<ul id='ul-font-size' class="dropdown-menu">
-	  		{{#each sizes}}
-	  			<li><a class="font-size" href="#">{{this}}</a></li>
-	  		{{/each}}
-	  	</ul>
-	</div>
-</template>
-
 <template name="sansSerifList">
   <div id="sans-serif-list" class="btn-group font-lists">
   	<button id="sans-serif-list-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -72,6 +59,19 @@
   		{{/each}}
   	</ul>
   </div>
+</template>
+
+<template name="fontSize">
+	<div id="font-size-list" class="btn-group">
+		<button id="font-size-list-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  	 	56 px <span class="caret"></span>
+	  	</button>
+	  	<ul id='ul-font-size' class="dropdown-menu">
+	  		{{#each sizes}}
+	  			<li><a class="font-size" href="#">{{this}}</a></li>
+	  		{{/each}}
+	  	</ul>
+	</div>
 </template>
 
 <template name="serifList2">
