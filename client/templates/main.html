@@ -15,6 +15,7 @@
   {{>fontClassificationList}}
   {{>serifList}}
   {{>sansSerifList}}
+  {{>fontStyleList}}
   {{>fontSize}}
   <br><br>
 
@@ -25,11 +26,11 @@
 <template name="fontClassificationList">
   <div class="btn-group">
   	<button id="font-type-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-  	 {{firstType}}
+  	 {{capitalize firstType}}
   	</button>
   	<ul class="dropdown-menu">
   		{{#each fontTypes}}
-  			<li><a class="font-class-type" href="#">{{this}}</a></li>
+  			<li><a class="font-class-type" href="#">{{capitalize this}}</a></li>
   		{{/each}}
   	</ul>
   </div>
@@ -38,11 +39,11 @@
 <template name="serifList">
   <div id="serif-list" class="btn-group font-lists">
   	<button id="serif-list-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-  	 {{firstFont}}
+  	 {{capitalize firstFont}}
   	</button>
   	<ul id='ul-serifs' class="dropdown-menu">
   		{{#each serifs}}
-  			<li><a class="font-type" data-font-class="{{this.class}}" href="#">{{this.name}}</a></li>
+  			<li><a class="font-type" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
   		{{/each}}
   	</ul>
   </div>
@@ -51,7 +52,7 @@
 <template name="sansSerifList">
   <div id="sans-serif-list" class="btn-group font-lists">
   	<button id="sans-serif-list-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-  	 {{firstFont}}
+  	 {{capitalize firstFont}}
   	</button>
   	<ul id='ul-sans-serifs' class="dropdown-menu">
   		{{#each sansSerifs}}
@@ -59,6 +60,19 @@
   		{{/each}}
   	</ul>
   </div>
+</template>
+
+<template name="fontStyleList">
+	<div id="font-style-list" class="btn-group">
+	  	<button id="font-style-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	  	 {{capitalize firstStyle}}
+	  	</button>
+	  	<ul id='ul-font-style' class="dropdown-menu">
+  		{{#each fontStyles}}
+  			<li><a class="font-style" data-font-style="{{this}}" href="#">{{capitalize this}}</a></li>
+  		{{/each}}
+  		</ul>
+  	</div>
 </template>
 
 <template name="fontSize">

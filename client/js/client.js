@@ -8,17 +8,17 @@ var fontSizes = [12,14,16,18,24,32,44,48,64,72];
 var serifFontDicts = [{
 							"name":"20db",
 							"class":"font-20db",
-							"styles":[]
+							"styles":["regular"]
 						},
 						{
 							"name":"bebas",
 							"class":"font-bebas",
-							"styles":[]
+							"styles":["regular"]
 						},
 						{
 							"name":"chunkfive",
 							"class":"font-chunkfive",
-							"styles":[]
+							"styles":["regular"]
 						},
 						{
 							"name":"ostrich",
@@ -27,11 +27,9 @@ var serifFontDicts = [{
 						}]
 
 var counter = 0;
-var leftKeyPressed = false;
-var rightKeyPressed = false;
-
 var fontListId = '';
-var fontListLength = 0
+var fontListLength = 0;
+var fontClassGlobal = '';
 
 function nextFont(){
 	if(counter == fontListLength-1){
@@ -54,7 +52,7 @@ function prevFont(){
 }
 
 function setFontOnKeyPress(){
-
+	Session.set('counter',counter)
 	//get current list element
 	var listElement = $(fontListId + ' li').eq(counter)[0];
 	// find data attr of a tag in li to set font class and btn name
@@ -68,6 +66,7 @@ function setFontOnKeyPress(){
 }
 
 function setFont(fontClass){
+	console.log(fontClass)
 	$("#text").removeClass();
 	$("#text").addClass(fontClass);
 }
@@ -90,6 +89,12 @@ function setFontSizeOnKeyPress(increase){
 	//set btn text to current font size
 	$("#font-size-list-btn").html(currentFontSize + " px");
 }
+
+Template.registerHelper('capitalize', function(str){
+	return str.replace(/\w\S*/g, function(txt){
+		return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+	})
+})
 
 Template.body.events({
 	"keydown": function(event){
@@ -146,8 +151,10 @@ Template.font.events({
 
 		//set counter to index of element
 		counter = $(self).parent().index();
-
+		Session.set('counter',counter);
+		console.log("COUNTER VAL: "+counter)
 		var fontClass = $(self).attr("data-font-class")
+		fontClassGlobal = fontClass;
 		setFont(fontClass);
 	}
 })
@@ -174,6 +181,21 @@ Template.fontClassificationList.events({
 		//reset counter to zero
 		counter = 0;
 
+	}
+})
+
+Template.fontStyleList.events({
+	"click .font-style": function(event){
+		event.preventDefault();
+		var self = $(event.target);
+		var style = self.attr('data-font-style');
+		var styleName = self.html()
+		var fontClass = fontClassGlobal
+		if(style != 'regular'){
+			fontClass += "-" + style
+		}
+		$("#font-style-btn").html(styleName)
+		setFont(fontClass)
 	}
 })
 
@@ -214,6 +236,19 @@ Template.sansSerifList.helpers({
 
 	"firstFont": function(){
 		return sansSerifFonts[0]
+	}
+})
+
+Template.fontStyleList.helpers({
+	"fontStyles": function(){
+		console.log("COUNTER IN HELPER: "+counter)
+		var c = Session.get('counter') || counter
+		return serifFontDicts[c]["styles"]
+	},
+
+	"firstStyle": function(){
+		var c = Session.get('counter') || counter
+		return serifFontDicts[c]["styles"][0]
 	}
 })
 

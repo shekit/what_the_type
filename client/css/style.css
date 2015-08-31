@@ -21,27 +21,27 @@
 
 @font-face {
 	font-family: 'ostrich-black';
-	src: url("/display/ostrich-regular.ttf");
+	src: url("/display/ostrich-black.ttf");
 }
 
 @font-face {
 	font-family: 'ostrich-bold';
-	src: url("/display/ostrich-regular.ttf");
+	src: url("/display/ostrich-bold.ttf");
 }
 
 @font-face {
 	font-family: 'ostrich-dashed';
-	src: url("/display/ostrich-regular.ttf");
+	src: url("/display/ostrich-dashed.ttf");
 }
 
 @font-face {
 	font-family: 'ostrich-light';
-	src: url("/display/ostrich-regular.ttf");
+	src: url("/display/ostrich-light.ttf");
 }
 
 @font-face {
 	font-family: 'ostrich-rounded';
-	src: url("/display/ostrich-regular.ttf");
+	src: url("/display/ostrich-rounded.ttf");
 }
 
 
