@@ -155,6 +155,9 @@ Template.font.events({
 		console.log("COUNTER VAL: "+counter)
 		var fontClass = $(self).attr("data-font-class")
 		fontClassGlobal = fontClass;
+
+		$("#font-style-btn").html("Regular")
+
 		setFont(fontClass);
 	}
 })
@@ -180,6 +183,8 @@ Template.fontClassificationList.events({
 
 		//reset counter to zero
 		counter = 0;
+
+		$("#font-style-btn").html("Regular")
 
 	}
 })
