@@ -62,11 +62,16 @@ function setFontOnKeyPress(){
 	// set text of btn
 	$(fontListId+"-btn").html(fontName);
 	// set font class
+	fontClassGlobal = fontClass;
+
+	$("#font-style-btn").html("Regular")
 	setFont(fontClass);
 }
 
+
+
 function setFont(fontClass){
-	console.log(fontClass)
+	console.log("RECEIVED FONT CLASS: " + fontClass)
 	$("#text").removeClass();
 	$("#text").addClass(fontClass);
 }
@@ -246,7 +251,6 @@ Template.sansSerifList.helpers({
 
 Template.fontStyleList.helpers({
 	"fontStyles": function(){
-		console.log("COUNTER IN HELPER: "+counter)
 		var c = Session.get('counter') || counter
 		return serifFontDicts[c]["styles"]
 	},
