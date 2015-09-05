@@ -8,8 +8,6 @@
 </body>
 
 <template name="font">
-  <a href="#" class="change">Change Font</a>
-
   <a href="#" class="increase-font-size">+</a>
   <a href="#" class="decrease-font-size">-</a>
   {{>fontClassificationList}}
@@ -30,7 +28,7 @@
   	</button>
   	<ul class="dropdown-menu">
   		{{#each fontTypes}}
-  			<li><a class="font-class-type" href="#">{{capitalize this}}</a></li>
+  			<li><a class="font-class-type" data-font-class-type="{{this}}" href="#">{{capitalize this}}</a></li>
   		{{/each}}
   	</ul>
   </div>

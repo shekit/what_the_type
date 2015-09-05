@@ -8,12 +8,14 @@ var fontSizes = [12,14,16,18,24,32,44,48,64,72];
 var serifFontDicts = [{
 							"name":"20db",
 							"class":"font-20db",
-							"styles":["regular"]
+							"styles":["regular"],
+							"link":"",
 						},
 						{
 							"name":"bebas",
 							"class":"font-bebas",
-							"styles":["regular"]
+							"styles":["regular"],
+							"link":""
 						},
 						{
 							"name":"chunkfive",
@@ -78,7 +80,6 @@ function setFont(fontClass){
 
 function setFontSizeOnKeyPress(increase){
 	var currentFontSize = parseInt($("#text").css('font-size'));
-	console.log(currentFontSize);
 
 	if(increase){
 		if(currentFontSize <= 100){
@@ -128,12 +129,13 @@ Template.body.events({
 
 Template.font.onRendered(function(){
 	//set cursor to end of textarea
-	var fontField = $("#text");
-	var field = fontField.get(0);
-	var fieldLength = field.value.length;
-	field.selectionStart = fieldLength;
-	field.selectionEnd = fieldLength;
-	field.focus();
+	// var fontField = $("#text");
+	// var field = fontField.get(0);
+	// var fieldLength = field.value.length;
+	// field.selectionStart = fieldLength;
+	// field.selectionEnd = fieldLength;
+	// field.focus();
+	$("#text").focus();
 })
 
 Template.font.events({
