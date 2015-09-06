@@ -21,26 +21,6 @@
   
 </body>
 
-<template name="font">
-  <a href="#" class="increase-font-size">+</a>
-  <a href="#" class="decrease-font-size">-</a>
-  {{>fontClassificationList}}
-  {{>allList}}
-  {{>serifList}}
-  {{>sansSerifList}}
-  {{>handwritingList}}
-  {{>displayList}}
-  {{>scriptList}}
-  {{>monospaceList}}
-  {{>fontStyleList}}
-  {{>fontSize}}
-  {{>downloadFont}}
-  <br><br>
-
-  <textarea id="text" placeholder="Your Text Here"></textarea>
-  
-</template>
-
 <template name="sidebar">
   <div class="row">
     <div class="col-sm-12">
@@ -60,8 +40,6 @@
   <div class="row">
     <div class="col-sm-12">
       {{>fontSize}}
-      <a href="#" class="increase-font-size">+</a>
-      <a href="#" class="decrease-font-size">-</a>
     </div>
   </div>
   <div class="row">
@@ -95,7 +73,7 @@
 <template name="fontClassificationList">
   <div class="row">
     <div class="col-sm-3 col-md-2 no-padding-right">
-      <a href="#" class="btn btn-default btn-block"><span class="glyphicon glyphicon-menu-left"></span></a>
+      <a href="#" class="btn btn-default btn-block prev-font-class"><span class="glyphicon glyphicon-menu-left"></span></a>
     </div>
 
     <div class="col-sm-6 col-md-8 no-padding">
@@ -112,7 +90,7 @@
     </div>
 
     <div class="col-sm-3 col-md-2 no-padding-left">
-    <a href="#" class="btn btn-default btn-block"><span class="glyphicon glyphicon-menu-right"></span></a>
+      <a href="#" class="btn btn-default btn-block next-font-class"><span class="glyphicon glyphicon-menu-right"></span></a>
     </div>
   </div>
   
@@ -209,47 +187,73 @@
   </div>
 </template>
 
-<template name="prevFont">
-  <div class="col-sm-3 col-md-2 no-padding-right">
-    <a href="#" class="btn btn-default btn-block"><span class="glyphicon glyphicon-menu-left"></span></a>
-  </div>
-</template>
 
-<template name="nextFont">
-  <div class="col-sm-3 col-md-2 no-padding-left">
-    <a href="#" class="btn btn-default btn-block"><span class="glyphicon glyphicon-menu-right"></span></a>
-  </div>
-</template>
 
 <template name="fontStyleList">
-	<div id="font-style-list" class="btn-group">
-	  	<button id="font-style-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	  	 {{capitalize firstStyle}}
-	  	</button>
-	  	<ul id='ul-font-style' class="dropdown-menu">
-  		{{#each fontStyles}}
-  			<li><a class="font-style" data-font-style="{{this}}" href="#">{{capitalize this}}</a></li>
-  		{{/each}}
-  		</ul>
-  	</div>
+  <div class="row">
+    <div class="col-sm-3 col-md-2 no-padding-right">
+      <a href="#" class="btn btn-default btn-block prev-font-style"><span class="glyphicon glyphicon-menu-left"></span></a>
+    </div>
+
+    <div class="col-sm-6 col-md-8 no-padding">
+      <div id="font-style-list" class="btn-group">
+        <button id="font-style-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         {{capitalize firstStyle}}
+        </button>
+        <ul id='ul-font-style' class="dropdown-menu">
+        {{#each fontStyles}}
+          <li><a class="font-style" data-font-style="{{this}}" href="#">{{capitalize this}}</a></li>
+        {{/each}}
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-sm-3 col-md-2 no-padding-left">
+      <a href="#" class="btn btn-default btn-block next-font-style"><span class="glyphicon glyphicon-menu-right"></span></a>
+    </div>
+
+  </div>
 </template>
 
 
 
 <template name="fontSize">
-	<div id="font-size-list" class="btn-group">
-		<button id="font-size-list-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-  	 	64 px
-	  	</button>
-	  	<ul id='ul-font-size' class="dropdown-menu">
-	  		{{#each sizes}}
-	  			<li><a class="font-size" href="#">{{this}}</a></li>
-	  		{{/each}}
-	  	</ul>
-	</div>
+  <div class="row">
+    <div class="col-sm-3 col-md-2 no-padding-right">
+      <a href="#" class="btn btn-default btn-block decrease-font-size"><span class="glyphicon glyphicon-menu-left"></span></a>
+    </div>
+    <div class="col-sm-6 col-md-8 no-padding">
+      <div id="font-size-list" class="btn-group">
+        <button id="font-size-list-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          64 px
+          </button>
+          <ul id='ul-font-size' class="dropdown-menu">
+            {{#each sizes}}
+              <li><a class="font-size" href="#">{{this}}</a></li>
+            {{/each}}
+          </ul>
+      </div>
+    </div>
+    <div class="col-sm-3 col-md-2 no-padding-left">
+      <a href="#" class="btn btn-default btn-block increase-font-size"><span class="glyphicon glyphicon-menu-right"></span></a>
+    </div>
+  </div>
+	
+</template>
+
+<template name="prevFont">
+  <div class="col-sm-3 col-md-2 no-padding-right">
+    <a href="#" class="btn btn-default btn-block prev-font"><span class="glyphicon glyphicon-menu-left"></span></a>
+  </div>
+</template>
+
+<template name="nextFont">
+  <div class="col-sm-3 col-md-2 no-padding-left">
+    <a href="#" class="btn btn-default btn-block next-font"><span class="glyphicon glyphicon-menu-right"></span></a>
+  </div>
 </template>
 
 <template name="downloadFont">
-  <a href="{{link}}" target="blank">Download Font</a>
+  <a href="{{link}}" class="btn btn-default btn-block" target="blank">Download Font</a>
 </template>
 

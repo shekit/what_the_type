@@ -244,6 +244,28 @@ Template.sidebar.events({
 		$("#font-style-btn").html("Regular")
 
 		setFont(fontClass);
+	},
+
+	"click .next-font": function(event){
+		event.preventDefault()
+		console.log("next font");
+		nextFont()
+	},
+
+	"click .prev-font": function(event){
+		event.preventDefault()
+		console.log("prev font")
+		prevFont()
+	},
+
+	"click .next-font-style": function(event){
+		event.preventDefault();
+		console.log("next font style")
+	},
+
+	"click .prev-font-style": function(event){
+		event.preventDefault();
+		console.log("prev font style")
 	}
 })
 
@@ -280,6 +302,7 @@ Template.fontClassificationList.events({
 
 	}
 })
+
 
 Template.fontStyleList.events({
 	"click .font-style": function(event){
