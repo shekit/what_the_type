@@ -6,14 +6,14 @@
   <div class="container-fluid">
     
     <div class="row">
-      <div class="col-sm-4">
+      <div class="col-sm-3">
         <div class="row">
           <h1>Font Fling</h1>
         </div>
         {{>sidebar}}
       </div>
 
-      <div class="col-sm-8">
+      <div class="col-sm-9">
         {{>text}}
       </div>
     </div>
@@ -49,13 +49,7 @@
   </div>
   <div class="row">
     <div class="col-sm-12">
-      {{>allList}}
-      {{>serifList}}
-      {{>sansSerifList}}
-      {{>handwritingList}}
-      {{>displayList}}
-      {{>scriptList}}
-      {{>monospaceList}}
+      {{>fontLists}}
     </div>
   </div>
   <div class="row">
@@ -78,21 +72,50 @@
   
 </template>
 
+<template name="fontLists">
+  <div class="row">
+    {{>prevFont}}
+    <div class="col-sm-6 col-md-8 no-padding">
+      {{>allList}}
+      {{>serifList}}
+      {{>sansSerifList}}
+      {{>handwritingList}}
+      {{>displayList}}
+      {{>scriptList}}
+      {{>monospaceList}}
+    </div>
+    {{>nextFont}}
+  </div>
+</template>
+
 <template name="text">
   <textarea id="text" placeholder="Your Text Here"></textarea>
 </template>
 
 <template name="fontClassificationList">
-  <div class="btn-group">
-  	<button id="font-type-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-  	 {{capitalize firstType}}
-  	</button>
-  	<ul class="dropdown-menu">
-  		{{#each fontTypes}}
-  			<li><a class="font-class-type" data-font-class-type="{{this}}" href="#">{{capitalize this}}</a></li>
-  		{{/each}}
-  	</ul>
+  <div class="row">
+    <div class="col-sm-3 col-md-2 no-padding-right">
+      <a href="#" class="btn btn-default btn-block"><span class="glyphicon glyphicon-menu-left"></span></a>
+    </div>
+
+    <div class="col-sm-6 col-md-8 no-padding">
+      <div class="btn-group">
+        <button id="font-type-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         {{capitalize firstType}}
+        </button>
+        <ul class="dropdown-menu">
+          {{#each fontTypes}}
+            <li><a class="font-class-type" data-font-class-type="{{this}}" href="#">{{capitalize this}}</a></li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-sm-3 col-md-2 no-padding-left">
+    <a href="#" class="btn btn-default btn-block"><span class="glyphicon glyphicon-menu-right"></span></a>
+    </div>
   </div>
+  
 </template>
 
 <template name="allList">
@@ -186,6 +209,18 @@
   </div>
 </template>
 
+<template name="prevFont">
+  <div class="col-sm-3 col-md-2 no-padding-right">
+    <a href="#" class="btn btn-default btn-block"><span class="glyphicon glyphicon-menu-left"></span></a>
+  </div>
+</template>
+
+<template name="nextFont">
+  <div class="col-sm-3 col-md-2 no-padding-left">
+    <a href="#" class="btn btn-default btn-block"><span class="glyphicon glyphicon-menu-right"></span></a>
+  </div>
+</template>
+
 <template name="fontStyleList">
 	<div id="font-style-list" class="btn-group">
 	  	<button id="font-style-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -198,6 +233,8 @@
   		</ul>
   	</div>
 </template>
+
+
 
 <template name="fontSize">
 	<div id="font-size-list" class="btn-group">
