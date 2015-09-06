@@ -212,11 +212,11 @@ Template.body.events({
 	}
 })
 
-Template.font.onRendered(function(){
+Template.text.onRendered(function(){
 	$("#text").focus();
 })
 
-Template.font.events({
+Template.sidebar.events({
 
 	"click .increase-font-size": function(event){
 		event.preventDefault();

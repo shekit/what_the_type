@@ -3,8 +3,22 @@
 </head>
 
 <body>
+  <div class="container-fluid">
+    
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="row">
+          <h1>Font Fling</h1>
+        </div>
+        {{>sidebar}}
+      </div>
 
-  {{> font}}
+      <div class="col-sm-8">
+        {{>text}}
+      </div>
+    </div>
+  </div>
+  
 </body>
 
 <template name="font">
@@ -25,6 +39,47 @@
 
   <textarea id="text" placeholder="Your Text Here"></textarea>
   
+</template>
+
+<template name="sidebar">
+  <div class="row">
+    <div class="col-sm-12">
+      {{>fontClassificationList}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      {{>allList}}
+      {{>serifList}}
+      {{>sansSerifList}}
+      {{>handwritingList}}
+      {{>displayList}}
+      {{>scriptList}}
+      {{>monospaceList}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      {{>fontStyleList}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      {{>fontSize}}
+      <a href="#" class="increase-font-size">+</a>
+      <a href="#" class="decrease-font-size">-</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      {{>downloadFont}}
+    </div>
+  </div>
+  
+</template>
+
+<template name="text">
+  <textarea id="text" placeholder="Your Text Here"></textarea>
 </template>
 
 <template name="fontClassificationList">
