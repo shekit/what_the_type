@@ -5,12 +5,11 @@
 
 <body>
   <div class="container-fluid">
-    
+    <div class="row">
+      {{>topbar}}
+    </div>
     <div class="row">
       <div class="col-sm-3">
-        <div class="row">
-          <h1>Font Fling</h1>
-        </div>
         {{>sidebar}}
       </div>
 
@@ -18,9 +17,38 @@
         {{>text}}
       </div>
     </div>
-  </div>
-  
+  </div> 
+  {{>aboutModal}}
 </body>
+
+<template name="topbar">
+  <div class="col-xs-12 col-sm-4">
+    <h1>Font Fling</h1>
+  </div>
+  <div class="col-sm-8">
+    <ul class="list-inline text-right">
+      <li><a href="javascript:void(0);" data-toggle="modal" data-target="#aboutModal">About</a></li>
+      <li><a href="mailto:">Feedback</a></li>
+      <li><a href="javascript:void(0);">Help</a></li>
+    </ul>
+  </div>
+</template>
+
+<template name="aboutModal">
+<div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+    </div>
+  </div>
+</div>
+</template>
 
 <template name="sidebar">
   <div class="row">
