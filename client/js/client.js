@@ -1,4 +1,4 @@
-var fontTypes = ["all","serif", "sans-serif", "display", "script", "handwriting", "monospace"]
+var fontClasses = ["all","serif", "sans-serif", "display", "script", "handwriting", "monospace"]
 
 var fontSizes = [12,14,16,18,24,32,44,48,64,72];
 
@@ -21,6 +21,13 @@ var counter = 0;
 var fontListId = '#all-list';
 var fontListLength = allFontDict.length;
 var fontClassGlobal = ''
+
+var fontClassCounter = 0;
+var fontClassLength = fontClasses.length;
+
+var fontStyleCounter = 0;
+var fontStyleLength = allFontDict[0]["styles"].length;
+var currentFontStyleArray = allFontDict[0]["styles"];
 
 function capitalize(str){
 	return str.replace(/\w\S*/g, function(txt){
@@ -47,6 +54,38 @@ function prevFont(){
 
 	setFontOnKeyPress();
 }
+
+function nextFontStyle(){
+	if(fontStyleCounter == fontStyleLength-1){
+		fontStyleCounter = 0
+	} else {
+		fontStyleCounter++
+	}
+
+	setFontStyle(currentFontStyleArray[fontStyleCounter])
+}
+
+function prevFontStyle(){
+	if(fontStyleCounter == 0){
+		fontStyleCounter = fontStyleLength-1
+	} else {
+		fontStyleCounter--
+	}
+
+	setFontStyle(currentFontStyleArray[fontStyleCounter])
+}
+
+function setFontStyle(styleName){
+	var fontClass = fontClassGlobal
+
+	if(styleName != 'regular'){
+		fontClass += "-"+styleName
+	}
+	$("#font-style-btn").html(capitalize(styleName));
+
+	setFont(fontClass)
+}
+
 
 function setFontOnKeyPress(){
 	Session.set('counter',counter)
@@ -103,6 +142,65 @@ function fontSwitchCase(searchFor){
 				return allFontDict[c][searchFor]
 				break
 		}
+}
+
+function nextFontClass(){
+	if(fontClassCounter == fontClassLength - 1){
+		fontClassCounter = 0
+	} else {
+		fontClassCounter++
+	}
+
+	setFontClass(fontClasses[fontClassCounter])
+}
+
+function prevFontClass(){
+	if(fontClassCounter==0){
+		fontClassCounter = fontClassLength - 1
+	} else {
+		fontClassCounter--
+	}
+
+	setFontClass(fontClasses[fontClassCounter])
+}
+
+function nextType(count, length){
+	if(count == length-1){
+		return count = 0
+	} else {
+		return count++
+	}
+}
+
+function prevType(count, length){
+	if(count == 0){
+		return count = length -1
+	} else {
+		return count--
+	}
+}
+
+function setFontClass(fontClassName){
+	counter = 0;
+	var listToDisplay = "#"+fontClassName+ "-list";
+	$("#font-type-btn").html(capitalize(fontClassName));
+
+	//show fonts of this class
+	$(".font-lists").hide();
+	$(listToDisplay).show();
+
+	//set global variables to hold the newly displayed list
+	fontListLength = $(listToDisplay + " li").length;
+	fontListId = listToDisplay;
+
+	// set which font class is selected
+	Session.set('fontClass',fontClassName)
+	Session.set('counter',counter)
+
+	console.log("FONT LENGTH: " + fontListLength);
+	console.log("FONT LIST ID: " + fontListId)
+
+	resetFont(fontClassName)
 }
 
 function resetFont(fontClass){
@@ -163,6 +261,11 @@ function resetFont(fontClass){
 
 function setFont(fontClass){
 	console.log("RECEIVED FONT CLASS: " + fontClass)
+
+	currentFontStyleArray = fontSwitchCase("styles");
+	console.log(currentFontStyleArray)
+	fontStyleLength = currentFontStyleArray.length
+
 	$("#text").removeClass();
 	$("#text").addClass(fontClass);
 }
@@ -218,16 +321,6 @@ Template.text.onRendered(function(){
 
 Template.sidebar.events({
 
-	"click .increase-font-size": function(event){
-		event.preventDefault();
-		setFontSizeOnKeyPress(true);
-	},
-
-	"click .decrease-font-size": function(event){
-		event.preventDefault();
-		setFontSizeOnKeyPress(false);
-	},
-
 	"click .font-type": function(event){
 		event.preventDefault();
 		var self = event.target
@@ -256,67 +349,66 @@ Template.sidebar.events({
 		event.preventDefault()
 		console.log("prev font")
 		prevFont()
-	},
-
-	"click .next-font-style": function(event){
-		event.preventDefault();
-		console.log("next font style")
-	},
-
-	"click .prev-font-style": function(event){
-		event.preventDefault();
-		console.log("prev font style")
 	}
 })
 
 Template.fontClassificationList.events({
 	"click .font-class-type": function(event){
 		event.preventDefault();
-
-		//reset counter to zero
-		counter = 0
 		
-		var listName = event.target.innerHTML
-		$("#font-type-btn").html(listName);
+		var listName = $(event.target).attr("data-font-class-type");
 
-		listName = listName.toLowerCase()
+		fontClassCounter = fontClasses.indexOf(listName);
 
-		var listToDisplay = "#" + listName + "-list";
+		setFontClass(listName);
+		
+	},
 
-		// show sub fonts of this style
-		$(".font-lists").hide();
-		$(listToDisplay).show();
+	"click .next-font-class": function(event){
+		event.preventDefault()
+		console.log("next font class")
+		nextFontClass();
+	},
 
-		//set global variables to hold the newly displayed list
-		fontListLength = $(listToDisplay + " li").length;
-		fontListId = listToDisplay;
-
-		// set which font class is selected
-		Session.set('fontClass',listName)
-		Session.set('counter',counter)
-
-		console.log("FONT LENGTH: " + fontListLength);
-		console.log("FONT LIST ID: " + fontListId)
-
-		resetFont(listName)
-
-	}
+	"click .prev-font-class": function(event){
+		event.preventDefault()
+		console.log("prev font class")
+		prevFontClass()
+	},
 })
 
 
 Template.fontStyleList.events({
 	"click .font-style": function(event){
 		event.preventDefault();
-		var self = $(event.target);
-		var style = self.attr('data-font-style');
-		var styleName = self.html()
-		var fontClass = fontClassGlobal
-		if(style != 'regular'){
-			fontClass += "-" + style
-		}
-		$("#font-style-btn").html(styleName)
-		setFont(fontClass)
+		var styleName = $(event.target).attr('data-font-style');
+
+		setFontStyle(styleName);
+		// var style = self.attr('data-font-style');
+
+
+
+		// var styleName = self.html()
+		// var fontClass = fontClassGlobal
+		// if(style != 'regular'){
+		// 	fontClass += "-" + style
+		// }
+		// $("#font-style-btn").html(styleName)
+		// setFont(fontClass)
+	},
+
+	"click .next-font-style": function(event){
+		event.preventDefault();
+		console.log("next font style")
+		nextFontStyle()
+	},
+
+	"click .prev-font-style": function(event){
+		event.preventDefault();
+		console.log("prev font style")
+		prevFontStyle()
 	}
+
 })
 
 Template.fontSize.events({
@@ -326,16 +418,26 @@ Template.fontSize.events({
 		console.log(fontSize);
 		$("#text").css('font-size',fontSize);
 		$(event.target).parents("ul").siblings("button").html(fontSize + " px");
+	},
+
+	"click .increase-font-size": function(event){
+		event.preventDefault();
+		setFontSizeOnKeyPress(true);
+	},
+
+	"click .decrease-font-size": function(event){
+		event.preventDefault();
+		setFontSizeOnKeyPress(false);
 	}
 })
 
 Template.fontClassificationList.helpers({
 	"fontTypes": function(){
-		return fontTypes
+		return fontClasses
 	},
 
 	"firstType":function(){
-		return fontTypes[0]
+		return fontClasses[0]
 	}
 })
 
