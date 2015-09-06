@@ -35,7 +35,7 @@ for dirname, dirs, filenames in os.walk(os.path.join(path, "fonts", fontType)):
 
 #pprint.pprint(fonts)
 
-with open(fontType+".json","w") as c:
+with open(os.path.join(path,"generated_files",fontType+".json"),"w") as c:
 	json.dump(fonts, c)
 	#for item in fonts:
 		#c.writelines("%s,\n" % item)
@@ -47,8 +47,8 @@ for font in fonts:
 		if style == 'regular':
 			fontFace = """@font-face{
 	font-family: '%s';
-	src: url('/fonts/%s/%s.%s');
-}""" % (font["name"], fontType, font["name"], font["ending"])
+	src: url('/fonts/%s/%s/%s.%s');
+}""" % (font["name"], fontType, font["name"],font["name"], font["ending"])
 
 			fontClass = """.%s{
 	font-family: '%s';
@@ -56,8 +56,8 @@ for font in fonts:
 		else:
 			fontFace = """@font-face{
 	font-family: '%s-%s';
-	src: url('/fonts/%s/%s_%s.%s');
-}""" % (font["name"],style, fontType, font["name"], style, font["ending"])
+	src: url('/fonts/%s/%s/%s_%s.%s');
+}""" % (font["name"],style, fontType, font["name"],font["name"], style, font["ending"])
 
 			fontClass = """.%s-%s{
 	font-family: '%s-%s';
@@ -67,7 +67,7 @@ for font in fonts:
 		css_file += fontClass
 		css_file += "\n\n"
 
-with open(fontType+".css","w") as f:
+with open(os.path.join(path,"generated_files",fontType+".css"),"w") as f:
 	f.write(css_file)
 
 
