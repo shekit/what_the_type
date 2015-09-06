@@ -35,6 +35,7 @@ function capitalize(str){
 	})
 }
 
+// CHANGE FONTS - open sans, droid, 20db etc
 function nextFont(){
 	if(counter == fontListLength-1){
 		counter = 0
@@ -55,6 +56,25 @@ function prevFont(){
 	setFontOnKeyPress();
 }
 
+
+function setFontOnKeyPress(){
+	Session.set('counter',counter)
+	//get current list element
+	var listElement = $(fontListId + ' li').eq(counter)[0];
+	// find data attr of a tag in li to set font class and btn name
+	var aElement = $(listElement).find("a")
+	var fontClass = aElement.attr("data-font-class")
+	var fontName = aElement.html()
+	// set text of btn
+	$(fontListId+"-btn").html(fontName);
+	// set font class
+	fontClassGlobal = fontClass;
+
+	$("#font-style-btn").html("Regular")
+	setFont(fontClass);
+}
+
+//CHANGE FONT STYLES - bold, regular, italic etc
 function nextFontStyle(){
 	if(fontStyleCounter == fontStyleLength-1){
 		fontStyleCounter = 0
@@ -86,64 +106,7 @@ function setFontStyle(styleName){
 	setFont(fontClass)
 }
 
-
-function setFontOnKeyPress(){
-	Session.set('counter',counter)
-	//get current list element
-	var listElement = $(fontListId + ' li').eq(counter)[0];
-	// find data attr of a tag in li to set font class and btn name
-	var aElement = $(listElement).find("a")
-	var fontClass = aElement.attr("data-font-class")
-	var fontName = aElement.html()
-	// set text of btn
-	$(fontListId+"-btn").html(fontName);
-	// set font class
-	fontClassGlobal = fontClass;
-
-	$("#font-style-btn").html("Regular")
-	setFont(fontClass);
-}
-
-function fontSwitchCase(searchFor){
-
-	var c = Session.get('counter') || counter
-	var fontClass = Session.get('fontClass') || 'all'
-
-	switch(fontClass){
-			case "all":
-				return allFontDict[c][searchFor]
-				break
-
-			case "serif":
-				return serifFontDict[c][searchFor];
-				break;
-
-			case "sans-serif":
-				return sansSerifFontDict[c][searchFor]
-				break;
-
-			case "handwriting":
-				return handwritingFontDict[c][searchFor]
-				break;
-
-			case "display":
-				return displayFontDict[c][searchFor]
-				break;
-
-			case "script":
-				return scriptFontDict[c][searchFor]
-				break;
-
-			case "monospace":
-				return monospaceFontDict[c][searchFor]
-				break;
-
-			default:
-				return allFontDict[c][searchFor]
-				break
-		}
-}
-
+//CHANGE FONT CLASS - serif, all, sans-serif etc
 function nextFontClass(){
 	if(fontClassCounter == fontClassLength - 1){
 		fontClassCounter = 0
@@ -162,22 +125,6 @@ function prevFontClass(){
 	}
 
 	setFontClass(fontClasses[fontClassCounter])
-}
-
-function nextType(count, length){
-	if(count == length-1){
-		return count = 0
-	} else {
-		return count++
-	}
-}
-
-function prevType(count, length){
-	if(count == 0){
-		return count = length -1
-	} else {
-		return count--
-	}
 }
 
 function setFontClass(fontClassName){
@@ -203,6 +150,48 @@ function setFontClass(fontClassName){
 	resetFont(fontClassName)
 }
 
+//return value from dict based on current font class
+function fontSwitchCase(searchFor){
+
+	var c = Session.get('counter') || counter
+	var fontClass = Session.get('fontClass') || 'all'
+
+	switch(fontClass){
+		case "all":
+			return allFontDict[c][searchFor]
+			break
+
+		case "serif":
+			return serifFontDict[c][searchFor];
+			break;
+
+		case "sans-serif":
+			return sansSerifFontDict[c][searchFor]
+			break;
+
+		case "handwriting":
+			return handwritingFontDict[c][searchFor]
+			break;
+
+		case "display":
+			return displayFontDict[c][searchFor]
+			break;
+
+		case "script":
+			return scriptFontDict[c][searchFor]
+			break;
+
+		case "monospace":
+			return monospaceFontDict[c][searchFor]
+			break;
+
+		default:
+			return allFontDict[c][searchFor]
+			break
+	}
+}
+
+// reset font list when font class is changed
 function resetFont(fontClass){
 
 	$("#font-style-btn").html("Regular")
@@ -258,7 +247,7 @@ function resetFont(fontClass){
 	setFont(fontClassToSet)
 }
 
-
+// main function - sets the font. called by all functions
 function setFont(fontClass){
 	console.log("RECEIVED FONT CLASS: " + fontClass)
 
@@ -270,6 +259,7 @@ function setFont(fontClass){
 	$("#text").addClass(fontClass);
 }
 
+// change size of text in textarea
 function setFontSizeOnKeyPress(increase){
 	var currentFontSize = parseInt($("#text").css('font-size'));
 
@@ -288,8 +278,14 @@ function setFontSizeOnKeyPress(increase){
 	$("#font-size-list-btn").html(currentFontSize + " px");
 }
 
+// HELPERS AND INITIALIZATION CODE
 Template.registerHelper('capitalize', capitalize)
 
+Template.text.onRendered(function(){
+	$("#text").focus();
+})
+
+// EVENTS
 Template.body.events({
 	"keydown": function(event){
 
@@ -315,9 +311,6 @@ Template.body.events({
 	}
 })
 
-Template.text.onRendered(function(){
-	$("#text").focus();
-})
 
 Template.sidebar.events({
 
@@ -364,6 +357,12 @@ Template.fontClassificationList.events({
 		
 	},
 
+	"change #mobile-font-class-list":function(event){
+		var listName = $(event.target).children(":selected").attr("data-font-class-type")
+		fontClassCounter = fontClasses.indexOf(listName);
+		setFontClass(listName);
+	},
+
 	"click .next-font-class": function(event){
 		event.preventDefault()
 		console.log("next font class")
@@ -374,7 +373,7 @@ Template.fontClassificationList.events({
 		event.preventDefault()
 		console.log("prev font class")
 		prevFontClass()
-	},
+	}
 })
 
 
@@ -383,18 +382,9 @@ Template.fontStyleList.events({
 		event.preventDefault();
 		var styleName = $(event.target).attr('data-font-style');
 
+		fontStyleCounter = currentFontStyleArray.indexOf(styleName);
+
 		setFontStyle(styleName);
-		// var style = self.attr('data-font-style');
-
-
-
-		// var styleName = self.html()
-		// var fontClass = fontClassGlobal
-		// if(style != 'regular'){
-		// 	fontClass += "-" + style
-		// }
-		// $("#font-style-btn").html(styleName)
-		// setFont(fontClass)
 	},
 
 	"click .next-font-style": function(event){
@@ -431,6 +421,7 @@ Template.fontSize.events({
 	}
 })
 
+//HELPERS
 Template.fontClassificationList.helpers({
 	"fontTypes": function(){
 		return fontClasses
@@ -517,7 +508,6 @@ Template.fontStyleList.helpers({
 	},
 
 	"firstStyle": function(){
-		//var c = Session.get('counter') || counter
 		return "Regular"
 	}
 })
