@@ -65,6 +65,46 @@ function setFontOnKeyPress(){
 	setFont(fontClass);
 }
 
+function fontSwitchCase(searchFor){
+
+	var c = Session.get('counter') || counter
+	var fontClass = Session.get('fontClass') || 'all'
+
+	switch(fontClass){
+			case "all":
+				return allFontDict[c][searchFor]
+				break
+
+			case "serif":
+				return serifFontDict[c][searchFor];
+				break;
+
+			case "sans-serif":
+				return sansSerifFontDict[c][searchFor]
+				break;
+
+			case "handwriting":
+				return handwritingFontDict[c][searchFor]
+				break;
+
+			case "display":
+				return displayFontDict[c][searchFor]
+				break;
+
+			case "script":
+				return scriptFontDict[c][searchFor]
+				break;
+
+			case "monospace":
+				return monospaceFontDict[c][searchFor]
+				break;
+
+			default:
+				return allFontDict[c][searchFor]
+				break
+		}
+}
+
 function resetFont(fontClass){
 
 	$("#font-style-btn").html("Regular")
@@ -210,6 +250,10 @@ Template.font.events({
 Template.fontClassificationList.events({
 	"click .font-class-type": function(event){
 		event.preventDefault();
+
+		//reset counter to zero
+		counter = 0
+		
 		var listName = event.target.innerHTML
 		$("#font-type-btn").html(listName);
 
@@ -227,12 +271,10 @@ Template.fontClassificationList.events({
 
 		// set which font class is selected
 		Session.set('fontClass',listName)
+		Session.set('counter',counter)
 
 		console.log("FONT LENGTH: " + fontListLength);
 		console.log("FONT LIST ID: " + fontListId)
-
-		//reset counter to zero
-		counter = 0;
 
 		resetFont(listName)
 
@@ -346,41 +388,7 @@ Template.monospaceList.helpers({
 
 Template.fontStyleList.helpers({
 	"fontStyles": function(){
-		var c = Session.get('counter') || counter
-		var fontClass = Session.get('fontClass') || 'all'
-
-		switch(fontClass){
-			case "all":
-				return allFontDict[c]["styles"]
-				break
-
-			case "serif":
-				return serifFontDict[c]["styles"];
-				break;
-
-			case "sans-serif":
-				return sansSerifFontDict[c]["styles"]
-				break;
-
-			case "handwriting":
-				return handwritingFontDict[c]["styles"]
-				break;
-
-			case "display":
-				return displayFontDict[c]["styles"]
-				break;
-
-			case "script":
-				return scriptFontDict[c]["styles"]
-				break;
-
-			case "monospace":
-				return monospaceFontDict[c]["styles"]
-				break
-			default:
-				return allFontDict[c]["styles"]
-				break
-		}
+		return fontSwitchCase("styles")
 	},
 
 	"firstStyle": function(){
@@ -392,6 +400,12 @@ Template.fontStyleList.helpers({
 Template.fontSize.helpers({
 	"sizes" : function(){
 		return fontSizes
+	}
+})
+
+Template.downloadFont.helpers({
+	"link" : function(){
+		return fontSwitchCase("link")
 	}
 })
 

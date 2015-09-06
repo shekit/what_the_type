@@ -20,6 +20,7 @@
   {{>monospaceList}}
   {{>fontStyleList}}
   {{>fontSize}}
+  {{>downloadFont}}
   <br><br>
 
   <textarea id="text" placeholder="Your Text Here"></textarea>
@@ -154,5 +155,9 @@
 	  		{{/each}}
 	  	</ul>
 	</div>
+</template>
+
+<template name="downloadFont">
+  <a href="{{link}}" target="blank">Download Font</a>
 </template>
 
