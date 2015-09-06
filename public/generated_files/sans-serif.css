@@ -1,0 +1,2421 @@
+@font-face{
+	font-family: 'aaargh';
+	src: url('/fonts/sans-serif/aaargh.ttf');
+}
+
+.font-aaargh{
+	font-family: 'aaargh';
+}
+
+@font-face{
+	font-family: 'afta-sans';
+	src: url('/fonts/sans-serif/afta-sans.otf');
+}
+
+.font-afta-sans{
+	font-family: 'afta-sans';
+}
+
+@font-face{
+	font-family: 'afta-sans-italic';
+	src: url('/fonts/sans-serif/afta-sans_italic.otf');
+}
+
+.font-afta-sans-italic{
+	font-family: 'afta-sans-italic';
+}
+
+@font-face{
+	font-family: 'amaranth';
+	src: url('/fonts/sans-serif/amaranth.otf');
+}
+
+.font-amaranth{
+	font-family: 'amaranth';
+}
+
+@font-face{
+	font-family: 'amaranth-bold-italic';
+	src: url('/fonts/sans-serif/amaranth_bold-italic.otf');
+}
+
+.font-amaranth-bold-italic{
+	font-family: 'amaranth-bold-italic';
+}
+
+@font-face{
+	font-family: 'amaranth-bold';
+	src: url('/fonts/sans-serif/amaranth_bold.otf');
+}
+
+.font-amaranth-bold{
+	font-family: 'amaranth-bold';
+}
+
+@font-face{
+	font-family: 'amaranth-italic';
+	src: url('/fonts/sans-serif/amaranth_italic.otf');
+}
+
+.font-amaranth-italic{
+	font-family: 'amaranth-italic';
+}
+
+@font-face{
+	font-family: 'amble';
+	src: url('/fonts/sans-serif/amble.ttf');
+}
+
+.font-amble{
+	font-family: 'amble';
+}
+
+@font-face{
+	font-family: 'amble-bold-italic';
+	src: url('/fonts/sans-serif/amble_bold-italic.ttf');
+}
+
+.font-amble-bold-italic{
+	font-family: 'amble-bold-italic';
+}
+
+@font-face{
+	font-family: 'amble-bold';
+	src: url('/fonts/sans-serif/amble_bold.ttf');
+}
+
+.font-amble-bold{
+	font-family: 'amble-bold';
+}
+
+@font-face{
+	font-family: 'amble-italic';
+	src: url('/fonts/sans-serif/amble_italic.ttf');
+}
+
+.font-amble-italic{
+	font-family: 'amble-italic';
+}
+
+@font-face{
+	font-family: 'amble-light-condensed-italic';
+	src: url('/fonts/sans-serif/amble_light-condensed-italic.ttf');
+}
+
+.font-amble-light-condensed-italic{
+	font-family: 'amble-light-condensed-italic';
+}
+
+@font-face{
+	font-family: 'amble-light-condensed';
+	src: url('/fonts/sans-serif/amble_light-condensed.ttf');
+}
+
+.font-amble-light-condensed{
+	font-family: 'amble-light-condensed';
+}
+
+@font-face{
+	font-family: 'amble-light-italic';
+	src: url('/fonts/sans-serif/amble_light-italic.ttf');
+}
+
+.font-amble-light-italic{
+	font-family: 'amble-light-italic';
+}
+
+@font-face{
+	font-family: 'amble-light';
+	src: url('/fonts/sans-serif/amble_light.ttf');
+}
+
+.font-amble-light{
+	font-family: 'amble-light';
+}
+
+@font-face{
+	font-family: 'arimo';
+	src: url('/fonts/sans-serif/arimo.ttf');
+}
+
+.font-arimo{
+	font-family: 'arimo';
+}
+
+@font-face{
+	font-family: 'arimo-bold-italic';
+	src: url('/fonts/sans-serif/arimo_bold-italic.ttf');
+}
+
+.font-arimo-bold-italic{
+	font-family: 'arimo-bold-italic';
+}
+
+@font-face{
+	font-family: 'arimo-bold';
+	src: url('/fonts/sans-serif/arimo_bold.ttf');
+}
+
+.font-arimo-bold{
+	font-family: 'arimo-bold';
+}
+
+@font-face{
+	font-family: 'arimo-italic';
+	src: url('/fonts/sans-serif/arimo_italic.ttf');
+}
+
+.font-arimo-italic{
+	font-family: 'arimo-italic';
+}
+
+@font-face{
+	font-family: 'arsenal';
+	src: url('/fonts/sans-serif/arsenal.otf');
+}
+
+.font-arsenal{
+	font-family: 'arsenal';
+}
+
+@font-face{
+	font-family: 'arsenal-bold-italic';
+	src: url('/fonts/sans-serif/arsenal_bold-italic.otf');
+}
+
+.font-arsenal-bold-italic{
+	font-family: 'arsenal-bold-italic';
+}
+
+@font-face{
+	font-family: 'arsenal-bold';
+	src: url('/fonts/sans-serif/arsenal_bold.otf');
+}
+
+.font-arsenal-bold{
+	font-family: 'arsenal-bold';
+}
+
+@font-face{
+	font-family: 'arsenal-italic';
+	src: url('/fonts/sans-serif/arsenal_italic.otf');
+}
+
+.font-arsenal-italic{
+	font-family: 'arsenal-italic';
+}
+
+@font-face{
+	font-family: 'asap';
+	src: url('/fonts/sans-serif/asap.otf');
+}
+
+.font-asap{
+	font-family: 'asap';
+}
+
+@font-face{
+	font-family: 'asap-bold-italic';
+	src: url('/fonts/sans-serif/asap_bold-italic.otf');
+}
+
+.font-asap-bold-italic{
+	font-family: 'asap-bold-italic';
+}
+
+@font-face{
+	font-family: 'asap-bold';
+	src: url('/fonts/sans-serif/asap_bold.otf');
+}
+
+.font-asap-bold{
+	font-family: 'asap-bold';
+}
+
+@font-face{
+	font-family: 'asap-italic';
+	src: url('/fonts/sans-serif/asap_italic.otf');
+}
+
+.font-asap-italic{
+	font-family: 'asap-italic';
+}
+
+@font-face{
+	font-family: 'asap-medium-italic';
+	src: url('/fonts/sans-serif/asap_medium-italic.otf');
+}
+
+.font-asap-medium-italic{
+	font-family: 'asap-medium-italic';
+}
+
+@font-face{
+	font-family: 'asap-medium';
+	src: url('/fonts/sans-serif/asap_medium.otf');
+}
+
+.font-asap-medium{
+	font-family: 'asap-medium';
+}
+
+@font-face{
+	font-family: 'aurulent-sans';
+	src: url('/fonts/sans-serif/aurulent-sans.otf');
+}
+
+.font-aurulent-sans{
+	font-family: 'aurulent-sans';
+}
+
+@font-face{
+	font-family: 'aurulent-sans-bold-italic';
+	src: url('/fonts/sans-serif/aurulent-sans_bold-italic.otf');
+}
+
+.font-aurulent-sans-bold-italic{
+	font-family: 'aurulent-sans-bold-italic';
+}
+
+@font-face{
+	font-family: 'aurulent-sans-bold';
+	src: url('/fonts/sans-serif/aurulent-sans_bold.otf');
+}
+
+.font-aurulent-sans-bold{
+	font-family: 'aurulent-sans-bold';
+}
+
+@font-face{
+	font-family: 'aurulent-sans-italic';
+	src: url('/fonts/sans-serif/aurulent-sans_italic.otf');
+}
+
+.font-aurulent-sans-italic{
+	font-family: 'aurulent-sans-italic';
+}
+
+@font-face{
+	font-family: 'bonvenocf';
+	src: url('/fonts/sans-serif/bonvenocf.otf');
+}
+
+.font-bonvenocf{
+	font-family: 'bonvenocf';
+}
+
+@font-face{
+	font-family: 'bpreplay';
+	src: url('/fonts/sans-serif/bpreplay.otf');
+}
+
+.font-bpreplay{
+	font-family: 'bpreplay';
+}
+
+@font-face{
+	font-family: 'bpreplay-bold-italic';
+	src: url('/fonts/sans-serif/bpreplay_bold-italic.otf');
+}
+
+.font-bpreplay-bold-italic{
+	font-family: 'bpreplay-bold-italic';
+}
+
+@font-face{
+	font-family: 'bpreplay-bold';
+	src: url('/fonts/sans-serif/bpreplay_bold.otf');
+}
+
+.font-bpreplay-bold{
+	font-family: 'bpreplay-bold';
+}
+
+@font-face{
+	font-family: 'cabin';
+	src: url('/fonts/sans-serif/cabin.otf');
+}
+
+.font-cabin{
+	font-family: 'cabin';
+}
+
+@font-face{
+	font-family: 'cabin-bold-italic';
+	src: url('/fonts/sans-serif/cabin_bold-italic.otf');
+}
+
+.font-cabin-bold-italic{
+	font-family: 'cabin-bold-italic';
+}
+
+@font-face{
+	font-family: 'cabin-bold';
+	src: url('/fonts/sans-serif/cabin_bold.otf');
+}
+
+.font-cabin-bold{
+	font-family: 'cabin-bold';
+}
+
+@font-face{
+	font-family: 'cabin-italic';
+	src: url('/fonts/sans-serif/cabin_italic.otf');
+}
+
+.font-cabin-italic{
+	font-family: 'cabin-italic';
+}
+
+@font-face{
+	font-family: 'cabin-medium-italic';
+	src: url('/fonts/sans-serif/cabin_medium-italic.otf');
+}
+
+.font-cabin-medium-italic{
+	font-family: 'cabin-medium-italic';
+}
+
+@font-face{
+	font-family: 'cabin-medium';
+	src: url('/fonts/sans-serif/cabin_medium.otf');
+}
+
+.font-cabin-medium{
+	font-family: 'cabin-medium';
+}
+
+@font-face{
+	font-family: 'cabin-semi-bold-italic';
+	src: url('/fonts/sans-serif/cabin_semi-bold-italic.otf');
+}
+
+.font-cabin-semi-bold-italic{
+	font-family: 'cabin-semi-bold-italic';
+}
+
+@font-face{
+	font-family: 'cabin-semi-bold';
+	src: url('/fonts/sans-serif/cabin_semi-bold.otf');
+}
+
+.font-cabin-semi-bold{
+	font-family: 'cabin-semi-bold';
+}
+
+@font-face{
+	font-family: 'capsuula';
+	src: url('/fonts/sans-serif/capsuula.ttf');
+}
+
+.font-capsuula{
+	font-family: 'capsuula';
+}
+
+@font-face{
+	font-family: 'caviar-dreams';
+	src: url('/fonts/sans-serif/caviar-dreams.ttf');
+}
+
+.font-caviar-dreams{
+	font-family: 'caviar-dreams';
+}
+
+@font-face{
+	font-family: 'caviar-dreams-bold-italic';
+	src: url('/fonts/sans-serif/caviar-dreams_bold-italic.ttf');
+}
+
+.font-caviar-dreams-bold-italic{
+	font-family: 'caviar-dreams-bold-italic';
+}
+
+@font-face{
+	font-family: 'caviar-dreams-bold';
+	src: url('/fonts/sans-serif/caviar-dreams_bold.ttf');
+}
+
+.font-caviar-dreams-bold{
+	font-family: 'caviar-dreams-bold';
+}
+
+@font-face{
+	font-family: 'caviar-dreams-italic';
+	src: url('/fonts/sans-serif/caviar-dreams_italic.ttf');
+}
+
+.font-caviar-dreams-italic{
+	font-family: 'caviar-dreams-italic';
+}
+
+@font-face{
+	font-family: 'cicle';
+	src: url('/fonts/sans-serif/cicle.ttf');
+}
+
+.font-cicle{
+	font-family: 'cicle';
+}
+
+@font-face{
+	font-family: 'cicle-bold-italic';
+	src: url('/fonts/sans-serif/cicle_bold-italic.ttf');
+}
+
+.font-cicle-bold-italic{
+	font-family: 'cicle-bold-italic';
+}
+
+@font-face{
+	font-family: 'cicle-bold';
+	src: url('/fonts/sans-serif/cicle_bold.ttf');
+}
+
+.font-cicle-bold{
+	font-family: 'cicle-bold';
+}
+
+@font-face{
+	font-family: 'cicle-italic';
+	src: url('/fonts/sans-serif/cicle_italic.ttf');
+}
+
+.font-cicle-italic{
+	font-family: 'cicle-italic';
+}
+
+@font-face{
+	font-family: 'cicle-semi-italic';
+	src: url('/fonts/sans-serif/cicle_semi-italic.ttf');
+}
+
+.font-cicle-semi-italic{
+	font-family: 'cicle-semi-italic';
+}
+
+@font-face{
+	font-family: 'cicle-semi';
+	src: url('/fonts/sans-serif/cicle_semi.ttf');
+}
+
+.font-cicle-semi{
+	font-family: 'cicle-semi';
+}
+
+@font-face{
+	font-family: 'cicle-shadow';
+	src: url('/fonts/sans-serif/cicle_shadow.ttf');
+}
+
+.font-cicle-shadow{
+	font-family: 'cicle-shadow';
+}
+
+@font-face{
+	font-family: 'colaborate';
+	src: url('/fonts/sans-serif/colaborate.otf');
+}
+
+.font-colaborate{
+	font-family: 'colaborate';
+}
+
+@font-face{
+	font-family: 'colaborate-bold';
+	src: url('/fonts/sans-serif/colaborate_bold.otf');
+}
+
+.font-colaborate-bold{
+	font-family: 'colaborate-bold';
+}
+
+@font-face{
+	font-family: 'colaborate-light';
+	src: url('/fonts/sans-serif/colaborate_light.otf');
+}
+
+.font-colaborate-light{
+	font-family: 'colaborate-light';
+}
+
+@font-face{
+	font-family: 'colaborate-medium';
+	src: url('/fonts/sans-serif/colaborate_medium.otf');
+}
+
+.font-colaborate-medium{
+	font-family: 'colaborate-medium';
+}
+
+@font-face{
+	font-family: 'colaborate-thin';
+	src: url('/fonts/sans-serif/colaborate_thin.otf');
+}
+
+.font-colaborate-thin{
+	font-family: 'colaborate-thin';
+}
+
+@font-face{
+	font-family: 'comfortaa';
+	src: url('/fonts/sans-serif/comfortaa.ttf');
+}
+
+.font-comfortaa{
+	font-family: 'comfortaa';
+}
+
+@font-face{
+	font-family: 'comfortaa-bold';
+	src: url('/fonts/sans-serif/comfortaa_bold.ttf');
+}
+
+.font-comfortaa-bold{
+	font-family: 'comfortaa-bold';
+}
+
+@font-face{
+	font-family: 'comfortaa-thin';
+	src: url('/fonts/sans-serif/comfortaa_thin.ttf');
+}
+
+.font-comfortaa-thin{
+	font-family: 'comfortaa-thin';
+}
+
+@font-face{
+	font-family: 'dejavu-sans';
+	src: url('/fonts/sans-serif/dejavu-sans.ttf');
+}
+
+.font-dejavu-sans{
+	font-family: 'dejavu-sans';
+}
+
+@font-face{
+	font-family: 'dejavu-sans-bold-italic';
+	src: url('/fonts/sans-serif/dejavu-sans_bold-italic.ttf');
+}
+
+.font-dejavu-sans-bold-italic{
+	font-family: 'dejavu-sans-bold-italic';
+}
+
+@font-face{
+	font-family: 'dejavu-sans-bold';
+	src: url('/fonts/sans-serif/dejavu-sans_bold.ttf');
+}
+
+.font-dejavu-sans-bold{
+	font-family: 'dejavu-sans-bold';
+}
+
+@font-face{
+	font-family: 'dejavu-sans-condensed-bold-italic';
+	src: url('/fonts/sans-serif/dejavu-sans_condensed-bold-italic.ttf');
+}
+
+.font-dejavu-sans-condensed-bold-italic{
+	font-family: 'dejavu-sans-condensed-bold-italic';
+}
+
+@font-face{
+	font-family: 'dejavu-sans-condensed-bold';
+	src: url('/fonts/sans-serif/dejavu-sans_condensed-bold.ttf');
+}
+
+.font-dejavu-sans-condensed-bold{
+	font-family: 'dejavu-sans-condensed-bold';
+}
+
+@font-face{
+	font-family: 'dejavu-sans-condensed-italic';
+	src: url('/fonts/sans-serif/dejavu-sans_condensed-italic.ttf');
+}
+
+.font-dejavu-sans-condensed-italic{
+	font-family: 'dejavu-sans-condensed-italic';
+}
+
+@font-face{
+	font-family: 'dejavu-sans-condensed';
+	src: url('/fonts/sans-serif/dejavu-sans_condensed.ttf');
+}
+
+.font-dejavu-sans-condensed{
+	font-family: 'dejavu-sans-condensed';
+}
+
+@font-face{
+	font-family: 'dejavu-sans-extra-light';
+	src: url('/fonts/sans-serif/dejavu-sans_extra-light.ttf');
+}
+
+.font-dejavu-sans-extra-light{
+	font-family: 'dejavu-sans-extra-light';
+}
+
+@font-face{
+	font-family: 'dejavu-sans-italic';
+	src: url('/fonts/sans-serif/dejavu-sans_italic.ttf');
+}
+
+.font-dejavu-sans-italic{
+	font-family: 'dejavu-sans-italic';
+}
+
+@font-face{
+	font-family: 'disco';
+	src: url('/fonts/sans-serif/disco.ttf');
+}
+
+.font-disco{
+	font-family: 'disco';
+}
+
+@font-face{
+	font-family: 'dosis';
+	src: url('/fonts/sans-serif/dosis.otf');
+}
+
+.font-dosis{
+	font-family: 'dosis';
+}
+
+@font-face{
+	font-family: 'dosis-bold';
+	src: url('/fonts/sans-serif/dosis_bold.otf');
+}
+
+.font-dosis-bold{
+	font-family: 'dosis-bold';
+}
+
+@font-face{
+	font-family: 'dosis-extra-bold';
+	src: url('/fonts/sans-serif/dosis_extra-bold.otf');
+}
+
+.font-dosis-extra-bold{
+	font-family: 'dosis-extra-bold';
+}
+
+@font-face{
+	font-family: 'dosis-extra-light';
+	src: url('/fonts/sans-serif/dosis_extra-light.otf');
+}
+
+.font-dosis-extra-light{
+	font-family: 'dosis-extra-light';
+}
+
+@font-face{
+	font-family: 'dosis-light';
+	src: url('/fonts/sans-serif/dosis_light.otf');
+}
+
+.font-dosis-light{
+	font-family: 'dosis-light';
+}
+
+@font-face{
+	font-family: 'dosis-medium';
+	src: url('/fonts/sans-serif/dosis_medium.otf');
+}
+
+.font-dosis-medium{
+	font-family: 'dosis-medium';
+}
+
+@font-face{
+	font-family: 'dosis-semi-bold';
+	src: url('/fonts/sans-serif/dosis_semi-bold.otf');
+}
+
+.font-dosis-semi-bold{
+	font-family: 'dosis-semi-bold';
+}
+
+@font-face{
+	font-family: 'droid-sans';
+	src: url('/fonts/sans-serif/droid-sans.ttf');
+}
+
+.font-droid-sans{
+	font-family: 'droid-sans';
+}
+
+@font-face{
+	font-family: 'droid-sans-bold';
+	src: url('/fonts/sans-serif/droid-sans_bold.ttf');
+}
+
+.font-droid-sans-bold{
+	font-family: 'droid-sans-bold';
+}
+
+@font-face{
+	font-family: 'existence-light';
+	src: url('/fonts/sans-serif/existence-light.otf');
+}
+
+.font-existence-light{
+	font-family: 'existence-light';
+}
+
+@font-face{
+	font-family: 'existence-light-stencil';
+	src: url('/fonts/sans-serif/existence-light_stencil.otf');
+}
+
+.font-existence-light-stencil{
+	font-family: 'existence-light-stencil';
+}
+
+@font-face{
+	font-family: 'existence-light-unicase';
+	src: url('/fonts/sans-serif/existence-light_unicase.otf');
+}
+
+.font-existence-light-unicase{
+	font-family: 'existence-light-unicase';
+}
+
+@font-face{
+	font-family: 'exo';
+	src: url('/fonts/sans-serif/exo.otf');
+}
+
+.font-exo{
+	font-family: 'exo';
+}
+
+@font-face{
+	font-family: 'exo-black-italic';
+	src: url('/fonts/sans-serif/exo_black-italic.otf');
+}
+
+.font-exo-black-italic{
+	font-family: 'exo-black-italic';
+}
+
+@font-face{
+	font-family: 'exo-black';
+	src: url('/fonts/sans-serif/exo_black.otf');
+}
+
+.font-exo-black{
+	font-family: 'exo-black';
+}
+
+@font-face{
+	font-family: 'exo-bold-italic';
+	src: url('/fonts/sans-serif/exo_bold-italic.otf');
+}
+
+.font-exo-bold-italic{
+	font-family: 'exo-bold-italic';
+}
+
+@font-face{
+	font-family: 'exo-bold';
+	src: url('/fonts/sans-serif/exo_bold.otf');
+}
+
+.font-exo-bold{
+	font-family: 'exo-bold';
+}
+
+@font-face{
+	font-family: 'exo-extra-bold-italic';
+	src: url('/fonts/sans-serif/exo_extra-bold-italic.otf');
+}
+
+.font-exo-extra-bold-italic{
+	font-family: 'exo-extra-bold-italic';
+}
+
+@font-face{
+	font-family: 'exo-extra-bold';
+	src: url('/fonts/sans-serif/exo_extra-bold.otf');
+}
+
+.font-exo-extra-bold{
+	font-family: 'exo-extra-bold';
+}
+
+@font-face{
+	font-family: 'exo-extra-light-italic';
+	src: url('/fonts/sans-serif/exo_extra-light-italic.otf');
+}
+
+.font-exo-extra-light-italic{
+	font-family: 'exo-extra-light-italic';
+}
+
+@font-face{
+	font-family: 'exo-extra-light';
+	src: url('/fonts/sans-serif/exo_extra-light.otf');
+}
+
+.font-exo-extra-light{
+	font-family: 'exo-extra-light';
+}
+
+@font-face{
+	font-family: 'exo-italic';
+	src: url('/fonts/sans-serif/exo_italic.otf');
+}
+
+.font-exo-italic{
+	font-family: 'exo-italic';
+}
+
+@font-face{
+	font-family: 'exo-light-italic';
+	src: url('/fonts/sans-serif/exo_light-italic.otf');
+}
+
+.font-exo-light-italic{
+	font-family: 'exo-light-italic';
+}
+
+@font-face{
+	font-family: 'exo-light';
+	src: url('/fonts/sans-serif/exo_light.otf');
+}
+
+.font-exo-light{
+	font-family: 'exo-light';
+}
+
+@font-face{
+	font-family: 'exo-medium-italic';
+	src: url('/fonts/sans-serif/exo_medium-italic.otf');
+}
+
+.font-exo-medium-italic{
+	font-family: 'exo-medium-italic';
+}
+
+@font-face{
+	font-family: 'exo-medium';
+	src: url('/fonts/sans-serif/exo_medium.otf');
+}
+
+.font-exo-medium{
+	font-family: 'exo-medium';
+}
+
+@font-face{
+	font-family: 'exo-semi-bold-italic';
+	src: url('/fonts/sans-serif/exo_semi-bold-italic.otf');
+}
+
+.font-exo-semi-bold-italic{
+	font-family: 'exo-semi-bold-italic';
+}
+
+@font-face{
+	font-family: 'exo-semi-bold';
+	src: url('/fonts/sans-serif/exo_semi-bold.otf');
+}
+
+.font-exo-semi-bold{
+	font-family: 'exo-semi-bold';
+}
+
+@font-face{
+	font-family: 'exo-thin-italic';
+	src: url('/fonts/sans-serif/exo_thin-italic.otf');
+}
+
+.font-exo-thin-italic{
+	font-family: 'exo-thin-italic';
+}
+
+@font-face{
+	font-family: 'exo-thin';
+	src: url('/fonts/sans-serif/exo_thin.otf');
+}
+
+.font-exo-thin{
+	font-family: 'exo-thin';
+}
+
+@font-face{
+	font-family: 'fira-sans';
+	src: url('/fonts/sans-serif/fira-sans.otf');
+}
+
+.font-fira-sans{
+	font-family: 'fira-sans';
+}
+
+@font-face{
+	font-family: 'fira-sans-bold';
+	src: url('/fonts/sans-serif/fira-sans_bold.otf');
+}
+
+.font-fira-sans-bold{
+	font-family: 'fira-sans-bold';
+}
+
+@font-face{
+	font-family: 'fira-sans-book';
+	src: url('/fonts/sans-serif/fira-sans_book.otf');
+}
+
+.font-fira-sans-book{
+	font-family: 'fira-sans-book';
+}
+
+@font-face{
+	font-family: 'fira-sans-eight';
+	src: url('/fonts/sans-serif/fira-sans_eight.otf');
+}
+
+.font-fira-sans-eight{
+	font-family: 'fira-sans-eight';
+}
+
+@font-face{
+	font-family: 'fira-sans-extra-light';
+	src: url('/fonts/sans-serif/fira-sans_extra-light.otf');
+}
+
+.font-fira-sans-extra-light{
+	font-family: 'fira-sans-extra-light';
+}
+
+@font-face{
+	font-family: 'fira-sans-italic';
+	src: url('/fonts/sans-serif/fira-sans_italic.otf');
+}
+
+.font-fira-sans-italic{
+	font-family: 'fira-sans-italic';
+}
+
+@font-face{
+	font-family: 'fira-sans-medium';
+	src: url('/fonts/sans-serif/fira-sans_medium.otf');
+}
+
+.font-fira-sans-medium{
+	font-family: 'fira-sans-medium';
+}
+
+@font-face{
+	font-family: 'fira-sans-ultra';
+	src: url('/fonts/sans-serif/fira-sans_ultra.otf');
+}
+
+.font-fira-sans-ultra{
+	font-family: 'fira-sans-ultra';
+}
+
+@font-face{
+	font-family: 'greyscale-basic';
+	src: url('/fonts/sans-serif/greyscale-basic.ttf');
+}
+
+.font-greyscale-basic{
+	font-family: 'greyscale-basic';
+}
+
+@font-face{
+	font-family: 'greyscale-basic-bold-italic';
+	src: url('/fonts/sans-serif/greyscale-basic_bold-italic.ttf');
+}
+
+.font-greyscale-basic-bold-italic{
+	font-family: 'greyscale-basic-bold-italic';
+}
+
+@font-face{
+	font-family: 'greyscale-basic-bold';
+	src: url('/fonts/sans-serif/greyscale-basic_bold.ttf');
+}
+
+.font-greyscale-basic-bold{
+	font-family: 'greyscale-basic-bold';
+}
+
+@font-face{
+	font-family: 'greyscale-basic-italic';
+	src: url('/fonts/sans-serif/greyscale-basic_italic.ttf');
+}
+
+.font-greyscale-basic-italic{
+	font-family: 'greyscale-basic-italic';
+}
+
+@font-face{
+	font-family: 'hattori-hanzo';
+	src: url('/fonts/sans-serif/hattori-hanzo.otf');
+}
+
+.font-hattori-hanzo{
+	font-family: 'hattori-hanzo';
+}
+
+@font-face{
+	font-family: 'hattori-hanzo-italic';
+	src: url('/fonts/sans-serif/hattori-hanzo_italic.otf');
+}
+
+.font-hattori-hanzo-italic{
+	font-family: 'hattori-hanzo-italic';
+}
+
+@font-face{
+	font-family: 'josefin-sans';
+	src: url('/fonts/sans-serif/josefin-sans.ttf');
+}
+
+.font-josefin-sans{
+	font-family: 'josefin-sans';
+}
+
+@font-face{
+	font-family: 'josefin-sans-bold-italic';
+	src: url('/fonts/sans-serif/josefin-sans_bold-italic.ttf');
+}
+
+.font-josefin-sans-bold-italic{
+	font-family: 'josefin-sans-bold-italic';
+}
+
+@font-face{
+	font-family: 'josefin-sans-bold';
+	src: url('/fonts/sans-serif/josefin-sans_bold.ttf');
+}
+
+.font-josefin-sans-bold{
+	font-family: 'josefin-sans-bold';
+}
+
+@font-face{
+	font-family: 'josefin-sans-italic';
+	src: url('/fonts/sans-serif/josefin-sans_italic.ttf');
+}
+
+.font-josefin-sans-italic{
+	font-family: 'josefin-sans-italic';
+}
+
+@font-face{
+	font-family: 'josefin-sans-light-italic';
+	src: url('/fonts/sans-serif/josefin-sans_light-italic.ttf');
+}
+
+.font-josefin-sans-light-italic{
+	font-family: 'josefin-sans-light-italic';
+}
+
+@font-face{
+	font-family: 'josefin-sans-light';
+	src: url('/fonts/sans-serif/josefin-sans_light.ttf');
+}
+
+.font-josefin-sans-light{
+	font-family: 'josefin-sans-light';
+}
+
+@font-face{
+	font-family: 'josefin-sans-semi-bold-italic';
+	src: url('/fonts/sans-serif/josefin-sans_semi-bold-italic.ttf');
+}
+
+.font-josefin-sans-semi-bold-italic{
+	font-family: 'josefin-sans-semi-bold-italic';
+}
+
+@font-face{
+	font-family: 'josefin-sans-semi-bold';
+	src: url('/fonts/sans-serif/josefin-sans_semi-bold.ttf');
+}
+
+.font-josefin-sans-semi-bold{
+	font-family: 'josefin-sans-semi-bold';
+}
+
+@font-face{
+	font-family: 'josefin-sans-thin-italic';
+	src: url('/fonts/sans-serif/josefin-sans_thin-italic.ttf');
+}
+
+.font-josefin-sans-thin-italic{
+	font-family: 'josefin-sans-thin-italic';
+}
+
+@font-face{
+	font-family: 'josefin-sans-thin';
+	src: url('/fonts/sans-serif/josefin-sans_thin.ttf');
+}
+
+.font-josefin-sans-thin{
+	font-family: 'josefin-sans-thin';
+}
+
+@font-face{
+	font-family: 'lato';
+	src: url('/fonts/sans-serif/lato.ttf');
+}
+
+.font-lato{
+	font-family: 'lato';
+}
+
+@font-face{
+	font-family: 'lato-black';
+	src: url('/fonts/sans-serif/lato_black.ttf');
+}
+
+.font-lato-black{
+	font-family: 'lato-black';
+}
+
+@font-face{
+	font-family: 'lato-bold';
+	src: url('/fonts/sans-serif/lato_bold.ttf');
+}
+
+.font-lato-bold{
+	font-family: 'lato-bold';
+}
+
+@font-face{
+	font-family: 'lato-hairline';
+	src: url('/fonts/sans-serif/lato_hairline.ttf');
+}
+
+.font-lato-hairline{
+	font-family: 'lato-hairline';
+}
+
+@font-face{
+	font-family: 'lato-heavy';
+	src: url('/fonts/sans-serif/lato_heavy.ttf');
+}
+
+.font-lato-heavy{
+	font-family: 'lato-heavy';
+}
+
+@font-face{
+	font-family: 'lato-italic';
+	src: url('/fonts/sans-serif/lato_italic.ttf');
+}
+
+.font-lato-italic{
+	font-family: 'lato-italic';
+}
+
+@font-face{
+	font-family: 'lato-light';
+	src: url('/fonts/sans-serif/lato_light.ttf');
+}
+
+.font-lato-light{
+	font-family: 'lato-light';
+}
+
+@font-face{
+	font-family: 'lato-medium';
+	src: url('/fonts/sans-serif/lato_medium.ttf');
+}
+
+.font-lato-medium{
+	font-family: 'lato-medium';
+}
+
+@font-face{
+	font-family: 'molot';
+	src: url('/fonts/sans-serif/molot.otf');
+}
+
+.font-molot{
+	font-family: 'molot';
+}
+
+@font-face{
+	font-family: 'montserrat';
+	src: url('/fonts/sans-serif/montserrat.otf');
+}
+
+.font-montserrat{
+	font-family: 'montserrat';
+}
+
+@font-face{
+	font-family: 'montserrat-black';
+	src: url('/fonts/sans-serif/montserrat_black.otf');
+}
+
+.font-montserrat-black{
+	font-family: 'montserrat-black';
+}
+
+@font-face{
+	font-family: 'montserrat-bold';
+	src: url('/fonts/sans-serif/montserrat_bold.otf');
+}
+
+.font-montserrat-bold{
+	font-family: 'montserrat-bold';
+}
+
+@font-face{
+	font-family: 'montserrat-hairline';
+	src: url('/fonts/sans-serif/montserrat_hairline.otf');
+}
+
+.font-montserrat-hairline{
+	font-family: 'montserrat-hairline';
+}
+
+@font-face{
+	font-family: 'montserrat-light';
+	src: url('/fonts/sans-serif/montserrat_light.otf');
+}
+
+.font-montserrat-light{
+	font-family: 'montserrat-light';
+}
+
+@font-face{
+	font-family: 'montserrat-ultra-light';
+	src: url('/fonts/sans-serif/montserrat_ultra-light.otf');
+}
+
+.font-montserrat-ultra-light{
+	font-family: 'montserrat-ultra-light';
+}
+
+@font-face{
+	font-family: 'new-cicle';
+	src: url('/fonts/sans-serif/new-cicle.ttf');
+}
+
+.font-new-cicle{
+	font-family: 'new-cicle';
+}
+
+@font-face{
+	font-family: 'new-cicle-bold-italic';
+	src: url('/fonts/sans-serif/new-cicle_bold-italic.ttf');
+}
+
+.font-new-cicle-bold-italic{
+	font-family: 'new-cicle-bold-italic';
+}
+
+@font-face{
+	font-family: 'new-cicle-bold';
+	src: url('/fonts/sans-serif/new-cicle_bold.ttf');
+}
+
+.font-new-cicle-bold{
+	font-family: 'new-cicle-bold';
+}
+
+@font-face{
+	font-family: 'new-cicle-italic';
+	src: url('/fonts/sans-serif/new-cicle_italic.ttf');
+}
+
+.font-new-cicle-italic{
+	font-family: 'new-cicle-italic';
+}
+
+@font-face{
+	font-family: 'new-cicle-semi';
+	src: url('/fonts/sans-serif/new-cicle_semi.ttf');
+}
+
+.font-new-cicle-semi{
+	font-family: 'new-cicle-semi';
+}
+
+@font-face{
+	font-family: 'nobile';
+	src: url('/fonts/sans-serif/nobile.ttf');
+}
+
+.font-nobile{
+	font-family: 'nobile';
+}
+
+@font-face{
+	font-family: 'nobile-bold-italic';
+	src: url('/fonts/sans-serif/nobile_bold-italic.ttf');
+}
+
+.font-nobile-bold-italic{
+	font-family: 'nobile-bold-italic';
+}
+
+@font-face{
+	font-family: 'nobile-bold';
+	src: url('/fonts/sans-serif/nobile_bold.ttf');
+}
+
+.font-nobile-bold{
+	font-family: 'nobile-bold';
+}
+
+@font-face{
+	font-family: 'nobile-italic';
+	src: url('/fonts/sans-serif/nobile_italic.ttf');
+}
+
+.font-nobile-italic{
+	font-family: 'nobile-italic';
+}
+
+@font-face{
+	font-family: 'nobile-medium-italic';
+	src: url('/fonts/sans-serif/nobile_medium-italic.ttf');
+}
+
+.font-nobile-medium-italic{
+	font-family: 'nobile-medium-italic';
+}
+
+@font-face{
+	font-family: 'nobile-medium';
+	src: url('/fonts/sans-serif/nobile_medium.ttf');
+}
+
+.font-nobile-medium{
+	font-family: 'nobile-medium';
+}
+
+@font-face{
+	font-family: 'open-sans';
+	src: url('/fonts/sans-serif/open-sans.ttf');
+}
+
+.font-open-sans{
+	font-family: 'open-sans';
+}
+
+@font-face{
+	font-family: 'open-sans-bold-italic';
+	src: url('/fonts/sans-serif/open-sans_bold-italic.ttf');
+}
+
+.font-open-sans-bold-italic{
+	font-family: 'open-sans-bold-italic';
+}
+
+@font-face{
+	font-family: 'open-sans-bold';
+	src: url('/fonts/sans-serif/open-sans_bold.ttf');
+}
+
+.font-open-sans-bold{
+	font-family: 'open-sans-bold';
+}
+
+@font-face{
+	font-family: 'open-sans-extra-bold-italic';
+	src: url('/fonts/sans-serif/open-sans_extra-bold-italic.ttf');
+}
+
+.font-open-sans-extra-bold-italic{
+	font-family: 'open-sans-extra-bold-italic';
+}
+
+@font-face{
+	font-family: 'open-sans-extra-bold';
+	src: url('/fonts/sans-serif/open-sans_extra-bold.ttf');
+}
+
+.font-open-sans-extra-bold{
+	font-family: 'open-sans-extra-bold';
+}
+
+@font-face{
+	font-family: 'open-sans-italic';
+	src: url('/fonts/sans-serif/open-sans_italic.ttf');
+}
+
+.font-open-sans-italic{
+	font-family: 'open-sans-italic';
+}
+
+@font-face{
+	font-family: 'open-sans-light-italic';
+	src: url('/fonts/sans-serif/open-sans_light-italic.ttf');
+}
+
+.font-open-sans-light-italic{
+	font-family: 'open-sans-light-italic';
+}
+
+@font-face{
+	font-family: 'open-sans-light';
+	src: url('/fonts/sans-serif/open-sans_light.ttf');
+}
+
+.font-open-sans-light{
+	font-family: 'open-sans-light';
+}
+
+@font-face{
+	font-family: 'open-sans-semi-bold-italic';
+	src: url('/fonts/sans-serif/open-sans_semi-bold-italic.ttf');
+}
+
+.font-open-sans-semi-bold-italic{
+	font-family: 'open-sans-semi-bold-italic';
+}
+
+@font-face{
+	font-family: 'open-sans-semi-bold';
+	src: url('/fonts/sans-serif/open-sans_semi-bold.ttf');
+}
+
+.font-open-sans-semi-bold{
+	font-family: 'open-sans-semi-bold';
+}
+
+@font-face{
+	font-family: 'open-sans-condensed';
+	src: url('/fonts/sans-serif/open-sans-condensed.ttf');
+}
+
+.font-open-sans-condensed{
+	font-family: 'open-sans-condensed';
+}
+
+@font-face{
+	font-family: 'open-sans-condensed-bold';
+	src: url('/fonts/sans-serif/open-sans-condensed_bold.ttf');
+}
+
+.font-open-sans-condensed-bold{
+	font-family: 'open-sans-condensed-bold';
+}
+
+@font-face{
+	font-family: 'open-sans-condensed-light-italic';
+	src: url('/fonts/sans-serif/open-sans-condensed_light-italic.ttf');
+}
+
+.font-open-sans-condensed-light-italic{
+	font-family: 'open-sans-condensed-light-italic';
+}
+
+@font-face{
+	font-family: 'open-sans-condensed-light';
+	src: url('/fonts/sans-serif/open-sans-condensed_light.ttf');
+}
+
+.font-open-sans-condensed-light{
+	font-family: 'open-sans-condensed-light';
+}
+
+@font-face{
+	font-family: 'overlock';
+	src: url('/fonts/sans-serif/overlock.ttf');
+}
+
+.font-overlock{
+	font-family: 'overlock';
+}
+
+@font-face{
+	font-family: 'overlock-black-italic';
+	src: url('/fonts/sans-serif/overlock_black-italic.ttf');
+}
+
+.font-overlock-black-italic{
+	font-family: 'overlock-black-italic';
+}
+
+@font-face{
+	font-family: 'overlock-black';
+	src: url('/fonts/sans-serif/overlock_black.ttf');
+}
+
+.font-overlock-black{
+	font-family: 'overlock-black';
+}
+
+@font-face{
+	font-family: 'overlock-bold-italic';
+	src: url('/fonts/sans-serif/overlock_bold-italic.ttf');
+}
+
+.font-overlock-bold-italic{
+	font-family: 'overlock-bold-italic';
+}
+
+@font-face{
+	font-family: 'overlock-bold';
+	src: url('/fonts/sans-serif/overlock_bold.ttf');
+}
+
+.font-overlock-bold{
+	font-family: 'overlock-bold';
+}
+
+@font-face{
+	font-family: 'overlock-italic';
+	src: url('/fonts/sans-serif/overlock_italic.ttf');
+}
+
+.font-overlock-italic{
+	font-family: 'overlock-italic';
+}
+
+@font-face{
+	font-family: 'print-clearly';
+	src: url('/fonts/sans-serif/print-clearly.otf');
+}
+
+.font-print-clearly{
+	font-family: 'print-clearly';
+}
+
+@font-face{
+	font-family: 'print-clearly-bold';
+	src: url('/fonts/sans-serif/print-clearly_bold.otf');
+}
+
+.font-print-clearly-bold{
+	font-family: 'print-clearly-bold';
+}
+
+@font-face{
+	font-family: 'print-clearly-dashed';
+	src: url('/fonts/sans-serif/print-clearly_dashed.otf');
+}
+
+.font-print-clearly-dashed{
+	font-family: 'print-clearly-dashed';
+}
+
+@font-face{
+	font-family: 'pt-sans';
+	src: url('/fonts/sans-serif/pt-sans.ttf');
+}
+
+.font-pt-sans{
+	font-family: 'pt-sans';
+}
+
+@font-face{
+	font-family: 'pt-sans-bold';
+	src: url('/fonts/sans-serif/pt-sans_bold.ttf');
+}
+
+.font-pt-sans-bold{
+	font-family: 'pt-sans-bold';
+}
+
+@font-face{
+	font-family: 'pt-sans-italic';
+	src: url('/fonts/sans-serif/pt-sans_italic.ttf');
+}
+
+.font-pt-sans-italic{
+	font-family: 'pt-sans-italic';
+}
+
+@font-face{
+	font-family: 'pt-sans-narrow';
+	src: url('/fonts/sans-serif/pt-sans_narrow.ttf');
+}
+
+.font-pt-sans-narrow{
+	font-family: 'pt-sans-narrow';
+}
+
+@font-face{
+	font-family: 'quicksand';
+	src: url('/fonts/sans-serif/quicksand.otf');
+}
+
+.font-quicksand{
+	font-family: 'quicksand';
+}
+
+@font-face{
+	font-family: 'quicksand-bold-italic';
+	src: url('/fonts/sans-serif/quicksand_bold-italic.otf');
+}
+
+.font-quicksand-bold-italic{
+	font-family: 'quicksand-bold-italic';
+}
+
+@font-face{
+	font-family: 'quicksand-bold';
+	src: url('/fonts/sans-serif/quicksand_bold.otf');
+}
+
+.font-quicksand-bold{
+	font-family: 'quicksand-bold';
+}
+
+@font-face{
+	font-family: 'quicksand-dash';
+	src: url('/fonts/sans-serif/quicksand_dash.otf');
+}
+
+.font-quicksand-dash{
+	font-family: 'quicksand-dash';
+}
+
+@font-face{
+	font-family: 'quicksand-italic';
+	src: url('/fonts/sans-serif/quicksand_italic.otf');
+}
+
+.font-quicksand-italic{
+	font-family: 'quicksand-italic';
+}
+
+@font-face{
+	font-family: 'quicksand-light-italic';
+	src: url('/fonts/sans-serif/quicksand_light-italic.otf');
+}
+
+.font-quicksand-light-italic{
+	font-family: 'quicksand-light-italic';
+}
+
+@font-face{
+	font-family: 'quicksand-light';
+	src: url('/fonts/sans-serif/quicksand_light.otf');
+}
+
+.font-quicksand-light{
+	font-family: 'quicksand-light';
+}
+
+@font-face{
+	font-family: 'raleway';
+	src: url('/fonts/sans-serif/raleway.ttf');
+}
+
+.font-raleway{
+	font-family: 'raleway';
+}
+
+@font-face{
+	font-family: 'raleway-black';
+	src: url('/fonts/sans-serif/raleway_black.ttf');
+}
+
+.font-raleway-black{
+	font-family: 'raleway-black';
+}
+
+@font-face{
+	font-family: 'raleway-bold';
+	src: url('/fonts/sans-serif/raleway_bold.ttf');
+}
+
+.font-raleway-bold{
+	font-family: 'raleway-bold';
+}
+
+@font-face{
+	font-family: 'raleway-italic';
+	src: url('/fonts/sans-serif/raleway_italic.ttf');
+}
+
+.font-raleway-italic{
+	font-family: 'raleway-italic';
+}
+
+@font-face{
+	font-family: 'raleway-light';
+	src: url('/fonts/sans-serif/raleway_light.ttf');
+}
+
+.font-raleway-light{
+	font-family: 'raleway-light';
+}
+
+@font-face{
+	font-family: 'raleway-lightitalic';
+	src: url('/fonts/sans-serif/raleway_lightitalic.ttf');
+}
+
+.font-raleway-lightitalic{
+	font-family: 'raleway-lightitalic';
+}
+
+@font-face{
+	font-family: 'raleway-medium';
+	src: url('/fonts/sans-serif/raleway_medium.ttf');
+}
+
+.font-raleway-medium{
+	font-family: 'raleway-medium';
+}
+
+@font-face{
+	font-family: 'roboto';
+	src: url('/fonts/sans-serif/roboto.ttf');
+}
+
+.font-roboto{
+	font-family: 'roboto';
+}
+
+@font-face{
+	font-family: 'roboto-black';
+	src: url('/fonts/sans-serif/roboto_black.ttf');
+}
+
+.font-roboto-black{
+	font-family: 'roboto-black';
+}
+
+@font-face{
+	font-family: 'roboto-bold';
+	src: url('/fonts/sans-serif/roboto_bold.ttf');
+}
+
+.font-roboto-bold{
+	font-family: 'roboto-bold';
+}
+
+@font-face{
+	font-family: 'roboto-condensed-bold';
+	src: url('/fonts/sans-serif/roboto_condensed-bold.ttf');
+}
+
+.font-roboto-condensed-bold{
+	font-family: 'roboto-condensed-bold';
+}
+
+@font-face{
+	font-family: 'roboto-condensed-italic';
+	src: url('/fonts/sans-serif/roboto_condensed-italic.ttf');
+}
+
+.font-roboto-condensed-italic{
+	font-family: 'roboto-condensed-italic';
+}
+
+@font-face{
+	font-family: 'roboto-condensed-light';
+	src: url('/fonts/sans-serif/roboto_condensed-light.ttf');
+}
+
+.font-roboto-condensed-light{
+	font-family: 'roboto-condensed-light';
+}
+
+@font-face{
+	font-family: 'roboto-condensed-regular';
+	src: url('/fonts/sans-serif/roboto_condensed-regular.ttf');
+}
+
+.font-roboto-condensed-regular{
+	font-family: 'roboto-condensed-regular';
+}
+
+@font-face{
+	font-family: 'roboto-italic';
+	src: url('/fonts/sans-serif/roboto_italic.ttf');
+}
+
+.font-roboto-italic{
+	font-family: 'roboto-italic';
+}
+
+@font-face{
+	font-family: 'roboto-light';
+	src: url('/fonts/sans-serif/roboto_light.ttf');
+}
+
+.font-roboto-light{
+	font-family: 'roboto-light';
+}
+
+@font-face{
+	font-family: 'roboto-medium';
+	src: url('/fonts/sans-serif/roboto_medium.ttf');
+}
+
+.font-roboto-medium{
+	font-family: 'roboto-medium';
+}
+
+@font-face{
+	font-family: 'roboto-thin';
+	src: url('/fonts/sans-serif/roboto_thin.ttf');
+}
+
+.font-roboto-thin{
+	font-family: 'roboto-thin';
+}
+
+@font-face{
+	font-family: 'sansation';
+	src: url('/fonts/sans-serif/sansation.ttf');
+}
+
+.font-sansation{
+	font-family: 'sansation';
+}
+
+@font-face{
+	font-family: 'sansation-bold-italic';
+	src: url('/fonts/sans-serif/sansation_bold-italic.ttf');
+}
+
+.font-sansation-bold-italic{
+	font-family: 'sansation-bold-italic';
+}
+
+@font-face{
+	font-family: 'sansation-bold';
+	src: url('/fonts/sans-serif/sansation_bold.ttf');
+}
+
+.font-sansation-bold{
+	font-family: 'sansation-bold';
+}
+
+@font-face{
+	font-family: 'sansation-italic';
+	src: url('/fonts/sans-serif/sansation_italic.ttf');
+}
+
+.font-sansation-italic{
+	font-family: 'sansation-italic';
+}
+
+@font-face{
+	font-family: 'sansation-light-italic';
+	src: url('/fonts/sans-serif/sansation_light-italic.ttf');
+}
+
+.font-sansation-light-italic{
+	font-family: 'sansation-light-italic';
+}
+
+@font-face{
+	font-family: 'sansation-light';
+	src: url('/fonts/sans-serif/sansation_light.ttf');
+}
+
+.font-sansation-light{
+	font-family: 'sansation-light';
+}
+
+@font-face{
+	font-family: 'signika';
+	src: url('/fonts/sans-serif/signika.otf');
+}
+
+.font-signika{
+	font-family: 'signika';
+}
+
+@font-face{
+	font-family: 'signika-bold';
+	src: url('/fonts/sans-serif/signika_bold.otf');
+}
+
+.font-signika-bold{
+	font-family: 'signika-bold';
+}
+
+@font-face{
+	font-family: 'signika-light';
+	src: url('/fonts/sans-serif/signika_light.otf');
+}
+
+.font-signika-light{
+	font-family: 'signika-light';
+}
+
+@font-face{
+	font-family: 'signika-semi-bold';
+	src: url('/fonts/sans-serif/signika_semi-bold.otf');
+}
+
+.font-signika-semi-bold{
+	font-family: 'signika-semi-bold';
+}
+
+@font-face{
+	font-family: 'sinkin-sans';
+	src: url('/fonts/sans-serif/sinkin-sans.otf');
+}
+
+.font-sinkin-sans{
+	font-family: 'sinkin-sans';
+}
+
+@font-face{
+	font-family: 'sinkin-sans-bold';
+	src: url('/fonts/sans-serif/sinkin-sans_bold.otf');
+}
+
+.font-sinkin-sans-bold{
+	font-family: 'sinkin-sans-bold';
+}
+
+@font-face{
+	font-family: 'sinkin-sans-italic';
+	src: url('/fonts/sans-serif/sinkin-sans_italic.otf');
+}
+
+.font-sinkin-sans-italic{
+	font-family: 'sinkin-sans-italic';
+}
+
+@font-face{
+	font-family: 'sinkin-sans-light';
+	src: url('/fonts/sans-serif/sinkin-sans_light.otf');
+}
+
+.font-sinkin-sans-light{
+	font-family: 'sinkin-sans-light';
+}
+
+@font-face{
+	font-family: 'sinkin-sans-medium';
+	src: url('/fonts/sans-serif/sinkin-sans_medium.otf');
+}
+
+.font-sinkin-sans-medium{
+	font-family: 'sinkin-sans-medium';
+}
+
+@font-face{
+	font-family: 'sinkin-sans-thin';
+	src: url('/fonts/sans-serif/sinkin-sans_thin.otf');
+}
+
+.font-sinkin-sans-thin{
+	font-family: 'sinkin-sans-thin';
+}
+
+@font-face{
+	font-family: 'source-sans-pro';
+	src: url('/fonts/sans-serif/source-sans-pro.otf');
+}
+
+.font-source-sans-pro{
+	font-family: 'source-sans-pro';
+}
+
+@font-face{
+	font-family: 'source-sans-pro-black-italic';
+	src: url('/fonts/sans-serif/source-sans-pro_black-italic.otf');
+}
+
+.font-source-sans-pro-black-italic{
+	font-family: 'source-sans-pro-black-italic';
+}
+
+@font-face{
+	font-family: 'source-sans-pro-black';
+	src: url('/fonts/sans-serif/source-sans-pro_black.otf');
+}
+
+.font-source-sans-pro-black{
+	font-family: 'source-sans-pro-black';
+}
+
+@font-face{
+	font-family: 'source-sans-pro-bold';
+	src: url('/fonts/sans-serif/source-sans-pro_bold.otf');
+}
+
+.font-source-sans-pro-bold{
+	font-family: 'source-sans-pro-bold';
+}
+
+@font-face{
+	font-family: 'source-sans-pro-italic';
+	src: url('/fonts/sans-serif/source-sans-pro_italic.otf');
+}
+
+.font-source-sans-pro-italic{
+	font-family: 'source-sans-pro-italic';
+}
+
+@font-face{
+	font-family: 'source-sans-pro-light-italic';
+	src: url('/fonts/sans-serif/source-sans-pro_light-italic.otf');
+}
+
+.font-source-sans-pro-light-italic{
+	font-family: 'source-sans-pro-light-italic';
+}
+
+@font-face{
+	font-family: 'source-sans-pro-light';
+	src: url('/fonts/sans-serif/source-sans-pro_light.otf');
+}
+
+.font-source-sans-pro-light{
+	font-family: 'source-sans-pro-light';
+}
+
+@font-face{
+	font-family: 'source-sans-pro-semi-bold';
+	src: url('/fonts/sans-serif/source-sans-pro_semi-bold.otf');
+}
+
+.font-source-sans-pro-semi-bold{
+	font-family: 'source-sans-pro-semi-bold';
+}
+
+@font-face{
+	font-family: 'tex-gyre-adventor';
+	src: url('/fonts/sans-serif/tex-gyre-adventor.otf');
+}
+
+.font-tex-gyre-adventor{
+	font-family: 'tex-gyre-adventor';
+}
+
+@font-face{
+	font-family: 'tex-gyre-adventor-bold-italic';
+	src: url('/fonts/sans-serif/tex-gyre-adventor_bold-italic.otf');
+}
+
+.font-tex-gyre-adventor-bold-italic{
+	font-family: 'tex-gyre-adventor-bold-italic';
+}
+
+@font-face{
+	font-family: 'tex-gyre-adventor-bold';
+	src: url('/fonts/sans-serif/tex-gyre-adventor_bold.otf');
+}
+
+.font-tex-gyre-adventor-bold{
+	font-family: 'tex-gyre-adventor-bold';
+}
+
+@font-face{
+	font-family: 'tex-gyre-adventor-italic';
+	src: url('/fonts/sans-serif/tex-gyre-adventor_italic.otf');
+}
+
+.font-tex-gyre-adventor-italic{
+	font-family: 'tex-gyre-adventor-italic';
+}
+
+@font-face{
+	font-family: 'titillium';
+	src: url('/fonts/sans-serif/titillium.otf');
+}
+
+.font-titillium{
+	font-family: 'titillium';
+}
+
+@font-face{
+	font-family: 'titillium-black';
+	src: url('/fonts/sans-serif/titillium_black.otf');
+}
+
+.font-titillium-black{
+	font-family: 'titillium-black';
+}
+
+@font-face{
+	font-family: 'titillium-bold-upright';
+	src: url('/fonts/sans-serif/titillium_bold-upright.otf');
+}
+
+.font-titillium-bold-upright{
+	font-family: 'titillium-bold-upright';
+}
+
+@font-face{
+	font-family: 'titillium-bold';
+	src: url('/fonts/sans-serif/titillium_bold.otf');
+}
+
+.font-titillium-bold{
+	font-family: 'titillium-bold';
+}
+
+@font-face{
+	font-family: 'titillium-italic';
+	src: url('/fonts/sans-serif/titillium_italic.otf');
+}
+
+.font-titillium-italic{
+	font-family: 'titillium-italic';
+}
+
+@font-face{
+	font-family: 'titillium-light-upright';
+	src: url('/fonts/sans-serif/titillium_light-upright.otf');
+}
+
+.font-titillium-light-upright{
+	font-family: 'titillium-light-upright';
+}
+
+@font-face{
+	font-family: 'titillium-light';
+	src: url('/fonts/sans-serif/titillium_light.otf');
+}
+
+.font-titillium-light{
+	font-family: 'titillium-light';
+}
+
+@font-face{
+	font-family: 'titillium-semi-bold';
+	src: url('/fonts/sans-serif/titillium_semi-bold.otf');
+}
+
+.font-titillium-semi-bold{
+	font-family: 'titillium-semi-bold';
+}
+
+@font-face{
+	font-family: 'titillium-thin-upright';
+	src: url('/fonts/sans-serif/titillium_thin-upright.otf');
+}
+
+.font-titillium-thin-upright{
+	font-family: 'titillium-thin-upright';
+}
+
+@font-face{
+	font-family: 'titillium-thin';
+	src: url('/fonts/sans-serif/titillium_thin.otf');
+}
+
+.font-titillium-thin{
+	font-family: 'titillium-thin';
+}
+
+@font-face{
+	font-family: 'titillium-upright';
+	src: url('/fonts/sans-serif/titillium_upright.otf');
+}
+
+.font-titillium-upright{
+	font-family: 'titillium-upright';
+}
+
+@font-face{
+	font-family: 'ubuntu';
+	src: url('/fonts/sans-serif/ubuntu.ttf');
+}
+
+.font-ubuntu{
+	font-family: 'ubuntu';
+}
+
+@font-face{
+	font-family: 'ubuntu-bold-italic';
+	src: url('/fonts/sans-serif/ubuntu_bold-italic.ttf');
+}
+
+.font-ubuntu-bold-italic{
+	font-family: 'ubuntu-bold-italic';
+}
+
+@font-face{
+	font-family: 'ubuntu-bold';
+	src: url('/fonts/sans-serif/ubuntu_bold.ttf');
+}
+
+.font-ubuntu-bold{
+	font-family: 'ubuntu-bold';
+}
+
+@font-face{
+	font-family: 'ubuntu-italic';
+	src: url('/fonts/sans-serif/ubuntu_italic.ttf');
+}
+
+.font-ubuntu-italic{
+	font-family: 'ubuntu-italic';
+}
+
+@font-face{
+	font-family: 'ubuntu-light-italic';
+	src: url('/fonts/sans-serif/ubuntu_light-italic.ttf');
+}
+
+.font-ubuntu-light-italic{
+	font-family: 'ubuntu-light-italic';
+}
+
+@font-face{
+	font-family: 'ubuntu-light';
+	src: url('/fonts/sans-serif/ubuntu_light.ttf');
+}
+
+.font-ubuntu-light{
+	font-family: 'ubuntu-light';
+}
+
+@font-face{
+	font-family: 'vera-sans';
+	src: url('/fonts/sans-serif/vera-sans.ttf');
+}
+
+.font-vera-sans{
+	font-family: 'vera-sans';
+}
+
+@font-face{
+	font-family: 'vera-sans-bold-italic';
+	src: url('/fonts/sans-serif/vera-sans_bold-italic.ttf');
+}
+
+.font-vera-sans-bold-italic{
+	font-family: 'vera-sans-bold-italic';
+}
+
+@font-face{
+	font-family: 'vera-sans-bold';
+	src: url('/fonts/sans-serif/vera-sans_bold.ttf');
+}
+
+.font-vera-sans-bold{
+	font-family: 'vera-sans-bold';
+}
+
+@font-face{
+	font-family: 'vera-sans-italic';
+	src: url('/fonts/sans-serif/vera-sans_italic.ttf');
+}
+
+.font-vera-sans-italic{
+	font-family: 'vera-sans-italic';
+}
+
+@font-face{
+	font-family: 'walkway';
+	src: url('/fonts/sans-serif/walkway.ttf');
+}
+
+.font-walkway{
+	font-family: 'walkway';
+}
+
+@font-face{
+	font-family: 'walkway-black-italic';
+	src: url('/fonts/sans-serif/walkway_black-italic.ttf');
+}
+
+.font-walkway-black-italic{
+	font-family: 'walkway-black-italic';
+}
+
+@font-face{
+	font-family: 'walkway-black';
+	src: url('/fonts/sans-serif/walkway_black.ttf');
+}
+
+.font-walkway-black{
+	font-family: 'walkway-black';
+}
+
+@font-face{
+	font-family: 'walkway-bold-italic';
+	src: url('/fonts/sans-serif/walkway_bold-italic.ttf');
+}
+
+.font-walkway-bold-italic{
+	font-family: 'walkway-bold-italic';
+}
+
+@font-face{
+	font-family: 'walkway-bold';
+	src: url('/fonts/sans-serif/walkway_bold.ttf');
+}
+
+.font-walkway-bold{
+	font-family: 'walkway-bold';
+}
+
+@font-face{
+	font-family: 'walkway-semi-bold-italic';
+	src: url('/fonts/sans-serif/walkway_semi-bold-italic.ttf');
+}
+
+.font-walkway-semi-bold-italic{
+	font-family: 'walkway-semi-bold-italic';
+}
+
+@font-face{
+	font-family: 'walkway-semi-bold';
+	src: url('/fonts/sans-serif/walkway_semi-bold.ttf');
+}
+
+.font-walkway-semi-bold{
+	font-family: 'walkway-semi-bold';
+}
+
+@font-face{
+	font-family: 'walkway-ultra-bold-italic';
+	src: url('/fonts/sans-serif/walkway_ultra-bold-italic.ttf');
+}
+
+.font-walkway-ultra-bold-italic{
+	font-family: 'walkway-ultra-bold-italic';
+}
+
+@font-face{
+	font-family: 'walkway-ultra-bold';
+	src: url('/fonts/sans-serif/walkway_ultra-bold.ttf');
+}
+
+.font-walkway-ultra-bold{
+	font-family: 'walkway-ultra-bold';
+}
+
+@font-face{
+	font-family: 'yanone-kaffeesatz';
+	src: url('/fonts/sans-serif/yanone-kaffeesatz.otf');
+}
+
+.font-yanone-kaffeesatz{
+	font-family: 'yanone-kaffeesatz';
+}
+
+@font-face{
+	font-family: 'yanone-kaffeesatz-bold';
+	src: url('/fonts/sans-serif/yanone-kaffeesatz_bold.otf');
+}
+
+.font-yanone-kaffeesatz-bold{
+	font-family: 'yanone-kaffeesatz-bold';
+}
+
+@font-face{
+	font-family: 'yanone-kaffeesatz-extra-light';
+	src: url('/fonts/sans-serif/yanone-kaffeesatz_extra-light.otf');
+}
+
+.font-yanone-kaffeesatz-extra-light{
+	font-family: 'yanone-kaffeesatz-extra-light';
+}
+
+@font-face{
+	font-family: 'yanone-kaffeesatz-light';
+	src: url('/fonts/sans-serif/yanone-kaffeesatz_light.otf');
+}
+
+.font-yanone-kaffeesatz-light{
+	font-family: 'yanone-kaffeesatz-light';
+}
+

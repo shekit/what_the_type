@@ -1,0 +1,594 @@
+@font-face{
+	font-family: '3dumb';
+	src: url('/fonts/handwriting/3dumb.ttf');
+}
+
+.font-3dumb{
+	font-family: '3dumb';
+}
+
+@font-face{
+	font-family: '3dumb-2d';
+	src: url('/fonts/handwriting/3dumb_2d.ttf');
+}
+
+.font-3dumb-2d{
+	font-family: '3dumb-2d';
+}
+
+@font-face{
+	font-family: 'amatic';
+	src: url('/fonts/handwriting/amatic.ttf');
+}
+
+.font-amatic{
+	font-family: 'amatic';
+}
+
+@font-face{
+	font-family: 'amatic-bold';
+	src: url('/fonts/handwriting/amatic_bold.ttf');
+}
+
+.font-amatic-bold{
+	font-family: 'amatic-bold';
+}
+
+@font-face{
+	font-family: 'architects-daughter';
+	src: url('/fonts/handwriting/architects-daughter.ttf');
+}
+
+.font-architects-daughter{
+	font-family: 'architects-daughter';
+}
+
+@font-face{
+	font-family: 'belligerent';
+	src: url('/fonts/handwriting/belligerent.ttf');
+}
+
+.font-belligerent{
+	font-family: 'belligerent';
+}
+
+@font-face{
+	font-family: 'blokletters-potlood';
+	src: url('/fonts/handwriting/blokletters-potlood.ttf');
+}
+
+.font-blokletters-potlood{
+	font-family: 'blokletters-potlood';
+}
+
+@font-face{
+	font-family: 'blokletters-potlood-bold';
+	src: url('/fonts/handwriting/blokletters-potlood_bold.ttf');
+}
+
+.font-blokletters-potlood-bold{
+	font-family: 'blokletters-potlood-bold';
+}
+
+@font-face{
+	font-family: 'blokletters-potlood-medium';
+	src: url('/fonts/handwriting/blokletters-potlood_medium.ttf');
+}
+
+.font-blokletters-potlood-medium{
+	font-family: 'blokletters-potlood-medium';
+}
+
+@font-face{
+	font-family: 'daniel';
+	src: url('/fonts/handwriting/daniel.ttf');
+}
+
+.font-daniel{
+	font-family: 'daniel';
+}
+
+@font-face{
+	font-family: 'daniel-medium';
+	src: url('/fonts/handwriting/daniel_medium.ttf');
+}
+
+.font-daniel-medium{
+	font-family: 'daniel-medium';
+}
+
+@font-face{
+	font-family: 'desyrel';
+	src: url('/fonts/handwriting/desyrel.ttf');
+}
+
+.font-desyrel{
+	font-family: 'desyrel';
+}
+
+@font-face{
+	font-family: 'dj-gross';
+	src: url('/fonts/handwriting/dj-gross.ttf');
+}
+
+.font-dj-gross{
+	font-family: 'dj-gross';
+}
+
+@font-face{
+	font-family: 'drawveticamini';
+	src: url('/fonts/handwriting/drawveticamini.ttf');
+}
+
+.font-drawveticamini{
+	font-family: 'drawveticamini';
+}
+
+@font-face{
+	font-family: 'elliotsix';
+	src: url('/fonts/handwriting/elliotsix.ttf');
+}
+
+.font-elliotsix{
+	font-family: 'elliotsix';
+}
+
+@font-face{
+	font-family: 'eraser';
+	src: url('/fonts/handwriting/eraser.ttf');
+}
+
+.font-eraser{
+	font-family: 'eraser';
+}
+
+@font-face{
+	font-family: 'flux';
+	src: url('/fonts/handwriting/flux.ttf');
+}
+
+.font-flux{
+	font-family: 'flux';
+}
+
+@font-face{
+	font-family: 'flux-bold-italic';
+	src: url('/fonts/handwriting/flux_bold-italic.ttf');
+}
+
+.font-flux-bold-italic{
+	font-family: 'flux-bold-italic';
+}
+
+@font-face{
+	font-family: 'flux-bold';
+	src: url('/fonts/handwriting/flux_bold.ttf');
+}
+
+.font-flux-bold{
+	font-family: 'flux-bold';
+}
+
+@font-face{
+	font-family: 'flux-italic';
+	src: url('/fonts/handwriting/flux_italic.ttf');
+}
+
+.font-flux-italic{
+	font-family: 'flux-italic';
+}
+
+@font-face{
+	font-family: 'frente-h1';
+	src: url('/fonts/handwriting/frente-h1.otf');
+}
+
+.font-frente-h1{
+	font-family: 'frente-h1';
+}
+
+@font-face{
+	font-family: 'gong';
+	src: url('/fonts/handwriting/gong.ttf');
+}
+
+.font-gong{
+	font-family: 'gong';
+}
+
+@font-face{
+	font-family: 'good-foot';
+	src: url('/fonts/handwriting/good-foot.ttf');
+}
+
+.font-good-foot{
+	font-family: 'good-foot';
+}
+
+@font-face{
+	font-family: 'gooddog';
+	src: url('/fonts/handwriting/gooddog.otf');
+}
+
+.font-gooddog{
+	font-family: 'gooddog';
+}
+
+@font-face{
+	font-family: 'harabarahand';
+	src: url('/fonts/handwriting/harabarahand.ttf');
+}
+
+.font-harabarahand{
+	font-family: 'harabarahand';
+}
+
+@font-face{
+	font-family: 'hetilica';
+	src: url('/fonts/handwriting/hetilica.ttf');
+}
+
+.font-hetilica{
+	font-family: 'hetilica';
+}
+
+@font-face{
+	font-family: 'idolwild';
+	src: url('/fonts/handwriting/idolwild.ttf');
+}
+
+.font-idolwild{
+	font-family: 'idolwild';
+}
+
+@font-face{
+	font-family: 'jinky';
+	src: url('/fonts/handwriting/jinky.ttf');
+}
+
+.font-jinky{
+	font-family: 'jinky';
+}
+
+@font-face{
+	font-family: 'journal';
+	src: url('/fonts/handwriting/journal.ttf');
+}
+
+.font-journal{
+	font-family: 'journal';
+}
+
+@font-face{
+	font-family: 'jr-hand';
+	src: url('/fonts/handwriting/jr-hand.ttf');
+}
+
+.font-jr-hand{
+	font-family: 'jr-hand';
+}
+
+@font-face{
+	font-family: 'krazy-nights';
+	src: url('/fonts/handwriting/krazy-nights.ttf');
+}
+
+.font-krazy-nights{
+	font-family: 'krazy-nights';
+}
+
+@font-face{
+	font-family: 'kristi';
+	src: url('/fonts/handwriting/kristi.ttf');
+}
+
+.font-kristi{
+	font-family: 'kristi';
+}
+
+@font-face{
+	font-family: 'leckerli-one';
+	src: url('/fonts/handwriting/leckerli-one.otf');
+}
+
+.font-leckerli-one{
+	font-family: 'leckerli-one';
+}
+
+@font-face{
+	font-family: 'lilly';
+	src: url('/fonts/handwriting/lilly.ttf');
+}
+
+.font-lilly{
+	font-family: 'lilly';
+}
+
+@font-face{
+	font-family: 'mathlete';
+	src: url('/fonts/handwriting/mathlete.otf');
+}
+
+.font-mathlete{
+	font-family: 'mathlete';
+}
+
+@font-face{
+	font-family: 'mathlete-bold-italic';
+	src: url('/fonts/handwriting/mathlete_bold-italic.otf');
+}
+
+.font-mathlete-bold-italic{
+	font-family: 'mathlete-bold-italic';
+}
+
+@font-face{
+	font-family: 'mathlete-bold';
+	src: url('/fonts/handwriting/mathlete_bold.otf');
+}
+
+.font-mathlete-bold{
+	font-family: 'mathlete-bold';
+}
+
+@font-face{
+	font-family: 'mathlete-italic';
+	src: url('/fonts/handwriting/mathlete_italic.otf');
+}
+
+.font-mathlete-italic{
+	font-family: 'mathlete-italic';
+}
+
+@font-face{
+	font-family: 'montez';
+	src: url('/fonts/handwriting/montez.ttf');
+}
+
+.font-montez{
+	font-family: 'montez';
+}
+
+@font-face{
+	font-family: 'mountains-of-christmas';
+	src: url('/fonts/handwriting/mountains-of-christmas.ttf');
+}
+
+.font-mountains-of-christmas{
+	font-family: 'mountains-of-christmas';
+}
+
+@font-face{
+	font-family: 'note-this';
+	src: url('/fonts/handwriting/note-this.ttf');
+}
+
+.font-note-this{
+	font-family: 'note-this';
+}
+
+@font-face{
+	font-family: 'paulmaul';
+	src: url('/fonts/handwriting/paulmaul.ttf');
+}
+
+.font-paulmaul{
+	font-family: 'paulmaul';
+}
+
+@font-face{
+	font-family: 'paulmaul-bold';
+	src: url('/fonts/handwriting/paulmaul_bold.ttf');
+}
+
+.font-paulmaul-bold{
+	font-family: 'paulmaul-bold';
+}
+
+@font-face{
+	font-family: 'pecita';
+	src: url('/fonts/handwriting/pecita.otf');
+}
+
+.font-pecita{
+	font-family: 'pecita';
+}
+
+@font-face{
+	font-family: 'permanent-marker';
+	src: url('/fonts/handwriting/permanent-marker.ttf');
+}
+
+.font-permanent-marker{
+	font-family: 'permanent-marker';
+}
+
+@font-face{
+	font-family: 'playtime';
+	src: url('/fonts/handwriting/playtime.ttf');
+}
+
+.font-playtime{
+	font-family: 'playtime';
+}
+
+@font-face{
+	font-family: 'playtime-italic';
+	src: url('/fonts/handwriting/playtime_italic.ttf');
+}
+
+.font-playtime-italic{
+	font-family: 'playtime-italic';
+}
+
+@font-face{
+	font-family: 'playtime-outline';
+	src: url('/fonts/handwriting/playtime_outline.ttf');
+}
+
+.font-playtime-outline{
+	font-family: 'playtime-outline';
+}
+
+@font-face{
+	font-family: 'poilet-taper';
+	src: url('/fonts/handwriting/poilet-taper.ttf');
+}
+
+.font-poilet-taper{
+	font-family: 'poilet-taper';
+}
+
+@font-face{
+	font-family: 'pompiere';
+	src: url('/fonts/handwriting/pompiere.otf');
+}
+
+.font-pompiere{
+	font-family: 'pompiere';
+}
+
+@font-face{
+	font-family: 'rabiohead';
+	src: url('/fonts/handwriting/rabiohead.ttf');
+}
+
+.font-rabiohead{
+	font-family: 'rabiohead';
+}
+
+@font-face{
+	font-family: 'redressed';
+	src: url('/fonts/handwriting/redressed.ttf');
+}
+
+.font-redressed{
+	font-family: 'redressed';
+}
+
+@font-face{
+	font-family: 'rock-salt';
+	src: url('/fonts/handwriting/rock-salt.ttf');
+}
+
+.font-rock-salt{
+	font-family: 'rock-salt';
+}
+
+@font-face{
+	font-family: 'scratch';
+	src: url('/fonts/handwriting/scratch.ttf');
+}
+
+.font-scratch{
+	font-family: 'scratch';
+}
+
+@font-face{
+	font-family: 'short-stack';
+	src: url('/fonts/handwriting/short-stack.otf');
+}
+
+.font-short-stack{
+	font-family: 'short-stack';
+}
+
+@font-face{
+	font-family: 'snickles';
+	src: url('/fonts/handwriting/snickles.ttf');
+}
+
+.font-snickles{
+	font-family: 'snickles';
+}
+
+@font-face{
+	font-family: 'soft-sugar-plain';
+	src: url('/fonts/handwriting/soft-sugar-plain.ttf');
+}
+
+.font-soft-sugar-plain{
+	font-family: 'soft-sugar-plain';
+}
+
+@font-face{
+	font-family: 'soft-sugar-plain-fade';
+	src: url('/fonts/handwriting/soft-sugar-plain_fade.ttf');
+}
+
+.font-soft-sugar-plain-fade{
+	font-family: 'soft-sugar-plain-fade';
+}
+
+@font-face{
+	font-family: 'tinet';
+	src: url('/fonts/handwriting/tinet.ttf');
+}
+
+.font-tinet{
+	font-family: 'tinet';
+}
+
+@font-face{
+	font-family: 'trashhand';
+	src: url('/fonts/handwriting/trashhand.ttf');
+}
+
+.font-trashhand{
+	font-family: 'trashhand';
+}
+
+@font-face{
+	font-family: 'vag-handwritten';
+	src: url('/fonts/handwriting/vag-handwritten.otf');
+}
+
+.font-vag-handwritten{
+	font-family: 'vag-handwritten';
+}
+
+@font-face{
+	font-family: 'wagnasty';
+	src: url('/fonts/handwriting/wagnasty.ttf');
+}
+
+.font-wagnasty{
+	font-family: 'wagnasty';
+}
+
+@font-face{
+	font-family: 'wc-mano-negra';
+	src: url('/fonts/handwriting/wc-mano-negra.otf');
+}
+
+.font-wc-mano-negra{
+	font-family: 'wc-mano-negra';
+}
+
+@font-face{
+	font-family: 'wc-mano-negra-bold';
+	src: url('/fonts/handwriting/wc-mano-negra_bold.otf');
+}
+
+.font-wc-mano-negra-bold{
+	font-family: 'wc-mano-negra-bold';
+}
+
+@font-face{
+	font-family: 'yellowtail';
+	src: url('/fonts/handwriting/yellowtail.otf');
+}
+
+.font-yellowtail{
+	font-family: 'yellowtail';
+}
+
+@font-face{
+	font-family: 'yesterdays-meal';
+	src: url('/fonts/handwriting/yesterdays-meal.ttf');
+}
+
+.font-yesterdays-meal{
+	font-family: 'yesterdays-meal';
+}
+
