@@ -7,7 +7,7 @@
 	border: none;
 }
 
-#sans-serif-list {
+#serif-list, #sans-serif-list, #handwriting-list, #display-list, #script-list, #monospace-list {
 	display: none;
 }
 

@@ -11,8 +11,13 @@
   <a href="#" class="increase-font-size">+</a>
   <a href="#" class="decrease-font-size">-</a>
   {{>fontClassificationList}}
+  {{>allList}}
   {{>serifList}}
   {{>sansSerifList}}
+  {{>handwritingList}}
+  {{>displayList}}
+  {{>scriptList}}
+  {{>monospaceList}}
   {{>fontStyleList}}
   {{>fontSize}}
   <br><br>
@@ -31,6 +36,19 @@
   			<li><a class="font-class-type" data-font-class-type="{{this}}" href="#">{{capitalize this}}</a></li>
   		{{/each}}
   	</ul>
+  </div>
+</template>
+
+<template name="allList">
+  <div id="all-list" class="btn-group font-lists">
+    <button id="all-list-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     {{capitalize firstFont}}
+    </button>
+    <ul id='ul-alls' class="dropdown-menu">
+      {{#each alls}}
+        <li><a class="font-type" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
+      {{/each}}
+    </ul>
   </div>
 </template>
 
@@ -54,9 +72,61 @@
   	</button>
   	<ul id='ul-sans-serifs' class="dropdown-menu">
   		{{#each sansSerifs}}
-  			<li><a class="font-type" data-font-class="{{this}}" href="#">{{this}}</a></li>
+  			<li><a class="font-type" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
   		{{/each}}
   	</ul>
+  </div>
+</template>
+
+<template name="handwritingList">
+  <div id="handwriting-list" class="btn-group font-lists">
+    <button id="handwriting-list-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     {{capitalize firstFont}}
+    </button>
+    <ul id='ul-handwritings' class="dropdown-menu">
+      {{#each handwritings}}
+        <li><a class="font-type" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
+      {{/each}}
+    </ul>
+  </div>
+</template>
+
+<template name="scriptList">
+  <div id="script-list" class="btn-group font-lists">
+    <button id="script-list-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     {{capitalize firstFont}}
+    </button>
+    <ul id='ul-scripts' class="dropdown-menu">
+      {{#each scripts}}
+        <li><a class="font-type" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
+      {{/each}}
+    </ul>
+  </div>
+</template>
+
+<template name="displayList">
+  <div id="display-list" class="btn-group font-lists">
+    <button id="display-list-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     {{capitalize firstFont}}
+    </button>
+    <ul id='ul-displays' class="dropdown-menu">
+      {{#each displays}}
+        <li><a class="font-type" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
+      {{/each}}
+    </ul>
+  </div>
+</template>
+
+<template name="monospaceList">
+  <div id="monospace-list" class="btn-group font-lists">
+    <button id="monospace-list-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     {{capitalize firstFont}}
+    </button>
+    <ul id='ul-monospaces' class="dropdown-menu">
+      {{#each monospaces}}
+        <li><a class="font-type" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
+      {{/each}}
+    </ul>
   </div>
 </template>
 
