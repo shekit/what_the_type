@@ -67,6 +67,8 @@ function setFontOnKeyPress(){
 	var fontName = aElement.html()
 	// set text of btn
 	$(fontListId+"-btn").html(fontName);
+	//set text of select box
+	$(fontListId+"-select").val(fontName);
 	// set font class
 	fontClassGlobal = fontClass;
 
@@ -130,11 +132,13 @@ function prevFontClass(){
 function setFontClass(fontClassName){
 	counter = 0;
 	var listToDisplay = "#"+fontClassName+ "-list";
+	var selectToDisplay = listToDisplay + "-select";
 	$("#font-type-btn").html(capitalize(fontClassName));
 
 	//show fonts of this class
 	$(".font-lists").hide();
 	$(listToDisplay).show();
+	$(selectToDisplay).show();
 
 	//set global variables to hold the newly displayed list
 	fontListLength = $(listToDisplay + " li").length;
@@ -436,6 +440,18 @@ Template.fontSize.events({
 	}
 })
 
+Template.mobileButtons.events({
+	"click .prev-font-mobile":function(event){
+		event.preventDefault();
+		prevFont()
+	},
+
+	"click .next-font-mobile":function(event){
+		event.preventDefault();
+		nextFont()
+	}
+})
+
 //HELPERS
 Template.fontClassificationList.helpers({
 	"fontTypes": function(){
@@ -457,6 +473,12 @@ Template.allList.helpers({
 	}
 })
 
+Template.allListSelect.helpers({
+	"alls": function(){
+		return allFontDict
+	}
+})
+
 Template.serifList.helpers({
 	"serifs": function(){
 		return serifFontDict
@@ -464,6 +486,12 @@ Template.serifList.helpers({
 
 	"firstFont" : function(){
 		return serifFontDict[0]["name"]
+	}
+})
+
+Template.serifListSelect.helpers({
+	"serifs": function(){
+		return serifFontDict
 	}
 })
 
@@ -477,6 +505,12 @@ Template.sansSerifList.helpers({
 	}
 })
 
+Template.sansSerifListSelect.helpers({
+	"sansSerifs": function(){
+		return sansSerifFontDict
+	}
+})
+
 Template.handwritingList.helpers({
 	"handwritings": function(){
 		return handwritingFontDict
@@ -484,6 +518,12 @@ Template.handwritingList.helpers({
 
 	"firstFont": function(){
 		return handwritingFontDict[0]["name"]
+	}
+})
+
+Template.handwritingListSelect.helpers({
+	"handwritings": function(){
+		return handwritingFontDict
 	}
 })
 
@@ -497,6 +537,12 @@ Template.scriptList.helpers({
 	}
 })
 
+Template.scriptListSelect.helpers({
+	"scripts": function(){
+		return scriptFontDict
+	}
+})
+
 Template.displayList.helpers({
 	"displays": function(){
 		return displayFontDict
@@ -507,6 +553,12 @@ Template.displayList.helpers({
 	}
 })
 
+Template.displayListSelect.helpers({
+	"displays": function(){
+		return displayFontDict
+	}
+})
+
 Template.monospaceList.helpers({
 	"monospaces": function(){
 		return monospaceFontDict
@@ -514,6 +566,11 @@ Template.monospaceList.helpers({
 
 	"firstFont": function(){
 		return monospaceFontDict[0]["name"]
+	}
+})
+Template.monospaceListSelect.helpers({
+	"monospaces": function(){
+		return monospaceFontDict
 	}
 })
 

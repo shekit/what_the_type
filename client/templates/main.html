@@ -104,14 +104,26 @@
 <template name="fontLists">
   <div class="row">
     {{>prevFont}}
-    <div class="col-sm-6 col-md-8 no-padding">
-      {{>allList}}
+    <div class="col-xs-12 col-sm-6 col-md-8 hidden-xs no-padding">
+      
       {{>serifList}}
       {{>sansSerifList}}
       {{>handwritingList}}
       {{>displayList}}
       {{>scriptList}}
       {{>monospaceList}}
+      {{>allList}}
+
+    </div>
+
+    <div class="col-xs-12 visible-xs-block">
+      {{>allListSelect}}
+      {{>serifListSelect}}
+      {{>sansSerifListSelect}}
+      {{>handwritingListSelect}}
+      {{>displayListSelect}}
+      {{>scriptListSelect}}
+      {{>monospaceListSelect}}
     </div>
     {{>nextFont}}
   </div>
@@ -159,7 +171,7 @@
 </template>
 
 <template name="allList">
-  <div id="all-list" class="btn-group font-lists">
+  <div id="all-list" class="btn-group font-lists hidden-xs">
     <button id="all-list-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
      {{capitalize firstFont}}
     </button>
@@ -169,6 +181,14 @@
       {{/each}}
     </ul>
   </div>
+</template>
+
+<template name="allListSelect">
+  <select id="all-list-select" class="form-control font-lists">
+    {{#each alls}}
+      <option class="font-class-type" data-font-class="{{this.class}}">{{capitalize this.name}}</option>
+    {{/each}}
+  </select>
 </template>
 
 <template name="serifList">
@@ -184,6 +204,14 @@
   </div>
 </template>
 
+<template name="serifListSelect">
+  <select id="serif-list-select" class="form-control font-lists">
+    {{#each serifs}}
+      <option class="font-class-type" data-font-class="{{this.class}}">{{capitalize this.name}}</option>
+    {{/each}}
+  </select>
+</template>
+
 <template name="sansSerifList">
   <div id="sans-serif-list" class="btn-group font-lists">
   	<button id="sans-serif-list-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -195,6 +223,14 @@
   		{{/each}}
   	</ul>
   </div>
+</template>
+
+<template name="sansSerifListSelect">
+  <select id="sans-serif-list-select" class="form-control font-lists">
+    {{#each sansSerifs}}
+      <option class="font-class-type" data-font-class="{{this.class}}">{{capitalize this.name}}</option>
+    {{/each}}
+  </select>
 </template>
 
 <template name="handwritingList">
@@ -210,6 +246,14 @@
   </div>
 </template>
 
+<template name="handwritingListSelect">
+  <select id="handwriting-list-select" class="form-control font-lists">
+    {{#each handwritings}}
+      <option class="font-class-type" data-font-class="{{this.class}}">{{capitalize this.name}}</option>
+    {{/each}}
+  </select>
+</template>
+
 <template name="scriptList">
   <div id="script-list" class="btn-group font-lists">
     <button id="script-list-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -221,6 +265,14 @@
       {{/each}}
     </ul>
   </div>
+</template>
+
+<template name="scriptListSelect">
+  <select id="script-list-select" class="form-control font-lists">
+    {{#each scripts}}
+      <option class="font-class-type" data-font-class="{{this.class}}">{{capitalize this.name}}</option>
+    {{/each}}
+  </select>
 </template>
 
 <template name="displayList">
@@ -236,6 +288,14 @@
   </div>
 </template>
 
+<template name="displayListSelect">
+  <select id="display-list-select" class="form-control font-lists">
+    {{#each displays}}
+      <option class="font-class-type" data-font-class="{{this.class}}">{{capitalize this.name}}</option>
+    {{/each}}
+  </select>
+</template>
+
 <template name="monospaceList">
   <div id="monospace-list" class="btn-group font-lists">
     <button id="monospace-list-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -247,6 +307,14 @@
       {{/each}}
     </ul>
   </div>
+</template>
+
+<template name="monospaceListSelect">
+  <select id="monospace-list-select" class="form-control font-lists">
+    {{#each monospaces}}
+      <option class="font-class-type" data-font-class="{{this.class}}">{{capitalize this.name}}</option>
+    {{/each}}
+  </select>
 </template>
 
 <template name="fontStyleList">
@@ -302,13 +370,13 @@
 </template>
 
 <template name="prevFont">
-  <div class="col-sm-3 col-md-2 no-padding-right">
+  <div class="col-sm-3 col-md-2 no-padding-right hidden-xs">
     <a href="#" class="btn btn-default btn-block prev-font btn-custom"><span class="glyphicon glyphicon-menu-left"></span></a>
   </div>
 </template>
 
 <template name="nextFont">
-  <div class="col-sm-3 col-md-2 no-padding-left">
+  <div class="col-sm-3 col-md-2 no-padding-left hidden-xs">
     <a href="#" class="btn btn-default btn-block next-font btn-custom"><span class="glyphicon glyphicon-menu-right"></span></a>
   </div>
 </template>

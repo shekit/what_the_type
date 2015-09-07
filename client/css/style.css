@@ -14,6 +14,10 @@ textarea:focus {
 	display: none;
 }
 
+#all-list-select, #sans-serif-list-select, #handwriting-list-select, #display-list-select, #script-list-select, #monospace-list-select {
+	display: none;
+}
+
 /* ARROW PREV NEXT BUTTONS*/
 .btn-custom, .btn-custom:visited{
 	border-radius: 0;
@@ -126,6 +130,10 @@ textarea:focus {
 	left: 100%;
 }
 
+.form-control {
+	outline: none;
+}
+
 /********* MEDIA QUERIES ******/
 
 @media(min-width: 768px){
@@ -157,13 +165,20 @@ textarea:focus {
 		width: 100%;
 	}
 
-	.btn-mobile {
+	.btn-mobile, .btn-mobile:hover {
 		width: 100%;
 		border-radius: 0;
 		line-height:2em;
 		background: #f05a28;
 		color: #ffffff;
 		border-color: #d85124;
+	}
+
+	.btn-mobile:active, .btn-mobile:focus{
+		border-color: #c04820;
+		background: #d85124;
+		color: #ffffff;
+		outline: none;
 	}
 }
 
