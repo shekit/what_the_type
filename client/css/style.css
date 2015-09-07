@@ -159,6 +159,11 @@ textarea:focus {
 		border: 1px solid #ccc;
 	}
 
+	select{
+		margin-bottom: 15px;
+		border-radius: 0;
+	}
+
 	.fixed-to-bottom{
 		position: fixed;
 		bottom: 0;
