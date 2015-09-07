@@ -76,7 +76,7 @@ textarea:focus {
 
 /*******BOOTSTRAP OVERRIDES******/
 
-
+/*make dropdown btns full width*/
 .btn-group {
 	width: 100%;
 }
@@ -93,6 +93,7 @@ textarea:focus {
 	overflow: hidden;
 }
 
+/*change bg of dropdwon btn when it is pressed*/
 .open > .dropdown-toggle.btn-default, .open > .dropdown-toggle.btn-default:hover, .open > .dropdown-toggle.btn-default:focus{
 	background: #ffffff;
 	box-shadow: none;
@@ -103,6 +104,7 @@ textarea:focus {
 	background: white;
 }
 
+/*add muted style to font styles btn if it has only one style*/
 .no-font-styles {
 	color: #ccc;
 	cursor: auto;
@@ -124,6 +126,8 @@ textarea:focus {
 	left: 100%;
 }
 
+/********* MEDIA QUERIES ******/
+
 @media(min-width: 768px){
 	/*makes columns of same height and stretch to fill parent container*/
 	.row, .text-div, #text {
@@ -137,12 +141,29 @@ textarea:focus {
 		font-size: 64px;
 		border: 1px solid #f1f1f1;
 		padding: 20px;
+		box-shadow: 0 0 5px #e5e5e5;
 	}
 }
 
 @media(max-width: 768px){
 	#text{
 		font-size: 36px;
+		border: 1px solid #ccc;
+	}
+
+	.fixed-to-bottom{
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+	}
+
+	.btn-mobile {
+		width: 100%;
+		border-radius: 0;
+		line-height:2em;
+		background: #f05a28;
+		color: #ffffff;
+		border-color: #d85124;
 	}
 }
 
