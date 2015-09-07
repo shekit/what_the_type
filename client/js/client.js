@@ -361,6 +361,16 @@ Template.sidebar.events({
 		event.preventDefault()
 		console.log("prev font")
 		prevFont()
+	},
+
+	"change .form-control": function(event){
+		var fontClass = $(event.target).children(":selected").attr("data-font-class");
+		counter = $(event.target).children(":selected").index()
+		Session.set('counter',counter);
+		fontClassGlobal = fontClass;
+		setFont(fontClass)
+		fontClassCounter = fontClasses.indexOf(listName);
+		setFontClass(listName);
 	}
 })
 
