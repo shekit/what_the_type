@@ -176,11 +176,11 @@ textarea:focus {
 		line-height:2em;
 		background: #f05a28;
 		color: #ffffff;
-		border-color: #d85124;
+		border-color: #ffffff;
 	}
 
 	.btn-mobile:active, .btn-mobile:focus{
-		border-color: #c04820;
+		border-color: #ffffff;
 		background: #d85124;
 		color: #ffffff;
 		outline: none;
