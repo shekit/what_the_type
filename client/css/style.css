@@ -1,10 +1,8 @@
-/* MY STYLES */
+/****** MY STYLES ******/
 
 #text {
-	font-size: 64px;
 	text-align: center;
 	width: 100%;
-	border: none;
 }
 
 textarea:focus {
@@ -16,10 +14,7 @@ textarea:focus {
 	display: none;
 }
 
-#font-type-btn {
-	text-align: center;
-}
-
+/* ARROW PREV NEXT BUTTONS*/
 .btn-custom, .btn-custom:visited{
 	border-radius: 0;
 	background: #f5f5f5;
@@ -42,12 +37,12 @@ textarea:focus {
 	color: #f05a28;
 }
 
-
 .btn-download{
 	border-radius: 0;
 	background: #fff;
 	border-color: #f05a28;
 	color: #f05a28;
+	margin-bottom: 30px;
 }
 
 .btn-download:hover{
@@ -57,12 +52,13 @@ textarea:focus {
 	border-color: #f05a28;
 }
 
-.btn-header{
-	font-weight: 200;
-	color: #aaa;
-	font-size: 20px;
+/*BORDER AROUND ARROW IMAGE*/
+.border-around {
+	padding: 20px 10px;
+	border:1px solid #ccc;
 }
 
+/*REMOVE COL PADDING*/
 .no-padding {
 	padding-right: 0;
 	padding-left: 0;
@@ -77,7 +73,10 @@ textarea:focus {
 }
 
 
-/*BOOTSTRAP OVERRIDES*/
+
+/*******BOOTSTRAP OVERRIDES******/
+
+
 .btn-group {
 	width: 100%;
 }
@@ -91,6 +90,7 @@ textarea:focus {
 	border-left:none;
 	border-right: none;
 	margin-bottom: 30px;
+	overflow: hidden;
 }
 
 .open > .dropdown-toggle.btn-default, .open > .dropdown-toggle.btn-default:hover, .open > .dropdown-toggle.btn-default:focus{
@@ -122,5 +122,27 @@ textarea:focus {
 	max-height: 200px;
 	top:0;
 	left: 100%;
+}
+
+@media(min-width: 768px){
+	/*makes columns of same height and stretch to fill parent container*/
+	.row, .text-div, #text {
+	  	display: -webkit-box;
+	  	display: -webkit-flex;
+	  	display: -ms-flexbox;
+	  	display:         flex;
+	}
+
+	#text {
+		font-size: 64px;
+		border: 1px solid #f1f1f1;
+		padding: 20px;
+	}
+}
+
+@media(max-width: 768px){
+	#text{
+		font-size: 36px;
+	}
 }
 
