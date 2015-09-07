@@ -24,6 +24,7 @@
 <template name="topbar">
   <div class="col-xs-12 col-sm-4">
     <h1>Font Fling</h1>
+    <p>Find your font</p>
   </div>
   <div class="col-sm-8">
     <ul class="list-inline text-right">
@@ -68,12 +69,19 @@
   </div>
   <div class="row">
     <div class="col-sm-12">
+
       {{>fontSize}}
     </div>
   </div>
   <div class="row">
     <div class="col-sm-12">
+
       {{>downloadFont}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <p>arrow image</p>
     </div>
   </div>
   
@@ -96,14 +104,14 @@
 </template>
 
 <template name="text">
-  <textarea id="text" placeholder="Your Text Here"></textarea>
+  <textarea id="text" placeholder="Enter Text Here"></textarea>
 </template>
 
 <template name="fontClassificationList">
 
   <div class="row hidden-xs">
     <div class="col-sm-3 col-md-2 no-padding-right">
-      <a href="#" class="btn btn-default btn-block prev-font-class"><span class="glyphicon glyphicon-menu-left"></span></a>
+      <a href="#" class="btn btn-default btn-block prev-font-class btn-custom"><span class="glyphicon glyphicon-menu-left"></span></a>
     </div>
 
     <div class="col-sm-6 col-md-8 no-padding">
@@ -120,7 +128,7 @@
     </div>
 
     <div class="col-sm-3 col-md-2 no-padding-left">
-      <a href="#" class="btn btn-default btn-block next-font-class"><span class="glyphicon glyphicon-menu-right"></span></a>
+      <a href="#" class="btn btn-default btn-block next-font-class btn-custom"><span class="glyphicon glyphicon-menu-right"></span></a>
     </div>
   </div>
 
@@ -230,7 +238,7 @@
 <template name="fontStyleList">
   <div class="row">
     <div class="col-sm-3 col-md-2 no-padding-right">
-      <a href="#" class="btn btn-default btn-block prev-font-style"><span class="glyphicon glyphicon-menu-left"></span></a>
+      <a href="#" class="btn btn-default btn-block prev-font-style btn-custom"><span class="glyphicon glyphicon-menu-left"></span></a>
     </div>
 
     <div class="col-sm-6 col-md-8 no-padding">
@@ -247,7 +255,7 @@
     </div>
 
     <div class="col-sm-3 col-md-2 no-padding-left">
-      <a href="#" class="btn btn-default btn-block next-font-style"><span class="glyphicon glyphicon-menu-right"></span></a>
+      <a href="#" class="btn btn-default btn-block next-font-style btn-custom"><span class="glyphicon glyphicon-menu-right"></span></a>
     </div>
 
   </div>
@@ -258,7 +266,7 @@
 <template name="fontSize">
   <div class="row">
     <div class="col-sm-3 col-md-2 no-padding-right">
-      <a href="#" class="btn btn-default btn-block decrease-font-size"><span class="glyphicon glyphicon-menu-left"></span></a>
+      <a href="#" class="btn btn-default btn-block decrease-font-size btn-custom"><span class="glyphicon glyphicon-menu-left"></span></a>
     </div>
     <div class="col-sm-6 col-md-8 no-padding">
       <div id="font-size-list" class="btn-group">
@@ -273,7 +281,7 @@
       </div>
     </div>
     <div class="col-sm-3 col-md-2 no-padding-left">
-      <a href="#" class="btn btn-default btn-block increase-font-size"><span class="glyphicon glyphicon-menu-right"></span></a>
+      <a href="#" class="btn btn-default btn-block increase-font-size btn-custom"><span class="glyphicon glyphicon-menu-right"></span></a>
     </div>
   </div>
 	
@@ -281,17 +289,17 @@
 
 <template name="prevFont">
   <div class="col-sm-3 col-md-2 no-padding-right">
-    <a href="#" class="btn btn-default btn-block prev-font"><span class="glyphicon glyphicon-menu-left"></span></a>
+    <a href="#" class="btn btn-default btn-block prev-font btn-custom"><span class="glyphicon glyphicon-menu-left"></span></a>
   </div>
 </template>
 
 <template name="nextFont">
   <div class="col-sm-3 col-md-2 no-padding-left">
-    <a href="#" class="btn btn-default btn-block next-font"><span class="glyphicon glyphicon-menu-right"></span></a>
+    <a href="#" class="btn btn-default btn-block next-font btn-custom"><span class="glyphicon glyphicon-menu-right"></span></a>
   </div>
 </template>
 
 <template name="downloadFont">
-  <a href="{{link}}" class="btn btn-default btn-block" target="blank">Download Font</a>
+  <a href="{{link}}" class="btn btn-default btn-block btn-download" target="blank">Download Font</a>
 </template>
 

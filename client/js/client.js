@@ -252,11 +252,20 @@ function setFont(fontClass){
 	console.log("RECEIVED FONT CLASS: " + fontClass)
 
 	currentFontStyleArray = fontSwitchCase("styles");
-	console.log(currentFontStyleArray)
-	fontStyleLength = currentFontStyleArray.length
-
+	fontStyleLength = currentFontStyleArray.length;
+	checkForStyles(fontStyleLength);
 	$("#text").removeClass();
 	$("#text").addClass(fontClass);
+}
+
+//mute the color to show it has no styles
+function checkForStyles(styleLength){
+	var styleBtn = $("#font-style-btn")
+	if(styleLength > 1){
+		styleBtn.removeClass("no-font-styles")
+	} else {
+		styleBtn.addClass("no-font-styles")
+	}
 }
 
 // change size of text in textarea
@@ -285,6 +294,10 @@ Template.text.onRendered(function(){
 	$("#text").focus();
 })
 
+Template.body.onRendered(function(){
+	checkForStyles(fontStyleLength);
+})
+
 // EVENTS
 Template.body.events({
 	"keydown": function(event){
@@ -301,11 +314,13 @@ Template.body.events({
 
 		// RIGHT KEY
 		if(event.keyCode == 39){
+			$("#text").blur()
 			nextFont()	
 		}
 
 		// LEFT KEY
 		if(event.keyCode == 37){
+			$("#text").blur()
 			prevFont()
 		}
 	}
@@ -515,6 +530,12 @@ Template.fontStyleList.helpers({
 Template.fontSize.helpers({
 	"sizes" : function(){
 		return fontSizes
+	}
+})
+
+Template.sidebar.helpers({
+	"numberOfStyles": function(){
+		return currentFontStyleArray.length
 	}
 })
 
