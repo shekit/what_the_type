@@ -1,4 +1,4 @@
-var fontClasses = ["all","serif", "sans-serif", "display", "script", "handwriting", "monospace"]
+var fontClasses = ["serif", "sans-serif", "display", "script", "handwriting", "monospace","all"]
 
 var fontSizes = [12,14,16,18,24,32,44,48,64,72];
 
@@ -18,16 +18,16 @@ var displayFontDict = [{"styles": ["regular"], "ending": "otf", "link": "http://
 
 
 var counter = 0;
-var fontListId = '#all-list';
-var fontListLength = allFontDict.length;
+var fontListId = '#serif-list';
+var fontListLength = serifFontDict.length;
 var fontClassGlobal = ''
 
 var fontClassCounter = 0;
 var fontClassLength = fontClasses.length;
 
 var fontStyleCounter = 0;
-var fontStyleLength = allFontDict[0]["styles"].length;
-var currentFontStyleArray = allFontDict[0]["styles"];
+var fontStyleLength = serifFontDict[0]["styles"].length;
+var currentFontStyleArray = serifFontDict[0]["styles"];
 
 function capitalize(str){
 	return str.replace(/\w\S*/g, function(txt){
@@ -154,7 +154,7 @@ function setFontClass(fontClassName){
 function fontSwitchCase(searchFor){
 
 	var c = Session.get('counter') || counter
-	var fontClass = Session.get('fontClass') || 'all'
+	var fontClass = Session.get('fontClass') || 'serif'
 
 	switch(fontClass){
 		case "all":

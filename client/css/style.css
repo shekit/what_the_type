@@ -12,7 +12,7 @@ textarea:focus {
 	outline: none !important;
 }
 
-#serif-list, #sans-serif-list, #handwriting-list, #display-list, #script-list, #monospace-list {
+#all-list, #sans-serif-list, #handwriting-list, #display-list, #script-list, #monospace-list {
 	display: none;
 }
 
