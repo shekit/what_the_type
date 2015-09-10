@@ -10,12 +10,47 @@ textarea:focus {
 	outline: none !important;
 }
 
+.top-bar-link, .top-bar-link:active, .top-bar-link:visited, .top-bar-link:focus {
+	color: #f05a28;
+	font-size: 18px;
+	line-height: 88px;
+	font-weight: 300;
+}
+
+.top-bar-link:hover{
+	color: #d85124;
+	text-decoration: none;
+}
+
+.about-link, .about-link:active, .about-link:visited, .about-link:focus{
+	color: #f05a28;
+	font-weight: bold;
+}
+
+.about-link:hover {
+	color: #d85124;
+	text-decoration: none;
+}
+
 #all-list, #sans-serif-list, #handwriting-list, #display-list, #script-list, #monospace-list {
 	display: none;
 }
 
 #all-list-select, #sans-serif-list-select, #handwriting-list-select, #display-list-select, #script-list-select, #monospace-list-select {
 	display: none;
+}
+
+/* ABOUT MODAL */
+.modal-content {
+	border-radius: 0;
+	font-size: 18px;
+	text-align: center;
+}
+
+.modal-title{
+	text-align: center;
+	color: #f05a28;
+	font-size: 24px;
 }
 
 /* ARROW PREV NEXT BUTTONS*/
@@ -155,8 +190,9 @@ textarea:focus {
 
 @media(max-width: 768px){
 	#text{
-		font-size: 36px;
+		font-size: 48px;
 		border: 1px solid #ccc;
+		min-height:400px;
 	}
 
 	select{

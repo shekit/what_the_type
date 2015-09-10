@@ -1,6 +1,9 @@
 <head>
   <title>Font Fling</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
 </head>
 
 <body>
@@ -21,18 +24,22 @@
   </div> 
   
   {{>aboutModal}}
+  {{>feedbackModal}}
 </body>
 
 <template name="topbar">
-  <div class="col-xs-12 col-sm-4">
-    <h1>Font Fling</h1>
-    <p>Find your font</p>
+  <div class="col-xs-12 col-sm-4 hidden-xs">
+    <h1><img src="/images/logo.png" alt="Font Fling" class="img-responsive" width="200"></h1>
   </div>
-  <div class="col-sm-8">
+  <div class="col-sm-8 hidden-xs">
     <ul class="list-inline text-right">
-      <li><a href="javascript:void(0);" data-toggle="modal" data-target="#aboutModal">About</a></li>
-      <li><a href="mailto:">Feedback</a></li>
+      <li><a href="#" class="top-bar-link" data-toggle="modal" data-target="#aboutModal">about</a></li>
+      <li><a href="#" class="top-bar-link" data-toggle="modal" data-target="#feedbackModal">feedback</a></li>
     </ul>
+  </div>
+
+  <div class="col-xs-12 visible-xs-block">
+  <h1><img src="/images/logo.png" alt="Font Fling" class="center-block img-responsive" width="150"></h1>
   </div>
 </template>
 
@@ -52,11 +59,37 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        <button type="button" class="close text-center" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">About</h4>
       </div>
       <div class="modal-body">
-        ...
+      <br>
+        <p>When I'm deciding on a font for one of my projects, this is how my process looks. Open up illustrator, write out some text and tab through the list of fonts till I find something that looks good.</p>
+        <br>
+        <p>But finding new fonts online and trying them is hard! So I made fontfling - to bring that same feeling of Illustrator to the web. Use the arrow keys to switch between hundreds of free fonts and simply download the ones you love. I've also added something that Illustrator is missing - choosing fonts by classification.</p>
+        <br>
+        <p>If you have feedback or want to say hi drop me a line at <a href="mailto:fontfling@gmail.com" class="about-link">fontfling@gmail.com</a></p>
+        <br>
+        <p>Hopefully fontfling makes finding great new fonts for your projects easier. Now go find your font &lt;3</p>
+      </div>
+    </div>
+  </div>
+</div>
+</template>
+
+<template name="feedbackModal">
+<div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close text-center" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Feedback</h4>
+      </div>
+      <div class="modal-body">
+      <br>
+        <p>I'd love to hear from you so if you have any feedback or just want to say hi drop me a line at <a href="mailto:fontfling@gmail.com" class="about-link">fontfling@gmail.com</a></p>
+        <br>
+        <p>Go find your font &lt;3</p>
       </div>
     </div>
   </div>
