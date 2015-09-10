@@ -192,7 +192,6 @@ textarea:focus {
 	#text{
 		font-size: 48px;
 		border: 1px solid #ccc;
-		min-height:400px;
 	}
 
 	select{
