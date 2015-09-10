@@ -4,9 +4,19 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67448502-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </head>
 
-<body>
+<template name="main">
   <div class="container-fluid">
     <div class="row">
       {{>topbar}}
@@ -25,8 +35,7 @@
   
   {{>aboutModal}}
   {{>feedbackModal}}
-  {{>ga}}
-</body>
+</template>
 
 <template name="topbar">
   <div class="col-xs-12 col-sm-4 hidden-xs">
@@ -67,7 +76,7 @@
       <br>
         <p>When I'm deciding on a font for one of my projects, this is how my process looks. Open up illustrator, write out some text and tab through the list of fonts till I find something that looks good.</p>
         <br>
-        <p>But finding new fonts online and trying them is hard! So I made fontfling - to bring that same feeling of Illustrator to the web. Use the arrow keys to switch between hundreds of free fonts and simply download the ones you love. I've also added something that Illustrator is missing - choosing fonts by classification.</p>
+        <p>But finding new fonts online and trying them is hard! So I made fontfling - to bring that same feeling of Illustrator to the web. Use the arrow keys to switch between hundreds of free fonts (thanks FontSquirrel!) and simply download the ones you love. I've also added something that Illustrator is missing - choosing fonts by classification.</p>
         <br>
         <p>If you have feedback or want to say hi drop me a line at <a href="mailto:fontfling@gmail.com" class="about-link">fontfling@gmail.com</a></p>
         <br>
