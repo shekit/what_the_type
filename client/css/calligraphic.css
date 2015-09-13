@@ -1,0 +1,162 @@
+@font-face{
+	font-family: 'calligraffiti';
+	src: url('/fonts/calligraphic/calligraffiti/calligraffiti.ttf');
+}
+
+.font-calligraffiti{
+	font-family: 'calligraffiti';
+}
+
+@font-face{
+	font-family: 'chantelli-antiqua';
+	src: url('/fonts/calligraphic/chantelli-antiqua/chantelli-antiqua.ttf');
+}
+
+.font-chantelli-antiqua{
+	font-family: 'chantelli-antiqua';
+}
+
+@font-face{
+	font-family: 'felipa';
+	src: url('/fonts/calligraphic/felipa/felipa.otf');
+}
+
+.font-felipa{
+	font-family: 'felipa';
+}
+
+@font-face{
+	font-family: 'florante-at-laura';
+	src: url('/fonts/calligraphic/florante-at-laura/florante-at-laura.ttf');
+}
+
+.font-florante-at-laura{
+	font-family: 'florante-at-laura';
+}
+
+@font-face{
+	font-family: 'florante-at-laura-italic';
+	src: url('/fonts/calligraphic/florante-at-laura/florante-at-laura_italic.ttf');
+}
+
+.font-florante-at-laura-italic{
+	font-family: 'florante-at-laura-italic';
+}
+
+@font-face{
+	font-family: 'gondola-sd';
+	src: url('/fonts/calligraphic/gondola-sd/gondola-sd.ttf');
+}
+
+.font-gondola-sd{
+	font-family: 'gondola-sd';
+}
+
+@font-face{
+	font-family: 'gondola-sd-swash';
+	src: url('/fonts/calligraphic/gondola-sd/gondola-sd_swash.ttf');
+}
+
+.font-gondola-sd-swash{
+	font-family: 'gondola-sd-swash';
+}
+
+@font-face{
+	font-family: 'gothic-ultra-ot';
+	src: url('/fonts/calligraphic/gothic-ultra-ot/gothic-ultra-ot.otf');
+}
+
+.font-gothic-ultra-ot{
+	font-family: 'gothic-ultra-ot';
+}
+
+@font-face{
+	font-family: 'kells-sd';
+	src: url('/fonts/calligraphic/kells-sd/kells-sd.ttf');
+}
+
+.font-kells-sd{
+	font-family: 'kells-sd';
+}
+
+@font-face{
+	font-family: 'kingthings-calligraphica';
+	src: url('/fonts/calligraphic/kingthings-calligraphica/kingthings-calligraphica.ttf');
+}
+
+.font-kingthings-calligraphica{
+	font-family: 'kingthings-calligraphica';
+}
+
+@font-face{
+	font-family: 'kingthings-calligraphica-italic';
+	src: url('/fonts/calligraphic/kingthings-calligraphica/kingthings-calligraphica_italic.ttf');
+}
+
+.font-kingthings-calligraphica-italic{
+	font-family: 'kingthings-calligraphica-italic';
+}
+
+@font-face{
+	font-family: 'kingthings-calligraphica-light';
+	src: url('/fonts/calligraphic/kingthings-calligraphica/kingthings-calligraphica_light.ttf');
+}
+
+.font-kingthings-calligraphica-light{
+	font-family: 'kingthings-calligraphica-light';
+}
+
+@font-face{
+	font-family: 'kingthings-exeter';
+	src: url('/fonts/calligraphic/kingthings-exeter/kingthings-exeter.ttf');
+}
+
+.font-kingthings-exeter{
+	font-family: 'kingthings-exeter';
+}
+
+@font-face{
+	font-family: 'kingthings-foundation';
+	src: url('/fonts/calligraphic/kingthings-foundation/kingthings-foundation.ttf');
+}
+
+.font-kingthings-foundation{
+	font-family: 'kingthings-foundation';
+}
+
+@font-face{
+	font-family: 'kingthings-petrock';
+	src: url('/fonts/calligraphic/kingthings-petrock/kingthings-petrock.ttf');
+}
+
+.font-kingthings-petrock{
+	font-family: 'kingthings-petrock';
+}
+
+@font-face{
+	font-family: 'kingthings-petrock-light';
+	src: url('/fonts/calligraphic/kingthings-petrock/kingthings-petrock_light.ttf');
+}
+
+.font-kingthings-petrock-light{
+	font-family: 'kingthings-petrock-light';
+}
+
+@font-face{
+	font-family: 'mothproofscript';
+	src: url('/fonts/calligraphic/mothproofscript/mothproofscript.ttf');
+}
+
+.font-mothproofscript{
+	font-family: 'mothproofscript';
+}
+
+@font-face{
+	font-family: 'roman-caps';
+	src: url('/fonts/calligraphic/roman-caps/roman-caps.ttf');
+}
+
+.font-roman-caps{
+	font-family: 'roman-caps';
+}
+

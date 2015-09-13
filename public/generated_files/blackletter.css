@@ -1,0 +1,153 @@
+@font-face{
+	font-family: 'dearest';
+	src: url('/fonts/blackletter/dearest/dearest.ttf');
+}
+
+.font-dearest{
+	font-family: 'dearest';
+}
+
+@font-face{
+	font-family: 'dearest-open';
+	src: url('/fonts/blackletter/dearest/dearest_open.ttf');
+}
+
+.font-dearest-open{
+	font-family: 'dearest-open';
+}
+
+@font-face{
+	font-family: 'dearest-outline';
+	src: url('/fonts/blackletter/dearest/dearest_outline.ttf');
+}
+
+.font-dearest-outline{
+	font-family: 'dearest-outline';
+}
+
+@font-face{
+	font-family: 'deutsch-gothic';
+	src: url('/fonts/blackletter/deutsch-gothic/deutsch-gothic.ttf');
+}
+
+.font-deutsch-gothic{
+	font-family: 'deutsch-gothic';
+}
+
+@font-face{
+	font-family: 'genzsch-et-heyse';
+	src: url('/fonts/blackletter/genzsch-et-heyse/genzsch-et-heyse.ttf');
+}
+
+.font-genzsch-et-heyse{
+	font-family: 'genzsch-et-heyse';
+}
+
+@font-face{
+	font-family: 'kingthings-gothique';
+	src: url('/fonts/blackletter/kingthings-gothique/kingthings-gothique.ttf');
+}
+
+.font-kingthings-gothique{
+	font-family: 'kingthings-gothique';
+}
+
+@font-face{
+	font-family: 'kingthings-italique';
+	src: url('/fonts/blackletter/kingthings-italique/kingthings-italique.ttf');
+}
+
+.font-kingthings-italique{
+	font-family: 'kingthings-italique';
+}
+
+@font-face{
+	font-family: 'kingthings-spikeless';
+	src: url('/fonts/blackletter/kingthings-spikeless/kingthings-spikeless.ttf');
+}
+
+.font-kingthings-spikeless{
+	font-family: 'kingthings-spikeless';
+}
+
+@font-face{
+	font-family: 'new-rocker';
+	src: url('/fonts/blackletter/new-rocker/new-rocker.otf');
+}
+
+.font-new-rocker{
+	font-family: 'new-rocker';
+}
+
+@font-face{
+	font-family: 'portcullion';
+	src: url('/fonts/blackletter/portcullion/portcullion.ttf');
+}
+
+.font-portcullion{
+	font-family: 'portcullion';
+}
+
+@font-face{
+	font-family: 'proclamate';
+	src: url('/fonts/blackletter/proclamate/proclamate.ttf');
+}
+
+.font-proclamate{
+	font-family: 'proclamate';
+}
+
+@font-face{
+	font-family: 'proclamate-heavy';
+	src: url('/fonts/blackletter/proclamate/proclamate_heavy.ttf');
+}
+
+.font-proclamate-heavy{
+	font-family: 'proclamate-heavy';
+}
+
+@font-face{
+	font-family: 'proclamate-incised';
+	src: url('/fonts/blackletter/proclamate/proclamate_incised.ttf');
+}
+
+.font-proclamate-incised{
+	font-family: 'proclamate-incised';
+}
+
+@font-face{
+	font-family: 'rapscallion';
+	src: url('/fonts/blackletter/rapscallion/rapscallion.ttf');
+}
+
+.font-rapscallion{
+	font-family: 'rapscallion';
+}
+
+@font-face{
+	font-family: 'rothenburg';
+	src: url('/fonts/blackletter/rothenburg/rothenburg.ttf');
+}
+
+.font-rothenburg{
+	font-family: 'rothenburg';
+}
+
+@font-face{
+	font-family: 'teutonic';
+	src: url('/fonts/blackletter/teutonic/teutonic.ttf');
+}
+
+.font-teutonic{
+	font-family: 'teutonic';
+}
+
+@font-face{
+	font-family: 'zenda';
+	src: url('/fonts/blackletter/zenda/zenda.ttf');
+}
+
+.font-zenda{
+	font-family: 'zenda';
+}
+

@@ -155,6 +155,10 @@
       {{>displayList}}
       {{>scriptList}}
       {{>monospaceList}}
+      {{>blackletterList}}
+      {{>calligraphicList}}
+      {{>typewriterList}}
+      {{>slabSerifList}}
       {{>allList}}
 
     </div>
@@ -167,6 +171,10 @@
       {{>displayListSelect}}
       {{>scriptListSelect}}
       {{>monospaceListSelect}}
+      {{>blackletterListSelect}}
+      {{>calligraphicListSelect}}
+      {{>typewriterListSelect}}
+      {{>slabSerifListSelect}}
     </div>
     {{>nextFont}}
   </div>
@@ -355,6 +363,90 @@
 <template name="monospaceListSelect">
   <select id="monospace-list-select" class="form-control font-lists">
     {{#each monospaces}}
+      <option class="font-class-type" data-font-class="{{this.class}}">{{capitalize this.name}}</option>
+    {{/each}}
+  </select>
+</template>
+
+<template name="blackletterList">
+  <div id="blackletter-list" class="btn-group font-lists">
+    <button id="blackletter-list-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     {{capitalize firstFont}}
+    </button>
+    <ul id='ul-blackletters' class="dropdown-menu">
+      {{#each blackletters}}
+        <li><a class="font-type" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
+      {{/each}}
+    </ul>
+  </div>
+</template>
+
+<template name="blackletterListSelect">
+  <select id="blackletter-list-select" class="form-control font-lists">
+    {{#each blackletters}}
+      <option class="font-class-type" data-font-class="{{this.class}}">{{capitalize this.name}}</option>
+    {{/each}}
+  </select>
+</template>
+
+<template name="calligraphicList">
+  <div id="calligraphic-list" class="btn-group font-lists">
+    <button id="calligraphic-list-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     {{capitalize firstFont}}
+    </button>
+    <ul id='ul-calligraphics' class="dropdown-menu">
+      {{#each calligraphics}}
+        <li><a class="font-type" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
+      {{/each}}
+    </ul>
+  </div>
+</template>
+
+<template name="calligraphicListSelect">
+  <select id="calligraphic-list-select" class="form-control font-lists">
+    {{#each calligraphics}}
+      <option class="font-class-type" data-font-class="{{this.class}}">{{capitalize this.name}}</option>
+    {{/each}}
+  </select>
+</template>
+
+<template name="typewriterList">
+  <div id="typewriter-list" class="btn-group font-lists">
+    <button id="typewriter-list-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     {{capitalize firstFont}}
+    </button>
+    <ul id='ul-typewriters' class="dropdown-menu">
+      {{#each typewriters}}
+        <li><a class="font-type" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
+      {{/each}}
+    </ul>
+  </div>
+</template>
+
+<template name="typewriterListSelect">
+  <select id="typewriter-list-select" class="form-control font-lists">
+    {{#each typewriters}}
+      <option class="font-class-type" data-font-class="{{this.class}}">{{capitalize this.name}}</option>
+    {{/each}}
+  </select>
+</template>
+
+<template name="slabSerifList">
+  <div id="slab-serif-list" class="btn-group font-lists">
+    <button id="slab-serif-list-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     {{capitalize firstFont}}
+    </button>
+    <ul id='ul-slab-serifs' class="dropdown-menu">
+      {{#each slabSerifs}}
+        <li><a class="font-type" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
+      {{/each}}
+    </ul>
+  </div>
+</template>
+
+<template name="slabSerifListSelect">
+  <select id="slab-serif-list-select" class="form-control font-lists">
+    {{#each slabSerifs}}
       <option class="font-class-type" data-font-class="{{this.class}}">{{capitalize this.name}}</option>
     {{/each}}
   </select>

@@ -1,6 +1,7 @@
 import os, sys, glob, pprint, json
 
 # Folder must contain fonts of same type - either otf or ttf
+# give it folder name as first arguement
 
 path = os.path.dirname(os.path.abspath(__file__))
 

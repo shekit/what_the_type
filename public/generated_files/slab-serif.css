@@ -1,0 +1,720 @@
+@font-face{
+	font-family: 'aleo';
+	src: url('/fonts/slab-serif/aleo/aleo.otf');
+}
+
+.font-aleo{
+	font-family: 'aleo';
+}
+
+@font-face{
+	font-family: 'aleo-bold-italic';
+	src: url('/fonts/slab-serif/aleo/aleo_bold-italic.otf');
+}
+
+.font-aleo-bold-italic{
+	font-family: 'aleo-bold-italic';
+}
+
+@font-face{
+	font-family: 'aleo-bold';
+	src: url('/fonts/slab-serif/aleo/aleo_bold.otf');
+}
+
+.font-aleo-bold{
+	font-family: 'aleo-bold';
+}
+
+@font-face{
+	font-family: 'aleo-italic';
+	src: url('/fonts/slab-serif/aleo/aleo_italic.otf');
+}
+
+.font-aleo-italic{
+	font-family: 'aleo-italic';
+}
+
+@font-face{
+	font-family: 'aleo-light-italic';
+	src: url('/fonts/slab-serif/aleo/aleo_light-italic.otf');
+}
+
+.font-aleo-light-italic{
+	font-family: 'aleo-light-italic';
+}
+
+@font-face{
+	font-family: 'aleo-light';
+	src: url('/fonts/slab-serif/aleo/aleo_light.otf');
+}
+
+.font-aleo-light{
+	font-family: 'aleo-light';
+}
+
+@font-face{
+	font-family: 'arvo';
+	src: url('/fonts/slab-serif/arvo/arvo.ttf');
+}
+
+.font-arvo{
+	font-family: 'arvo';
+}
+
+@font-face{
+	font-family: 'arvo-bold-italic';
+	src: url('/fonts/slab-serif/arvo/arvo_bold-italic.ttf');
+}
+
+.font-arvo-bold-italic{
+	font-family: 'arvo-bold-italic';
+}
+
+@font-face{
+	font-family: 'arvo-bold';
+	src: url('/fonts/slab-serif/arvo/arvo_bold.ttf');
+}
+
+.font-arvo-bold{
+	font-family: 'arvo-bold';
+}
+
+@font-face{
+	font-family: 'arvo-italic';
+	src: url('/fonts/slab-serif/arvo/arvo_italic.ttf');
+}
+
+.font-arvo-italic{
+	font-family: 'arvo-italic';
+}
+
+@font-face{
+	font-family: 'bitter';
+	src: url('/fonts/slab-serif/bitter/bitter.otf');
+}
+
+.font-bitter{
+	font-family: 'bitter';
+}
+
+@font-face{
+	font-family: 'bitter-bold-italic';
+	src: url('/fonts/slab-serif/bitter/bitter_bold-italic.otf');
+}
+
+.font-bitter-bold-italic{
+	font-family: 'bitter-bold-italic';
+}
+
+@font-face{
+	font-family: 'bitter-bold';
+	src: url('/fonts/slab-serif/bitter/bitter_bold.otf');
+}
+
+.font-bitter-bold{
+	font-family: 'bitter-bold';
+}
+
+@font-face{
+	font-family: 'bitter-italic';
+	src: url('/fonts/slab-serif/bitter/bitter_italic.otf');
+}
+
+.font-bitter-italic{
+	font-family: 'bitter-italic';
+}
+
+@font-face{
+	font-family: 'bodonitown';
+	src: url('/fonts/slab-serif/bodonitown/bodonitown.ttf');
+}
+
+.font-bodonitown{
+	font-family: 'bodonitown';
+}
+
+@font-face{
+	font-family: 'bree-serif';
+	src: url('/fonts/slab-serif/bree-serif/bree-serif.otf');
+}
+
+.font-bree-serif{
+	font-family: 'bree-serif';
+}
+
+@font-face{
+	font-family: 'copse';
+	src: url('/fonts/slab-serif/copse/copse.ttf');
+}
+
+.font-copse{
+	font-family: 'copse';
+}
+
+@font-face{
+	font-family: 'crete-round';
+	src: url('/fonts/slab-serif/crete-round/crete-round.otf');
+}
+
+.font-crete-round{
+	font-family: 'crete-round';
+}
+
+@font-face{
+	font-family: 'crete-round-italic';
+	src: url('/fonts/slab-serif/crete-round/crete-round_italic.otf');
+}
+
+.font-crete-round-italic{
+	font-family: 'crete-round-italic';
+}
+
+@font-face{
+	font-family: 'enriqueta';
+	src: url('/fonts/slab-serif/enriqueta/enriqueta.otf');
+}
+
+.font-enriqueta{
+	font-family: 'enriqueta';
+}
+
+@font-face{
+	font-family: 'enriqueta-bold';
+	src: url('/fonts/slab-serif/enriqueta/enriqueta_bold.otf');
+}
+
+.font-enriqueta-bold{
+	font-family: 'enriqueta-bold';
+}
+
+@font-face{
+	font-family: 'gaspar';
+	src: url('/fonts/slab-serif/gaspar/gaspar.otf');
+}
+
+.font-gaspar{
+	font-family: 'gaspar';
+}
+
+@font-face{
+	font-family: 'gaspar-bold-italic';
+	src: url('/fonts/slab-serif/gaspar/gaspar_bold-italic.otf');
+}
+
+.font-gaspar-bold-italic{
+	font-family: 'gaspar-bold-italic';
+}
+
+@font-face{
+	font-family: 'gaspar-bold';
+	src: url('/fonts/slab-serif/gaspar/gaspar_bold.otf');
+}
+
+.font-gaspar-bold{
+	font-family: 'gaspar-bold';
+}
+
+@font-face{
+	font-family: 'gaspar-italic';
+	src: url('/fonts/slab-serif/gaspar/gaspar_italic.otf');
+}
+
+.font-gaspar-italic{
+	font-family: 'gaspar-italic';
+}
+
+@font-face{
+	font-family: 'josefin-slab';
+	src: url('/fonts/slab-serif/josefin-slab/josefin-slab.ttf');
+}
+
+.font-josefin-slab{
+	font-family: 'josefin-slab';
+}
+
+@font-face{
+	font-family: 'josefin-slab-bold-italic';
+	src: url('/fonts/slab-serif/josefin-slab/josefin-slab_bold-italic.ttf');
+}
+
+.font-josefin-slab-bold-italic{
+	font-family: 'josefin-slab-bold-italic';
+}
+
+@font-face{
+	font-family: 'josefin-slab-bold';
+	src: url('/fonts/slab-serif/josefin-slab/josefin-slab_bold.ttf');
+}
+
+.font-josefin-slab-bold{
+	font-family: 'josefin-slab-bold';
+}
+
+@font-face{
+	font-family: 'josefin-slab-italic';
+	src: url('/fonts/slab-serif/josefin-slab/josefin-slab_italic.ttf');
+}
+
+.font-josefin-slab-italic{
+	font-family: 'josefin-slab-italic';
+}
+
+@font-face{
+	font-family: 'josefin-slab-light-italic';
+	src: url('/fonts/slab-serif/josefin-slab/josefin-slab_light-italic.ttf');
+}
+
+.font-josefin-slab-light-italic{
+	font-family: 'josefin-slab-light-italic';
+}
+
+@font-face{
+	font-family: 'josefin-slab-light';
+	src: url('/fonts/slab-serif/josefin-slab/josefin-slab_light.ttf');
+}
+
+.font-josefin-slab-light{
+	font-family: 'josefin-slab-light';
+}
+
+@font-face{
+	font-family: 'josefin-slab-semibold-italic';
+	src: url('/fonts/slab-serif/josefin-slab/josefin-slab_semibold-italic.ttf');
+}
+
+.font-josefin-slab-semibold-italic{
+	font-family: 'josefin-slab-semibold-italic';
+}
+
+@font-face{
+	font-family: 'josefin-slab-semibold';
+	src: url('/fonts/slab-serif/josefin-slab/josefin-slab_semibold.ttf');
+}
+
+.font-josefin-slab-semibold{
+	font-family: 'josefin-slab-semibold';
+}
+
+@font-face{
+	font-family: 'josefin-slab-thin-italic';
+	src: url('/fonts/slab-serif/josefin-slab/josefin-slab_thin-italic.ttf');
+}
+
+.font-josefin-slab-thin-italic{
+	font-family: 'josefin-slab-thin-italic';
+}
+
+@font-face{
+	font-family: 'josefin-slab-thin';
+	src: url('/fonts/slab-serif/josefin-slab/josefin-slab_thin.ttf');
+}
+
+.font-josefin-slab-thin{
+	font-family: 'josefin-slab-thin';
+}
+
+@font-face{
+	font-family: 'kontrapunkt';
+	src: url('/fonts/slab-serif/kontrapunkt/kontrapunkt.otf');
+}
+
+.font-kontrapunkt{
+	font-family: 'kontrapunkt';
+}
+
+@font-face{
+	font-family: 'kontrapunkt-bold';
+	src: url('/fonts/slab-serif/kontrapunkt/kontrapunkt_bold.otf');
+}
+
+.font-kontrapunkt-bold{
+	font-family: 'kontrapunkt-bold';
+}
+
+@font-face{
+	font-family: 'kontrapunkt-italic';
+	src: url('/fonts/slab-serif/kontrapunkt/kontrapunkt_italic.otf');
+}
+
+.font-kontrapunkt-italic{
+	font-family: 'kontrapunkt-italic';
+}
+
+@font-face{
+	font-family: 'kreon';
+	src: url('/fonts/slab-serif/kreon/kreon.ttf');
+}
+
+.font-kreon{
+	font-family: 'kreon';
+}
+
+@font-face{
+	font-family: 'kreon-bold';
+	src: url('/fonts/slab-serif/kreon/kreon_bold.ttf');
+}
+
+.font-kreon-bold{
+	font-family: 'kreon-bold';
+}
+
+@font-face{
+	font-family: 'kreon-light';
+	src: url('/fonts/slab-serif/kreon/kreon_light.ttf');
+}
+
+.font-kreon-light{
+	font-family: 'kreon-light';
+}
+
+@font-face{
+	font-family: 'lindenhill';
+	src: url('/fonts/slab-serif/lindenhill/lindenhill.otf');
+}
+
+.font-lindenhill{
+	font-family: 'lindenhill';
+}
+
+@font-face{
+	font-family: 'lindenhill-italic';
+	src: url('/fonts/slab-serif/lindenhill/lindenhill_italic.otf');
+}
+
+.font-lindenhill-italic{
+	font-family: 'lindenhill-italic';
+}
+
+@font-face{
+	font-family: 'nixie-one';
+	src: url('/fonts/slab-serif/nixie-one/nixie-one.otf');
+}
+
+.font-nixie-one{
+	font-family: 'nixie-one';
+}
+
+@font-face{
+	font-family: 'noticia-text';
+	src: url('/fonts/slab-serif/noticia-text/noticia-text.ttf');
+}
+
+.font-noticia-text{
+	font-family: 'noticia-text';
+}
+
+@font-face{
+	font-family: 'noticia-text-bold-italic';
+	src: url('/fonts/slab-serif/noticia-text/noticia-text_bold-italic.ttf');
+}
+
+.font-noticia-text-bold-italic{
+	font-family: 'noticia-text-bold-italic';
+}
+
+@font-face{
+	font-family: 'noticia-text-bold';
+	src: url('/fonts/slab-serif/noticia-text/noticia-text_bold.ttf');
+}
+
+.font-noticia-text-bold{
+	font-family: 'noticia-text-bold';
+}
+
+@font-face{
+	font-family: 'noticia-text-italic';
+	src: url('/fonts/slab-serif/noticia-text/noticia-text_italic.ttf');
+}
+
+.font-noticia-text-italic{
+	font-family: 'noticia-text-italic';
+}
+
+@font-face{
+	font-family: 'patua-one';
+	src: url('/fonts/slab-serif/patua-one/patua-one.otf');
+}
+
+.font-patua-one{
+	font-family: 'patua-one';
+}
+
+@font-face{
+	font-family: 'permian-slab';
+	src: url('/fonts/slab-serif/permian-slab/permian-slab.otf');
+}
+
+.font-permian-slab{
+	font-family: 'permian-slab';
+}
+
+@font-face{
+	font-family: 'permian-slab-bold';
+	src: url('/fonts/slab-serif/permian-slab/permian-slab_bold.otf');
+}
+
+.font-permian-slab-bold{
+	font-family: 'permian-slab-bold';
+}
+
+@font-face{
+	font-family: 'permian-slab-italic';
+	src: url('/fonts/slab-serif/permian-slab/permian-slab_italic.otf');
+}
+
+.font-permian-slab-italic{
+	font-family: 'permian-slab-italic';
+}
+
+@font-face{
+	font-family: 'podkova';
+	src: url('/fonts/slab-serif/podkova/podkova.ttf');
+}
+
+.font-podkova{
+	font-family: 'podkova';
+}
+
+@font-face{
+	font-family: 'pt-serif';
+	src: url('/fonts/slab-serif/pt-serif/pt-serif.ttf');
+}
+
+.font-pt-serif{
+	font-family: 'pt-serif';
+}
+
+@font-face{
+	font-family: 'pt-serif-bold-italic';
+	src: url('/fonts/slab-serif/pt-serif/pt-serif_bold-italic.ttf');
+}
+
+.font-pt-serif-bold-italic{
+	font-family: 'pt-serif-bold-italic';
+}
+
+@font-face{
+	font-family: 'pt-serif-bold';
+	src: url('/fonts/slab-serif/pt-serif/pt-serif_bold.ttf');
+}
+
+.font-pt-serif-bold{
+	font-family: 'pt-serif-bold';
+}
+
+@font-face{
+	font-family: 'pt-serif-italic';
+	src: url('/fonts/slab-serif/pt-serif/pt-serif_italic.ttf');
+}
+
+.font-pt-serif-italic{
+	font-family: 'pt-serif-italic';
+}
+
+@font-face{
+	font-family: 'rawengulk';
+	src: url('/fonts/slab-serif/rawengulk/rawengulk.otf');
+}
+
+.font-rawengulk{
+	font-family: 'rawengulk';
+}
+
+@font-face{
+	font-family: 'rawengulk-bold';
+	src: url('/fonts/slab-serif/rawengulk/rawengulk_bold.otf');
+}
+
+.font-rawengulk-bold{
+	font-family: 'rawengulk-bold';
+}
+
+@font-face{
+	font-family: 'rawengulk-capital';
+	src: url('/fonts/slab-serif/rawengulk/rawengulk_capital.otf');
+}
+
+.font-rawengulk-capital{
+	font-family: 'rawengulk-capital';
+}
+
+@font-face{
+	font-family: 'rawengulk-demi-bold';
+	src: url('/fonts/slab-serif/rawengulk/rawengulk_demi-bold.otf');
+}
+
+.font-rawengulk-demi-bold{
+	font-family: 'rawengulk-demi-bold';
+}
+
+@font-face{
+	font-family: 'rawengulk-light';
+	src: url('/fonts/slab-serif/rawengulk/rawengulk_light.otf');
+}
+
+.font-rawengulk-light{
+	font-family: 'rawengulk-light';
+}
+
+@font-face{
+	font-family: 'rawengulk-ultra-light';
+	src: url('/fonts/slab-serif/rawengulk/rawengulk_ultra-light.otf');
+}
+
+.font-rawengulk-ultra-light{
+	font-family: 'rawengulk-ultra-light';
+}
+
+@font-face{
+	font-family: 'roboto-slab';
+	src: url('/fonts/slab-serif/roboto-slab/roboto-slab.ttf');
+}
+
+.font-roboto-slab{
+	font-family: 'roboto-slab';
+}
+
+@font-face{
+	font-family: 'roboto-slab-bold';
+	src: url('/fonts/slab-serif/roboto-slab/roboto-slab_bold.ttf');
+}
+
+.font-roboto-slab-bold{
+	font-family: 'roboto-slab-bold';
+}
+
+@font-face{
+	font-family: 'roboto-slab-light';
+	src: url('/fonts/slab-serif/roboto-slab/roboto-slab_light.ttf');
+}
+
+.font-roboto-slab-light{
+	font-family: 'roboto-slab-light';
+}
+
+@font-face{
+	font-family: 'roboto-slab-thin';
+	src: url('/fonts/slab-serif/roboto-slab/roboto-slab_thin.ttf');
+}
+
+.font-roboto-slab-thin{
+	font-family: 'roboto-slab-thin';
+}
+
+@font-face{
+	font-family: 'rokkitt';
+	src: url('/fonts/slab-serif/rokkitt/rokkitt.otf');
+}
+
+.font-rokkitt{
+	font-family: 'rokkitt';
+}
+
+@font-face{
+	font-family: 'slabo';
+	src: url('/fonts/slab-serif/slabo/slabo.ttf');
+}
+
+.font-slabo{
+	font-family: 'slabo';
+}
+
+@font-face{
+	font-family: 'slabo-serif';
+	src: url('/fonts/slab-serif/slabo/slabo_serif.ttf');
+}
+
+.font-slabo-serif{
+	font-family: 'slabo-serif';
+}
+
+@font-face{
+	font-family: 'st-marie';
+	src: url('/fonts/slab-serif/st-marie/st-marie.otf');
+}
+
+.font-st-marie{
+	font-family: 'st-marie';
+}
+
+@font-face{
+	font-family: 'tienne';
+	src: url('/fonts/slab-serif/tienne/tienne.otf');
+}
+
+.font-tienne{
+	font-family: 'tienne';
+}
+
+@font-face{
+	font-family: 'tienne-bold';
+	src: url('/fonts/slab-serif/tienne/tienne_bold.otf');
+}
+
+.font-tienne-bold{
+	font-family: 'tienne-bold';
+}
+
+@font-face{
+	font-family: 'tienne-heavy';
+	src: url('/fonts/slab-serif/tienne/tienne_heavy.otf');
+}
+
+.font-tienne-heavy{
+	font-family: 'tienne-heavy';
+}
+
+@font-face{
+	font-family: 'trocchi';
+	src: url('/fonts/slab-serif/trocchi/trocchi.otf');
+}
+
+.font-trocchi{
+	font-family: 'trocchi';
+}
+
+@font-face{
+	font-family: 'trocchi-bold';
+	src: url('/fonts/slab-serif/trocchi/trocchi_bold.otf');
+}
+
+.font-trocchi-bold{
+	font-family: 'trocchi-bold';
+}
+
+@font-face{
+	font-family: 'typo-slab-serif';
+	src: url('/fonts/slab-serif/typo-slab-serif/typo-slab-serif.ttf');
+}
+
+.font-typo-slab-serif{
+	font-family: 'typo-slab-serif';
+}
+
+@font-face{
+	font-family: 'veraserif';
+	src: url('/fonts/slab-serif/veraserif/veraserif.ttf');
+}
+
+.font-veraserif{
+	font-family: 'veraserif';
+}
+
+@font-face{
+	font-family: 'veraserif-bold';
+	src: url('/fonts/slab-serif/veraserif/veraserif_bold.ttf');
+}
+
+.font-veraserif-bold{
+	font-family: 'veraserif-bold';
+}
+
+@font-face{
+	font-family: 'zantroke';
+	src: url('/fonts/slab-serif/zantroke/zantroke.otf');
+}
+
+.font-zantroke{
+	font-family: 'zantroke';
+}
+

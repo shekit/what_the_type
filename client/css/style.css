@@ -32,11 +32,29 @@ textarea:focus {
 	text-decoration: none;
 }
 
-#all-list, #sans-serif-list, #handwriting-list, #display-list, #script-list, #monospace-list {
+#all-list, 
+#sans-serif-list, 
+#handwriting-list, 
+#display-list, 
+#script-list, 
+#monospace-list, 
+#blackletter-list,
+#slab-serif-list,
+#calligraphic-list,
+#typewriter-list {
 	display: none;
 }
 
-#all-list-select, #sans-serif-list-select, #handwriting-list-select, #display-list-select, #script-list-select, #monospace-list-select {
+#all-list-select, 
+#sans-serif-list-select, 
+#handwriting-list-select, 
+#display-list-select, 
+#script-list-select, 
+#monospace-list-select, 
+#blackletter-list-select,
+#slab-serif-list-select,
+#calligraphic-list-select,
+#typewriter-list-select {
 	display: none;
 }
 

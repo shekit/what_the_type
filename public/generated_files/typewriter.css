@@ -1,0 +1,207 @@
+@font-face{
+	font-family: '1942';
+	src: url('/fonts/typewriter/1942/1942.ttf');
+}
+
+.font-1942{
+	font-family: '1942';
+}
+
+@font-face{
+	font-family: 'carbontype';
+	src: url('/fonts/typewriter/carbontype/carbontype.ttf');
+}
+
+.font-carbontype{
+	font-family: 'carbontype';
+}
+
+@font-face{
+	font-family: 'courier-prime';
+	src: url('/fonts/typewriter/courier-prime/courier-prime.ttf');
+}
+
+.font-courier-prime{
+	font-family: 'courier-prime';
+}
+
+@font-face{
+	font-family: 'courier-prime-bold-italic';
+	src: url('/fonts/typewriter/courier-prime/courier-prime_bold-italic.ttf');
+}
+
+.font-courier-prime-bold-italic{
+	font-family: 'courier-prime-bold-italic';
+}
+
+@font-face{
+	font-family: 'courier-prime-bold';
+	src: url('/fonts/typewriter/courier-prime/courier-prime_bold.ttf');
+}
+
+.font-courier-prime-bold{
+	font-family: 'courier-prime-bold';
+}
+
+@font-face{
+	font-family: 'courier-prime-italic';
+	src: url('/fonts/typewriter/courier-prime/courier-prime_italic.ttf');
+}
+
+.font-courier-prime-italic{
+	font-family: 'courier-prime-italic';
+}
+
+@font-face{
+	font-family: 'harting';
+	src: url('/fonts/typewriter/harting/harting.ttf');
+}
+
+.font-harting{
+	font-family: 'harting';
+}
+
+@font-face{
+	font-family: 'kingthings-typewriter';
+	src: url('/fonts/typewriter/kingthings-typewriter/kingthings-typewriter.ttf');
+}
+
+.font-kingthings-typewriter{
+	font-family: 'kingthings-typewriter';
+}
+
+@font-face{
+	font-family: 'latin-modern-mono';
+	src: url('/fonts/typewriter/latin-modern-mono/latin-modern-mono.otf');
+}
+
+.font-latin-modern-mono{
+	font-family: 'latin-modern-mono';
+}
+
+@font-face{
+	font-family: 'latin-modern-mono-bold-italic';
+	src: url('/fonts/typewriter/latin-modern-mono/latin-modern-mono_bold-italic.otf');
+}
+
+.font-latin-modern-mono-bold-italic{
+	font-family: 'latin-modern-mono-bold-italic';
+}
+
+@font-face{
+	font-family: 'latin-modern-mono-bold';
+	src: url('/fonts/typewriter/latin-modern-mono/latin-modern-mono_bold.otf');
+}
+
+.font-latin-modern-mono-bold{
+	font-family: 'latin-modern-mono-bold';
+}
+
+@font-face{
+	font-family: 'latin-modern-mono-capital-italic';
+	src: url('/fonts/typewriter/latin-modern-mono/latin-modern-mono_capital-italic.otf');
+}
+
+.font-latin-modern-mono-capital-italic{
+	font-family: 'latin-modern-mono-capital-italic';
+}
+
+@font-face{
+	font-family: 'latin-modern-mono-capital';
+	src: url('/fonts/typewriter/latin-modern-mono/latin-modern-mono_capital.otf');
+}
+
+.font-latin-modern-mono-capital{
+	font-family: 'latin-modern-mono-capital';
+}
+
+@font-face{
+	font-family: 'latin-modern-mono-condensed-italic';
+	src: url('/fonts/typewriter/latin-modern-mono/latin-modern-mono_condensed-italic.otf');
+}
+
+.font-latin-modern-mono-condensed-italic{
+	font-family: 'latin-modern-mono-condensed-italic';
+}
+
+@font-face{
+	font-family: 'latin-modern-mono-condensed';
+	src: url('/fonts/typewriter/latin-modern-mono/latin-modern-mono_condensed.otf');
+}
+
+.font-latin-modern-mono-condensed{
+	font-family: 'latin-modern-mono-condensed';
+}
+
+@font-face{
+	font-family: 'latin-modern-mono-italic';
+	src: url('/fonts/typewriter/latin-modern-mono/latin-modern-mono_italic.otf');
+}
+
+.font-latin-modern-mono-italic{
+	font-family: 'latin-modern-mono-italic';
+}
+
+@font-face{
+	font-family: 'latin-modern-mono-light';
+	src: url('/fonts/typewriter/latin-modern-mono/latin-modern-mono_light.otf');
+}
+
+.font-latin-modern-mono-light{
+	font-family: 'latin-modern-mono-light';
+}
+
+@font-face{
+	font-family: 'moms-typewriter';
+	src: url('/fonts/typewriter/moms-typewriter/moms-typewriter.ttf');
+}
+
+.font-moms-typewriter{
+	font-family: 'moms-typewriter';
+}
+
+@font-face{
+	font-family: 'my-underwood';
+	src: url('/fonts/typewriter/my-underwood/my-underwood.ttf');
+}
+
+.font-my-underwood{
+	font-family: 'my-underwood';
+}
+
+@font-face{
+	font-family: 'sears-tower';
+	src: url('/fonts/typewriter/sears-tower/sears-tower.ttf');
+}
+
+.font-sears-tower{
+	font-family: 'sears-tower';
+}
+
+@font-face{
+	font-family: 'secret-typewriter';
+	src: url('/fonts/typewriter/secret-typewriter/secret-typewriter.ttf');
+}
+
+.font-secret-typewriter{
+	font-family: 'secret-typewriter';
+}
+
+@font-face{
+	font-family: 'special-elite';
+	src: url('/fonts/typewriter/special-elite/special-elite.ttf');
+}
+
+.font-special-elite{
+	font-family: 'special-elite';
+}
+
+@font-face{
+	font-family: 'underwood-champion';
+	src: url('/fonts/typewriter/underwood-champion/underwood-champion.ttf');
+}
+
+.font-underwood-champion{
+	font-family: 'underwood-champion';
+}
+
