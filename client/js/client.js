@@ -168,73 +168,73 @@ function fontSwitchCase(searchFor){
 	var fontClass = Session.get('fontClass') || 'serif'
 
 	// have to figure this - access dictionary by generating string of same name as it
-	for (var font_class in fontClasses){
-		if(font_class == fontClass){
+	// for (var font_class in fontClasses){
+	// 	if(font_class == fontClass){
 
-			font_class = font_class.split("-")
+	// 		font_class = font_class.split("-")
 
-			if(font_class.length > 1){
-				font_class = font_class[0] + capitalize(fontClass[1]);
-			} else {
-				font_class = String(font_class)
-			}
+	// 		if(font_class.length > 1){
+	// 			font_class = font_class[0] + capitalize(font_class[1]);
+	// 		} else {
+	// 			font_class = String(font_class)
+	// 		}
 
-			dictToUse = font_class + "FontDict"
-			return window[dictToUse][c][searchFor]
-		} else {
-			return allFontDict[c][searchFor]
-		}
-	}
-
-	// switch(fontClass){
-	// 	case "all":
+	// 		dictToUse = font_class + "FontDict"
+	// 		return window[dictToUse][c][searchFor]
+	// 	} else {
 	// 		return allFontDict[c][searchFor]
-	// 		break
-
-	// 	case "serif":
-	// 		return serifFontDict[c][searchFor];
-	// 		break;
-
-	// 	case "sans-serif":
-	// 		return sansSerifFontDict[c][searchFor]
-	// 		break;
-
-	// 	case "handwriting":
-	// 		return handwritingFontDict[c][searchFor]
-	// 		break;
-
-	// 	case "display":
-	// 		return displayFontDict[c][searchFor]
-	// 		break;
-
-	// 	case "script":
-	// 		return scriptFontDict[c][searchFor]
-	// 		break;
-
-	// 	case "monospace":
-	// 		return monospaceFontDict[c][searchFor]
-	// 		break;
-
-	// 	case "blackletter":
-	// 		return blackletterFontDict[c][searchFor]
-	// 		break;
-
-	// 	case "slab-serif":
-	// 		return slabSerifFontDict[c][searchFor]
-	// 		break
-
-	// 	case "typewriter":
-	// 		return typewriterFontDict[c][searchFor]
-	// 		break
-
-	// 	case "calligraphic":
-	// 		return calligraphicFontDict[c][searchFor]
-	// 		break
-
-	// 	default:
-	// 		return allFontDict[c][searchFor]
-	// 		break
+	// 	}
 	// }
+
+	switch(fontClass){
+		case "all":
+			return allFontDict[c][searchFor]
+			break
+
+		case "serif":
+			return serifFontDict[c][searchFor];
+			break;
+
+		case "sans-serif":
+			return sansSerifFontDict[c][searchFor]
+			break;
+
+		case "handwriting":
+			return handwritingFontDict[c][searchFor]
+			break;
+
+		case "display":
+			return displayFontDict[c][searchFor]
+			break;
+
+		case "script":
+			return scriptFontDict[c][searchFor]
+			break;
+
+		case "monospace":
+			return monospaceFontDict[c][searchFor]
+			break;
+
+		case "blackletter":
+			return blackletterFontDict[c][searchFor]
+			break;
+
+		case "slab-serif":
+			return slabSerifFontDict[c][searchFor]
+			break
+
+		case "typewriter":
+			return typewriterFontDict[c][searchFor]
+			break
+
+		case "calligraphic":
+			return calligraphicFontDict[c][searchFor]
+			break
+
+		default:
+			return allFontDict[c][searchFor]
+			break
+	}
 }
 
 // reset font list when font class is changed
@@ -242,8 +242,25 @@ function resetFont(fontClass){
 
 	$("#font-style-btn").html("Regular")
 
-	var fontClassToSet = ''
-	var fontName = ''
+	// var font_class = fontClass.split("-")
+
+	// if(font_class.length > 1){
+	// 	font_class = font_class[0] + capitalize(font_class[1]);
+	// } else {
+	// 	font_class = String(font_class)
+	// }
+
+	// var dictToUse = font_class + "FontDict";
+	// console.log("DICT: "+dictToUse);
+	// console.log(window[dictToUse])
+	// var fontClassToSet = window[dictToUse][counter]["class"]
+	// var fontName = window[dictToUse][counter]["name"]
+
+	// console.log("DICT: "+dictToUse);
+	//console.log(fontName);
+
+	var fontClassToSet = '';
+	var fontName = '';
 
 	switch(fontClass){
 		case "all":
