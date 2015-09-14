@@ -27,7 +27,7 @@ var calligraphicFontDict = [{"styles": ["regular"], "ending": "ttf", "link": "ht
 var counter = 0;
 var fontListId = '#serif-list';
 var fontListLength = serifFontDict.length;
-var fontClassGlobal = ''
+var fontClassGlobal = serifFontDict[0]["class"];
 
 var fontClassCounter = 0;
 var fontClassLength = fontClasses.length;
@@ -155,8 +155,13 @@ function setFontClass(fontClassName){
 	Session.set('fontClass',fontClassName)
 	Session.set('counter',counter)
 
+	fontClassGlobal = fontSwitchCase("class")
+
 	console.log("FONT LENGTH: " + fontListLength);
 	console.log("FONT LIST ID: " + fontListId)
+	console.log("FONT CLASS: " + Session.get('fontClass'))
+	console.log("FONT COUNTER: " + Session.get('counter'))
+	console.log("FONT CLASS GLOBAL: " + fontClassGlobal)
 
 	resetFont(fontClassName)
 }
