@@ -414,17 +414,8 @@ Template.body.events({
 })
 
 Template.topbar.events({
-	"click .view-as-list": function(event){
-		console.log("view as list");
+	"click .view-link": function(event){
 		$(".work-area").addClass("block-div");
-		//$(".view-as-list").hide();
-		//$(".view-as-single").show();
-	},
-
-	"click .view-as-single": function(event){
-		$(".work-area").removeClass("block-div");
-		//$(".view-as-list").show();
-		//$(".view-as-single").hide();
 	}
 })
 
@@ -571,6 +562,13 @@ Template.list.events({
 
 
 //HELPERS
+
+Template.main.helpers({
+	"route": function(){
+		return Router.current().route.getName()
+	}
+})
+
 Template.topbar.helpers({
 	"route": function(){
 		return Router.current().route.getName()

@@ -10,27 +10,7 @@ textarea:focus {
 	outline: none !important;
 }
 
-.top-bar-link, .top-bar-link:active, .top-bar-link:visited, .top-bar-link:focus {
-	color: #f05a28;
-	font-size: 18px;
-	line-height: 88px;
-	font-weight: 300;
-}
 
-.top-bar-link:hover{
-	color: #d85124;
-	text-decoration: none;
-}
-
-.about-link, .about-link:active, .about-link:visited, .about-link:focus{
-	color: #f05a28;
-	font-weight: bold;
-}
-
-.about-link:hover {
-	color: #d85124;
-	text-decoration: none;
-}
 
 /*SIDEBAR FONT LISTS*/
 
@@ -319,15 +299,50 @@ textarea:focus {
 		color: #d85124;
 	}
 
+	.top-bar-link, .top-bar-link:active, .top-bar-link:visited, .top-bar-link:focus {
+	color: #f05a28;
+	font-size: 18px;
+	line-height: 88px;
+	font-weight: 300;
+	}
+
+	.top-bar-link:hover{
+		color: #d85124;
+		text-decoration: none;
+	}
+
+	.about-link, .about-link:active, .about-link:visited, .about-link:focus{
+		color: #f05a28;
+		font-weight: bold;
+	}
+
+	.about-link:hover {
+		color: #d85124;
+		text-decoration: none;
+	}
+
+	.view-link {
+		background: #f05a28;
+		font-size: 18px;
+		color: #ffffff;
+		padding: 5px 10px;
+	}
+
+	.view-link:hover {
+		background: #d85124;
+		color: #ffffff;
+		text-decoration: none;
+	}
+
 }
 
 @media(max-width: 768px){
-	#text{
+	#text, .font-holder{
 		font-size: 48px;
 		border: 1px solid #ccc;
 	}
 
-	select{
+	select, .btn-default{
 		margin-bottom: 15px;
 		border-radius: 0;
 	}
