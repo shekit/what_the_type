@@ -1,6 +1,6 @@
 /****** MY STYLES ******/
 
-#text {
+#text, .list-input {
 	text-align: center;
 	width: 100%;
 }
@@ -139,8 +139,6 @@ textarea:focus {
 	font-weight: bolder !important;
 	font-style: italic;
 }
-
-
 
 
 /* ABOUT MODAL */
@@ -293,7 +291,11 @@ textarea:focus {
 	  	display:         flex;
 	}
 
-	#text {
+	.block-div {
+		display: block;
+	}
+
+	#text, .list-input {
 		font-size: 64px;
 		border: 1px solid #f1f1f1;
 		padding: 20px;

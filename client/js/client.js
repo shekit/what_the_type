@@ -408,6 +408,21 @@ Template.body.events({
 	}
 })
 
+Template.topbar.events({
+	"click .view-as-list": function(event){
+		console.log("view as list");
+		$(".work-area").addClass("block-div");
+		$(".view-as-list").hide();
+		$(".view-as-single").show();
+	},
+
+	"click .view-as-single": function(event){
+		$(".work-area").removeClass("block-div");
+		$(".view-as-list").show();
+		$(".view-as-single").hide();
+	}
+})
+
 
 Template.sidebar.events({
 
@@ -540,6 +555,16 @@ Template.mobileButtons.events({
 	}
 })
 
+Template.list.events({
+	"keyup .list-input": function(event){
+		console.log("typing typing");
+		var text = event.target.value;
+		console.log(text);
+		$(".list-input").val(text)
+	}
+})
+
+
 //HELPERS
 Template.fontClassificationList.helpers({
 	"fontTypes": function(){
@@ -552,177 +577,266 @@ Template.fontClassificationList.helpers({
 })
 
 Template.allList.helpers({
-	"alls": function(){
+	"fonts": function(){
 		return allFontDict
 	},
 
 	"firstFont" : function(){
 		return allFontDict[0]["name"]
+	},
+
+	"name": function(){
+		return "all"
 	}
 })
 
 Template.allListSelect.helpers({
-	"alls": function(){
+	"fonts": function(){
 		return allFontDict
+	},
+
+	"name": function(){
+		return "all"
 	}
 })
 
 Template.serifList.helpers({
-	"serifs": function(){
+	"fonts": function(){
 		return serifFontDict
 	},
 
 	"firstFont" : function(){
 		return serifFontDict[0]["name"]
+	},
+
+	"name": function(){
+		return "serif"
 	}
 })
 
 Template.serifListSelect.helpers({
-	"serifs": function(){
+	"fonts": function(){
 		return serifFontDict
+	},
+
+	"name": function(){
+		return "serif"
 	}
 })
 
 Template.sansSerifList.helpers({
-	"sansSerifs": function(){
+	"fonts": function(){
 		return sansSerifFontDict
 	},
 
 	"firstFont": function(){
 		return sansSerifFontDict[0]["name"]
+	},
+
+	"name": function(){
+		return "sans-serif"
 	}
 })
 
 Template.sansSerifListSelect.helpers({
-	"sansSerifs": function(){
+	"fonts": function(){
 		return sansSerifFontDict
+	},
+
+	"name": function(){
+		return "sans-serif"
 	}
 })
 
 Template.handwritingList.helpers({
-	"handwritings": function(){
+	"fonts": function(){
 		return handwritingFontDict
 	},
 
 	"firstFont": function(){
 		return handwritingFontDict[0]["name"]
+	},
+
+	"name": function(){
+		return "handwriting"
 	}
 })
 
 Template.handwritingListSelect.helpers({
-	"handwritings": function(){
+	"fonts": function(){
 		return handwritingFontDict
+	},
+
+	"name": function(){
+		return "handwriting"
 	}
 })
 
 Template.scriptList.helpers({
-	"scripts": function(){
+	"fonts": function(){
 		return scriptFontDict
 	},
 
 	"firstFont": function(){
 		return scriptFontDict[0]["name"]
+	},
+
+	"name": function(){
+		return "script"
 	}
+
 })
 
 Template.scriptListSelect.helpers({
-	"scripts": function(){
+	"fonts": function(){
 		return scriptFontDict
+	},
+
+	"name": function(){
+		return "script"
 	}
 })
 
 Template.displayList.helpers({
-	"displays": function(){
+	"fonts": function(){
 		return displayFontDict
 	},
 
 	"firstFont": function(){
 		return displayFontDict[0]["name"]
+	},
+
+	"name": function(){
+		return "display"
 	}
 })
 
 Template.displayListSelect.helpers({
-	"displays": function(){
+	"fonts": function(){
 		return displayFontDict
+	},
+
+	"name": function(){
+		return "display"
 	}
 })
 
 Template.monospaceList.helpers({
-	"monospaces": function(){
+	"fonts": function(){
 		return monospaceFontDict
 	},
 
 	"firstFont": function(){
 		return monospaceFontDict[0]["name"]
+	},
+
+	"name": function(){
+		return "monospace"
 	}
 })
 Template.monospaceListSelect.helpers({
-	"monospaces": function(){
+	"fonts": function(){
 		return monospaceFontDict
+	},
+
+	"name": function(){
+		return "monospace"
 	}
 })
 
 Template.blackletterList.helpers({
-	"blackletters": function(){
+	"fonts": function(){
 		return blackletterFontDict
 	},
 
 	"firstFont": function(){
 		return blackletterFontDict[0]["name"]
+	},
+
+	"name": function(){
+		return "blackletter"
 	}
 })
 
 Template.blackletterListSelect.helpers({
-	"blackletters": function(){
+	"fonts": function(){
 		return blackletterFontDict
+	},
+
+	"name": function(){
+		return "blackletter"
 	}
 })
 
 Template.slabSerifList.helpers({
-	"slabSerifs": function(){
+	"fonts": function(){
 		return slabSerifFontDict
 	},
 
 	"firstFont": function(){
 		return slabSerifFontDict[0]["name"]
+	},
+
+	"name": function(){
+		return "slab-serif"
 	}
 })
 
 Template.slabSerifListSelect.helpers({
-	"slabSerifs": function(){
+	"fonts": function(){
 		return slabSerifFontDict
+	},
+
+	"name": function(){
+		return "slab-serif"
 	}
 })
 
 Template.calligraphicList.helpers({
-	"calligraphics": function(){
+	"fonts": function(){
 		return calligraphicFontDict
 	},
 
 	"firstFont": function(){
 		return calligraphicFontDict[0]["name"]
+	},
+
+	"name": function(){
+		return "calligraphic"
 	}
 })
 
 Template.calligraphicListSelect.helpers({
-	"calligraphics": function(){
+	"fonts": function(){
 		return calligraphicFontDict
+	},
+
+	"name": function(){
+		return "calligraphic"
 	}
 })
 
 Template.typewriterList.helpers({
-	"typewriters": function(){
+	"fonts": function(){
 		return typewriterFontDict
 	},
 
 	"firstFont": function(){
 		return typewriterFontDict[0]["name"]
+	},
+
+	"name": function(){
+		return "typewriter"
 	}
 })
 
 Template.typewriterListSelect.helpers({
-	"typewriters": function(){
+	"fonts": function(){
 		return typewriterFontDict
+	},
+
+	"name": function(){
+		return "typewriter"
 	}
 })
 
@@ -755,7 +869,24 @@ Template.downloadFont.helpers({
 	}
 })
 
-Router.route('/', function(){
-	this.render('main');
+Template.list.helpers({
+	"fonts": function(){
+		return serifFontDict
+	}
+})
+
+///////////// ROUTER //////////
+Router.configure({
+	"layoutTemplate": "main"
+})
+
+Router.route('/', {
+	name: 'text',
+	template: 'text'
+})
+
+Router.route('/list', {
+	name: 'list',
+	template: 'list'
 })
 
