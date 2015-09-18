@@ -352,7 +352,7 @@ function checkForStyles(styleLength){
 
 // change size of text in textarea
 function setFontSizeOnKeyPress(increase){
-	var currentFontSize = parseInt($("#text").css('font-size'));
+	var currentFontSize = parseInt($(".font-holder").css('font-size'));
 
 	if(increase){
 		if(currentFontSize <= 100){
@@ -364,13 +364,17 @@ function setFontSizeOnKeyPress(increase){
 		}
 	}
 	
-	$("#text").css('font-size',currentFontSize);
+	$(".font-holder").css('font-size',currentFontSize);
 	//set btn text to current font size
 	$("#font-size-list-btn").html(currentFontSize + " px");
 }
 
 // HELPERS AND INITIALIZATION CODE
 Template.registerHelper('capitalize', capitalize)
+
+Template.registerHelper('equals', function(route, currentRoute){
+	return route == currentRoute;
+})
 
 Template.text.onRendered(function(){
 	$("#text").focus();
@@ -379,6 +383,7 @@ Template.text.onRendered(function(){
 Template.body.onRendered(function(){
 	checkForStyles(fontStyleLength);
 })
+
 
 // EVENTS
 Template.body.events({
@@ -412,14 +417,14 @@ Template.topbar.events({
 	"click .view-as-list": function(event){
 		console.log("view as list");
 		$(".work-area").addClass("block-div");
-		$(".view-as-list").hide();
-		$(".view-as-single").show();
+		//$(".view-as-list").hide();
+		//$(".view-as-single").show();
 	},
 
 	"click .view-as-single": function(event){
 		$(".work-area").removeClass("block-div");
-		$(".view-as-list").show();
-		$(".view-as-single").hide();
+		//$(".view-as-list").show();
+		//$(".view-as-single").hide();
 	}
 })
 
@@ -528,7 +533,7 @@ Template.fontSize.events({
 		event.preventDefault();
 		var fontSize = parseInt(event.target.innerHTML);
 		//console.log(fontSize);
-		$("#text").css('font-size',fontSize);
+		$(".font-holder").css('font-size',fontSize);
 		$(event.target).parents("ul").siblings("button").html(fontSize + " px");
 	},
 
@@ -555,17 +560,29 @@ Template.mobileButtons.events({
 	}
 })
 
+
 Template.list.events({
 	"keyup .list-input": function(event){
-		console.log("typing typing");
+		// edit all textareas when one is edited
 		var text = event.target.value;
-		console.log(text);
 		$(".list-input").val(text)
 	}
 })
 
 
 //HELPERS
+Template.topbar.helpers({
+	"route": function(){
+		return Router.current().route.getName()
+	}
+})
+
+Template.sidebar.helpers({
+	"route": function(){
+		return Router.current().route.getName()
+	}
+})
+
 Template.fontClassificationList.helpers({
 	"fontTypes": function(){
 		return fontClasses
@@ -871,7 +888,18 @@ Template.downloadFont.helpers({
 
 Template.list.helpers({
 	"fonts": function(){
-		return serifFontDict
+		var fontClass = Session.get('fontClass') || 'serif'
+		var font_class = fontClass.split("-")
+
+		if(font_class.length > 1){
+			font_class = font_class[0] + capitalize(font_class[1]);
+		} else {
+			font_class = String(font_class)
+		}
+
+		var dictToUse = font_class + "FontDict";
+
+		return window[dictToUse]
 	}
 })
 

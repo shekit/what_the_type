@@ -300,7 +300,25 @@ textarea:focus {
 		border: 1px solid #f1f1f1;
 		padding: 20px;
 		box-shadow: 0 0 5px #e5e5e5;
+		margin-bottom: 10px;
 	}
+
+	.list-div {
+		position: relative;
+	}
+
+	.download-list-link , .download-list-link:active, .download-list-link:visited{
+		position: absolute;
+		bottom: 20px;
+		right: 25px;
+		color: #f05a28;
+	}
+
+	.download-list-link:hover {
+		text-decoration: none;
+		color: #d85124;
+	}
+
 }
 
 @media(max-width: 768px){
