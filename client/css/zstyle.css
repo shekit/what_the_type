@@ -32,6 +32,8 @@ textarea:focus {
 	text-decoration: none;
 }
 
+/*SIDEBAR FONT LISTS*/
+
 #all-list, 
 #sans-serif-list, 
 #handwriting-list, 
@@ -57,6 +59,89 @@ textarea:focus {
 #typewriter-list-select {
 	display: none;
 }
+
+/*STYLING FOR THE FONT CLASS DROPDOWN BTN*/
+.serif {
+	font-family: "crimson";
+}
+
+.sans-serif {
+	font-family: "droid-sans";
+}
+
+.script{
+	font-family: "black-jack";
+}
+
+.handwriting {
+	font-family: "daniel";
+}
+
+.display {
+	font-family: "alfa-slab";
+}
+
+.monospace {
+	font-family: "source-code-pro";
+}
+
+.blackletter {
+	font-family: "new-rocker";
+}
+
+.calligraphic {
+	font-family: "calligraffiti"
+}
+
+.slab-serif {
+	font-family: "roboto-slab";
+}
+
+.typewriter {
+	font-family: "courier-prime";
+}
+
+/*STYLING FOR FONT VARIANT DROP DOWN BTN*/
+.ultra-light {
+	font-weight: 100 !important;
+}
+
+.light {
+	font-weight: 200 !important;
+}
+
+.thin {
+	font-weight: 300 !important;
+}
+
+.regular {
+	 font-weight: 400;
+} 
+
+.medium, .demi {
+	font-weight: 500 !important;
+}
+
+.medium-italic, .demi-italic {
+	font-weight: 500 !important;
+	font-style: italic;
+}
+
+.bold {
+	font-weight: bolder !important;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.bold-italic {
+	font-weight: bolder !important;
+	font-style: italic;
+}
+
+
+
 
 /* ABOUT MODAL */
 .modal-content {
@@ -129,7 +214,17 @@ textarea:focus {
 	padding-right: 0;
 }
 
+.muted {
+	color: #aaa;
+}
 
+.twitter_link, .twitter_link:visited, .twitter_link:active {
+	color: #f05a28;
+}
+
+.twitter_link:hover{
+	color: #d85124 ;
+}
 
 /*******BOOTSTRAP OVERRIDES******/
 

@@ -32,9 +32,14 @@
     </div>
     {{>mobileButtons}}
   </div> 
-  
+  <div class="row hidden-xs">
+  	<div class="col-xs-12">
+  		{{>footer}}
+  	</div>
+  </div>
   {{>aboutModal}}
   {{>feedbackModal}}
+  
 </template>
 
 <template name="topbar">
@@ -198,7 +203,7 @@
         </button>
         <ul class="dropdown-menu">
           {{#each fontTypes}}
-            <li><a class="font-class-type" data-font-class-type="{{this}}" href="#">{{capitalize this}}</a></li>
+            <li><a class="font-class-type {{this}}" data-font-class-type="{{this}}" href="#">{{capitalize this}}</a></li>
           {{/each}}
         </ul>
       </div>
@@ -228,7 +233,7 @@
     </button>
     <ul id='ul-alls' class="dropdown-menu">
       {{#each alls}}
-        <li><a class="font-type" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
+        <li><a class="font-type {{this.class}}" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
       {{/each}}
     </ul>
   </div>
@@ -249,7 +254,7 @@
   	</button>
   	<ul id='ul-serifs' class="dropdown-menu">
   		{{#each serifs}}
-  			<li><a class="font-type" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
+  			<li><a class="font-type {{this.class}}" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
   		{{/each}}
   	</ul>
   </div>
@@ -270,7 +275,7 @@
   	</button>
   	<ul id='ul-sans-serifs' class="dropdown-menu">
   		{{#each sansSerifs}}
-  			<li><a class="font-type" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
+  			<li><a class="font-type {{this.class}}" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
   		{{/each}}
   	</ul>
   </div>
@@ -291,7 +296,7 @@
     </button>
     <ul id='ul-handwritings' class="dropdown-menu">
       {{#each handwritings}}
-        <li><a class="font-type" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
+        <li><a class="font-type {{this.class}}" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
       {{/each}}
     </ul>
   </div>
@@ -312,7 +317,7 @@
     </button>
     <ul id='ul-scripts' class="dropdown-menu">
       {{#each scripts}}
-        <li><a class="font-type" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
+        <li><a class="font-type {{this.class}}" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
       {{/each}}
     </ul>
   </div>
@@ -333,7 +338,7 @@
     </button>
     <ul id='ul-displays' class="dropdown-menu">
       {{#each displays}}
-        <li><a class="font-type" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
+        <li><a class="font-type {{this.class}}" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
       {{/each}}
     </ul>
   </div>
@@ -354,7 +359,7 @@
     </button>
     <ul id='ul-monospaces' class="dropdown-menu">
       {{#each monospaces}}
-        <li><a class="font-type" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
+        <li><a class="font-type {{this.class}}" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
       {{/each}}
     </ul>
   </div>
@@ -375,7 +380,7 @@
     </button>
     <ul id='ul-blackletters' class="dropdown-menu">
       {{#each blackletters}}
-        <li><a class="font-type" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
+        <li><a class="font-type {{this.class}}" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
       {{/each}}
     </ul>
   </div>
@@ -396,7 +401,7 @@
     </button>
     <ul id='ul-calligraphics' class="dropdown-menu">
       {{#each calligraphics}}
-        <li><a class="font-type" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
+        <li><a class="font-type {{this.class}}" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
       {{/each}}
     </ul>
   </div>
@@ -417,7 +422,7 @@
     </button>
     <ul id='ul-typewriters' class="dropdown-menu">
       {{#each typewriters}}
-        <li><a class="font-type" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
+        <li><a class="font-type {{this.class}}" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
       {{/each}}
     </ul>
   </div>
@@ -438,7 +443,7 @@
     </button>
     <ul id='ul-slab-serifs' class="dropdown-menu">
       {{#each slabSerifs}}
-        <li><a class="font-type" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
+        <li><a class="font-type {{this.class}}" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
       {{/each}}
     </ul>
   </div>
@@ -465,7 +470,7 @@
         </button>
         <ul id='ul-font-style' class="dropdown-menu">
         {{#each fontStyles}}
-          <li><a class="font-style" data-font-style="{{this}}" href="#">{{capitalize this}}</a></li>
+          <li><a class="font-style {{this}}" data-font-style="{{this}}" href="#">{{capitalize this}}</a></li>
         {{/each}}
         </ul>
       </div>
@@ -518,6 +523,11 @@
 
 <template name="downloadFont">
   <a href="{{link}}" class="btn btn-default btn-block btn-download" target="blank">Download Font</a>
+</template>
+
+<template name="footer">
+<br><br>
+ <p class="small text-center block-center muted">Built by <a href="https://twitter.com/ashekshek" class="twitter_link" target="blank">@ashekshek</a></p>
 </template>
 
 <template name="ga">
