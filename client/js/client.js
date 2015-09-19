@@ -38,6 +38,8 @@ var currentFontStyleArray = serifFontDict[0]["styles"];
 
 var textToStyle = '';
 
+var nightView = false;
+
 function capitalize(str){
 	return str.replace(/\w\S*/g, function(txt){
 		return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
@@ -274,6 +276,16 @@ Template.registerHelper('equals', function(route, currentRoute){
 
 Template.text.onRendered(function(){
 	$("#text").focus();
+
+	if(nightView){
+		$("#text").addClass('inverted')
+	}
+})
+
+Template.list.onRendered(function(){
+	if(nightView){
+		$(".list-input").addClass('inverted')
+	}
 })
 
 Template.sidebar.onRendered(function(){
@@ -346,6 +358,26 @@ Template.topbar.events({
 
 	"click .view-link-mobile": function(event){
 		resetFont();
+	},
+
+	"click .night-view-link": function(event){
+		var textField = $("#text");
+		var textListFields = $(".list-input")
+		var nightBtn = $(event.target)
+
+		if(textField.hasClass('inverted') || textListFields.hasClass('inverted')){
+			textField.removeClass('inverted')
+			textListFields.removeClass('inverted')
+			nightBtn.html("Night View")
+			nightBtn.removeClass('day-view-link')
+			nightView = false;
+		} else {
+			textField.addClass('inverted')
+			textListFields.addClass('inverted')
+			nightBtn.html("Day View")
+			nightBtn.addClass('day-view-link')
+			nightView = true;
+		}
 	}
 })
 

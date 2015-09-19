@@ -278,17 +278,7 @@ textarea:focus {
 		color: #d85124;
 	}
 
-	.top-bar-link, .top-bar-link:active, .top-bar-link:visited, .top-bar-link:focus {
-	color: #f05a28;
-	font-size: 18px;
-	line-height: 88px;
-	font-weight: 300;
-	}
-
-	.top-bar-link:hover{
-		color: #d85124;
-		text-decoration: none;
-	}
+	
 
 	.footer-link, .footer-link:active, .footer-link:visited, .footer-link:focus {
 		color: #f05a28;
@@ -312,17 +302,38 @@ textarea:focus {
 		text-decoration: none;
 	}
 
-	.view-link {
-		background: #f05a28;
-		font-size: 18px;
-		color: #ffffff;
-		padding: 5px 10px;
+	.top-bar-link{
+		line-height: 88px;
 	}
 
-	.view-link:hover {
-		background: #d85124;
+	.view-link, .view-link:active, .view-link:visited, .view-link:focus, .night-view-link, .night-view-link:active, .night-view-link:focus, .night-view-link:visited {
+		background: #ffffff;
+		font-size: 18px;
+		color: #f05a28;
+		border: 1px solid #f05a28;
+		padding: 5px 10px;
+		font-weight: 300;
+		text-decoration: none;
+	}
+
+	.view-link:hover{
+		background: #f05a28;
 		color: #ffffff;
 		text-decoration: none;
+	}
+
+	.night-view-link:hover {
+		background: #333;
+		color: #ffffff;
+		text-decoration: none;
+		border: 1px solid #000;
+	}
+
+	.day-view-link:hover {
+		background: #f05a28;
+		color: #ffffff;
+		text-decoration: none;
+		border: 1px solid #f05a28;
 	}
 
 }
