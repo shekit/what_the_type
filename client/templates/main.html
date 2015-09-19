@@ -82,7 +82,7 @@
 	<div class="row block-div">
 		{{#each fonts}}
 		<div class="col-sm-6 list-div">
-			<textarea class="list-input {{this.class}} font-holder" placeholder="{{this.name}}"></textarea>
+			<textarea class="list-input {{this.class}} font-holder" placeholder="{{this.name}}">{{textToStyle}}</textarea>
 			<a href="{{this.link}}" target="blank" class="download-list-link"><span class="glyphicon glyphicon-download-alt hidden-xs"></span></a>
         </div>
       	{{/each}}
@@ -189,17 +189,8 @@
     {{>prevFont}}
     <div class="col-xs-12 col-sm-6 col-md-8 hidden-xs no-padding">
       
-      {{>serifList}}
-      {{>sansSerifList}}
-      {{>handwritingList}}
-      {{>displayList}}
-      {{>scriptList}}
-      {{>monospaceList}}
-      {{>blackletterList}}
-      {{>calligraphicList}}
-      {{>typewriterList}}
-      {{>slabSerifList}}
-      {{>allList}}
+      
+      {{>fontList}}
 
     </div>
 
@@ -221,7 +212,7 @@
 </template>
 
 <template name="text">
-  <textarea id="text" class="font-holder" placeholder="Enter Text Here"></textarea>
+  <textarea id="text" class="font-holder" placeholder="Enter Text Here">{{textToStyle}}</textarea>
 </template>
 
 <template name="fontClassificationList">
@@ -259,6 +250,19 @@
     </div>
   </div>
   
+</template>
+
+<template name="fontList">
+	<div id="{{name}}-list" class="btn-group">
+	    <button id="{{name}}-list-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	     {{capitalize firstFont}}
+	    </button>
+	    <ul id='ul-{{name}}s' class="dropdown-menu">
+	      {{#each fonts}}
+	        <li><a class="font-type {{this.class}}" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
+	      {{/each}}
+	    </ul>
+  	</div>
 </template>
 
 <template name="allList">

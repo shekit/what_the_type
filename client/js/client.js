@@ -36,6 +36,8 @@ var fontStyleCounter = 0;
 var fontStyleLength = serifFontDict[0]["styles"].length;
 var currentFontStyleArray = serifFontDict[0]["styles"];
 
+var textToStyle = '';
+
 function capitalize(str){
 	return str.replace(/\w\S*/g, function(txt){
 		return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
@@ -170,17 +172,8 @@ function setFontClass(fontClassName){
 function fontSwitchCase(searchFor){
 
 	var c = Session.get('counter') || counter
-	var fontClass = Session.get('fontClass') || 'serif'
 
-	var font_class = fontClass.split("-")
-
-	if(font_class.length > 1){
-		font_class = font_class[0] + capitalize(font_class[1]);
-	} else {
-		font_class = String(font_class)
-	}
-
-	var dictToUse = font_class + "FontDict";
+	var dictToUse = getFontDict()
 
 	return window[dictToUse][c][searchFor]
 
@@ -240,15 +233,7 @@ function resetFont(fontClass){
 
 	$("#font-style-btn").html("Regular")
 
-	var font_class = fontClass.split("-")
-
-	if(font_class.length > 1){
-		font_class = font_class[0] + capitalize(font_class[1]);
-	} else {
-		font_class = String(font_class)
-	}
-
-	var dictToUse = font_class + "FontDict";
+	var dictToUse = getFontDict()
 	//console.log("DICT: "+dictToUse);
 	//console.log(window[dictToUse])
 	var fontClassToSet = window[dictToUse][counter]["class"]
@@ -340,6 +325,19 @@ function setFont(fontClass){
 	$("#text").addClass(fontClass);
 }
 
+function getFontDict(){
+	var fontClass = Session.get('fontClass') || 'serif'
+	var font_class = fontClass.split("-")
+
+	if(font_class.length > 1){
+		font_class = font_class[0] + capitalize(font_class[1]);
+	} else {
+		font_class = String(font_class)
+	}
+
+	return font_class + "FontDict";
+}
+
 //mute the color to show it has no styles
 function checkForStyles(styleLength){
 	var styleBtn = $("#font-style-btn")
@@ -415,7 +413,9 @@ Template.body.events({
 
 Template.topbar.events({
 	"click .view-link": function(event){
-		$(".work-area").addClass("block-div");
+		// var fontClass = Session.get('fontClass') || "serif"
+		// resetFont(fontClass);
+		// setFontClass(fontClass);
 	}
 })
 
@@ -555,8 +555,14 @@ Template.mobileButtons.events({
 Template.list.events({
 	"keyup .list-input": function(event){
 		// edit all textareas when one is edited
-		var text = event.target.value;
-		$(".list-input").val(text)
+		textToStyle = event.target.value;
+		$(".list-input").val(textToStyle);
+	}
+})
+
+Template.text.events({
+	"keyup .font-holder": function(event){
+		textToStyle = event.target.value;
 	}
 })
 
@@ -588,6 +594,25 @@ Template.fontClassificationList.helpers({
 
 	"firstType":function(){
 		return fontClasses[0]
+	}
+})
+
+Template.fontList.helpers({
+	"fonts": function(){
+		var dictToUse = getFontDict();
+
+		return window[dictToUse]
+	},
+
+	"firstFont": function(){
+
+		var dictToUse = getFontDict();
+
+		return window[dictToUse][0]['name']
+	},
+
+	"name": function(){
+		return Session.get('fontClass') || 'serif'
 	}
 })
 
@@ -886,18 +911,19 @@ Template.downloadFont.helpers({
 
 Template.list.helpers({
 	"fonts": function(){
-		var fontClass = Session.get('fontClass') || 'serif'
-		var font_class = fontClass.split("-")
-
-		if(font_class.length > 1){
-			font_class = font_class[0] + capitalize(font_class[1]);
-		} else {
-			font_class = String(font_class)
-		}
-
-		var dictToUse = font_class + "FontDict";
+		var dictToUse = getFontDict()
 
 		return window[dictToUse]
+	},
+
+	"textToStyle" : function(){
+		return textToStyle;
+	}
+})
+
+Template.text.helpers({
+	"textToStyle":function(){
+		return textToStyle;
 	}
 })
 
