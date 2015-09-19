@@ -342,6 +342,10 @@ Template.topbar.events({
 
 	"click .view-link": function(event){
 		resetFont()
+	},
+
+	"click .view-link-mobile": function(event){
+		resetFont();
 	}
 })
 
@@ -383,7 +387,7 @@ Template.sidebar.events({
 		Session.set('counter',counter);
 		fontClassGlobal = fontClass;
 		setFont(fontClass)
-		console.log(counter)
+		//console.log(counter)
 		//fontClassCounter = fontClasses.indexOf(listName);
 		//setFontClass(listName);
 	}

@@ -58,9 +58,6 @@
 	    {{#if equals route 'text'}}
 	    	<li><a href="{{pathFor route='list'}}" class="view-link">List View</a></li>
 	    {{/if}}
-	      
-	      <li><a href="#" class="top-bar-link {{route}}" data-toggle="modal" data-target="#aboutModal">about</a></li>
-	      <li><a href="#" class="top-bar-link" data-toggle="modal" data-target="#feedbackModal">feedback</a></li>
 	    </ul>
     </div>
 
@@ -318,7 +315,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close text-center" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Feedback</h4>
+        <h4 class="modal-title" id="myModalLabel">Contact</h4>
       </div>
       <div class="modal-body">
       <br>
@@ -332,7 +329,10 @@
 </template>
 
 <template name="footer">
-<br><br>
- <p class="small text-center block-center muted">Built by <a href="https://twitter.com/ashekshek" class="twitter_link" target="blank">@ashekshek</a></p>
+	<ul class="list-inline text-center">
+      <li><a href="#" class="footer-link {{route}}" data-toggle="modal" data-target="#aboutModal">about</a></li>
+      <li><a href="#" class="footer-link" data-toggle="modal" data-target="#feedbackModal">contact</a></li>
+	</ul>
+ 	<p class="small text-center block-center muted">Built by <a href="https://twitter.com/ashekshek" class="twitter_link" target="blank">@ashekshek</a></p>
 </template>
 
