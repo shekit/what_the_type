@@ -165,12 +165,15 @@ function setFontClass(fontClassName){
 	resetFont()
 }
 
-//return value from dict based on current font class
-function fontSwitchCase(searchFor){
+// main function - sets the font. called by all functions
+function setFont(fontClass){
+	//console.log("RECEIVED FONT CLASS: " + fontClass)
 
-	var c = Session.get('counter') || counter
-	return window[getFontDict()][c][searchFor]
-
+	currentFontStyleArray = fontSwitchCase("styles");
+	fontStyleLength = currentFontStyleArray.length;
+	checkForStyles(fontStyleLength);
+	$("#text").removeClass();
+	$("#text").addClass(fontClass);
 }
 
 // reset font list when font class is changed
@@ -193,15 +196,12 @@ function resetFont(){
 	setFont(fontClassToSet)
 }
 
-// main function - sets the font. called by all functions
-function setFont(fontClass){
-	//console.log("RECEIVED FONT CLASS: " + fontClass)
+//return value from dict based on current font class
+function fontSwitchCase(searchFor){
 
-	currentFontStyleArray = fontSwitchCase("styles");
-	fontStyleLength = currentFontStyleArray.length;
-	checkForStyles(fontStyleLength);
-	$("#text").removeClass();
-	$("#text").addClass(fontClass);
+	var c = Session.get('counter') || counter
+	return window[getFontDict()][c][searchFor]
+
 }
 
 function getFontDict(){
@@ -276,9 +276,8 @@ Template.text.onRendered(function(){
 	$("#text").focus();
 })
 
-Template.body.onRendered(function(){
+Template.sidebar.onRendered(function(){
 	checkForStyles(fontStyleLength);
-	$(".font-btn").html(capitalize(serifFontDict[0][name]));
 })
 
 
@@ -469,13 +468,11 @@ Template.fontSize.events({
 Template.mobileButtons.events({
 	"click .prev-font-mobile":function(event){
 		event.preventDefault();
-		console.log(counter)
 		prevFont()
 	},
 
 	"click .next-font-mobile":function(event){
 		event.preventDefault();
-		console.log(counter)
 		nextFont()
 	}
 })
