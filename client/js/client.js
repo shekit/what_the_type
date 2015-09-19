@@ -1,4 +1,4 @@
-var fontClasses = ["serif", "sans-serif", "display", "script", "handwriting", "monospace", "blackletter", "calligraphic", "slab-serif", "typewriter", "all"]
+var fontClasses = ["serif", "sans-serif", "display", "script", "handwriting", "monospace", "blackletter", "slab-serif", "typewriter","calligraphic", "all"]
 
 var fontSizes = [12,14,16,18,24,32,44,48,64,72];
 
@@ -68,6 +68,7 @@ function prevFont(){
 
 function setFontOnKeyPress(){
 	Session.set('counter',counter)
+	console.log(counter);
 	//get current list element
 	var listElement = $(fontListId + ' li').eq(counter)[0];
 	// find data attr of a tag in li to set font class and btn name
@@ -139,15 +140,11 @@ function prevFontClass(){
 }
 
 function setFontClass(fontClassName){
+
 	counter = 0;
 	var listToDisplay = "#"+fontClassName+ "-list";
-	var selectToDisplay = listToDisplay + "-select";
-	$("#font-type-btn").html(capitalize(fontClassName));
 
-	//show fonts of this class
-	$(".font-lists").hide();
-	$(listToDisplay).show();
-	$(selectToDisplay).show();
+	$("#font-type-btn").html(capitalize(fontClassName));
 
 	//set global variables to hold the newly displayed list
 	fontListLength = $(listToDisplay + " li").length;
@@ -165,151 +162,33 @@ function setFontClass(fontClassName){
 	// console.log("FONT COUNTER: " + Session.get('counter'))
 	// console.log("FONT CLASS GLOBAL: " + fontClassGlobal)
 
-	resetFont(fontClassName)
+	resetFont()
 }
 
 //return value from dict based on current font class
 function fontSwitchCase(searchFor){
 
 	var c = Session.get('counter') || counter
+	return window[getFontDict()][c][searchFor]
 
-	var dictToUse = getFontDict()
-
-	return window[dictToUse][c][searchFor]
-
-	// switch(fontClass){
-	// 	case "all":
-	// 		return allFontDict[c][searchFor]
-	// 		break
-
-	// 	case "serif":
-	// 		return serifFontDict[c][searchFor];
-	// 		break;
-
-	// 	case "sans-serif":
-	// 		return sansSerifFontDict[c][searchFor]
-	// 		break;
-
-	// 	case "handwriting":
-	// 		return handwritingFontDict[c][searchFor]
-	// 		break;
-
-	// 	case "display":
-	// 		return displayFontDict[c][searchFor]
-	// 		break;
-
-	// 	case "script":
-	// 		return scriptFontDict[c][searchFor]
-	// 		break;
-
-	// 	case "monospace":
-	// 		return monospaceFontDict[c][searchFor]
-	// 		break;
-
-	// 	case "blackletter":
-	// 		return blackletterFontDict[c][searchFor]
-	// 		break;
-
-	// 	case "slab-serif":
-	// 		return slabSerifFontDict[c][searchFor]
-	// 		break
-
-	// 	case "typewriter":
-	// 		return typewriterFontDict[c][searchFor]
-	// 		break
-
-	// 	case "calligraphic":
-	// 		return calligraphicFontDict[c][searchFor]
-	// 		break
-
-	// 	default:
-	// 		return allFontDict[c][searchFor]
-	// 		break
-	// }
 }
 
 // reset font list when font class is changed
-function resetFont(fontClass){
+function resetFont(){
 
+	counter = 0;
 	$("#font-style-btn").html("Regular")
 
 	var dictToUse = getFontDict()
-	//console.log("DICT: "+dictToUse);
-	//console.log(window[dictToUse])
-	var fontClassToSet = window[dictToUse][counter]["class"]
-	var fontName = window[dictToUse][counter]["name"]
 
-	//console.log("DICT: "+dictToUse);
-	//console.log(fontName);
+	var fontClassToSet = window[dictToUse][0]["class"]
+	var fontName = window[dictToUse][0]["name"]
 
-	// var fontClassToSet = '';
-	// var fontName = '';
+	//fontName = capitalize(fontName);
+	Session.set("fontName", fontName);
 
-	// switch(fontClass){
-	// 	case "all":
-	// 		fontClassToSet = allFontDict[counter]["class"];
-	// 		fontName = allFontDict[counter]["name"];
-	// 		break;
-
-	// 	case "serif":
-	// 		fontClassToSet = serifFontDict[counter]["class"];
-	// 		fontName = serifFontDict[counter]["name"];
-	// 		break;
-
-	// 	case "sans-serif":
-	// 		fontClassToSet = sansSerifFontDict[counter]["class"]
-	// 		fontName = sansSerifFontDict[counter]["name"];
-	// 		break;
-
-	// 	case "handwriting":
-	// 		fontClassToSet = handwritingFontDict[counter]["class"]
-	// 		fontName = handwritingFontDict[counter]["name"];
-	// 		break;
-
-	// 	case "display":
-	// 		fontClassToSet = displayFontDict[counter]["class"];
-	// 		fontName = displayFontDict[counter]["name"];
-	// 		break;
-
-	// 	case "script":
-	// 		fontClassToSet = scriptFontDict[counter]["class"];
-	// 		fontName = scriptFontDict[counter]["name"];
-	// 		break;
-
-	// 	case "monospace":
-	// 		fontClassToSet = monospaceFontDict[counter]["class"];
-	// 		fontName = monospaceFontDict[counter]["name"];
-	// 		break
-
-	// 	case "blackletter":
-	// 		fontClassToSet = blackletterFontDict[counter]["class"];
-	// 		fontName = blackletterFontDict[counter]["name"];
-	// 		break
-
-	// 	case "slab-serif":
-	// 		fontClassToSet = slabSerifFontDict[counter]["class"];
-	// 		fontName = slabSerifFontDict[counter]["name"];
-	// 		break
-
-	// 	case "typewriter":
-	// 		fontClassToSet = typewriterFontDict[counter]["class"];
-	// 		fontName = typewriterFontDict[counter]["name"];
-	// 		break
-
-	// 	case "calligraphic":
-	// 		fontClassToSet = calligraphicFontDict[counter]["class"];
-	// 		fontName = calligraphicFontDict[counter]["name"];
-	// 		break
-
-	// 	default:
-	// 		fontClassToSet = allFontDict[counter]["class"];
-	// 		fontName = allFontDict[counter]["name"];
-	// 		break
-	// }
-
-	fontName = capitalize(fontName);
-
-	$("#"+fontClass+"-list-btn").html(fontName);
+	// reset to empty othrwise printing double
+	$(".font-btn").html('')
 
 	setFont(fontClassToSet)
 }
@@ -367,6 +246,25 @@ function setFontSizeOnKeyPress(increase){
 	$("#font-size-list-btn").html(currentFontSize + " px");
 }
 
+$.fn.inView = function(inViewType){
+    var viewport = {};
+    viewport.top = $(window).scrollTop();
+    viewport.bottom = viewport.top + $(window).height();
+    var bounds = {};
+    bounds.top = this.offset().top;
+    bounds.bottom = bounds.top + this.outerHeight();
+    switch(inViewType){
+      case 'bottomOnly':
+        return ((bounds.bottom <= viewport.bottom) && (bounds.bottom >= viewport.top));
+      case 'topOnly':
+        return ((bounds.top <= viewport.bottom) && (bounds.top >= viewport.top));
+      case 'both':
+        return ((bounds.top >= viewport.top) && (bounds.bottom <= viewport.bottom));         
+      default:     
+        return ((bounds.top >= viewport.top) && (bounds.bottom <= viewport.bottom));        
+    }
+};
+
 // HELPERS AND INITIALIZATION CODE
 Template.registerHelper('capitalize', capitalize)
 
@@ -380,6 +278,7 @@ Template.text.onRendered(function(){
 
 Template.body.onRendered(function(){
 	checkForStyles(fontStyleLength);
+	$(".font-btn").html(capitalize(serifFontDict[0][name]));
 })
 
 
@@ -387,38 +286,65 @@ Template.body.onRendered(function(){
 Template.body.events({
 	"keydown": function(event){
 
+		var route = Router.current().route.getName()
 		//UP KEY
-		if(event.keyCode == 38){
+		if(event.keyCode == 38 && route=='text'){
+			setFontSizeOnKeyPress(true);
+		}
+
+		if(event.keyCode == 38 && route=='list'){
+			event.preventDefault()
 			setFontSizeOnKeyPress(true);
 		}
 
 		// DOWN KEY
-		if(event.keyCode == 40){
+		if(event.keyCode == 40 && route=='text'){
+			setFontSizeOnKeyPress(false);
+		}
+
+		if(event.keyCode == 40 && route=='list'){
+			event.preventDefault();
 			setFontSizeOnKeyPress(false);
 		}
 
 		// RIGHT KEY
-		if(event.keyCode == 39){
+		if(event.keyCode == 39 && route=='text'){
+			event.preventDefault()
 			$("#text").blur()
 			nextFont()	
 		}
 
+		if(event.keyCode == 39 && route=='list'){
+			event.preventDefault();
+			nextFontClass()	
+		}
+
 		// LEFT KEY
-		if(event.keyCode == 37){
+		if(event.keyCode == 37 && route=='text'){
+			event.preventDefault()
 			$("#text").blur()
 			prevFont()
+		}
+
+		if(event.keyCode == 37 && route=='list'){
+			event.preventDefault();
+			prevFontClass()
 		}
 	}
 })
 
 Template.topbar.events({
+	"click .img-responsive": function(event){
+		//resetFont()
+		if(Router.current().route.getName() != 'text'){
+			counter=0;
+		}
+	},
+
 	"click .view-link": function(event){
-		// var fontClass = Session.get('fontClass') || "serif"
-		// resetFont(fontClass);
-		// setFontClass(fontClass);
+		resetFont()
 	}
 })
-
 
 Template.sidebar.events({
 
@@ -458,8 +384,8 @@ Template.sidebar.events({
 		Session.set('counter',counter);
 		fontClassGlobal = fontClass;
 		setFont(fontClass)
-		fontClassCounter = fontClasses.indexOf(listName);
-		setFontClass(listName);
+		//fontClassCounter = fontClasses.indexOf(listName);
+		//setFontClass(listName);
 	}
 })
 
@@ -561,7 +487,8 @@ Template.list.events({
 })
 
 Template.text.events({
-	"keyup .font-holder": function(event){
+	"keyup #text": function(event){
+		// save to global variable so that it persists between single and list view
 		textToStyle = event.target.value;
 	}
 })
@@ -587,6 +514,22 @@ Template.sidebar.helpers({
 	}
 })
 
+Template.list.helpers({
+	"fonts": function(){
+		return window[getFontDict()]
+	},
+
+	"textToStyle" : function(){
+		return textToStyle;
+	}
+})
+
+Template.text.helpers({
+	"textToStyle":function(){
+		return textToStyle;
+	}
+})
+
 Template.fontClassificationList.helpers({
 	"fontTypes": function(){
 		return fontClasses
@@ -597,18 +540,14 @@ Template.fontClassificationList.helpers({
 	}
 })
 
+// This renders the font list btn
 Template.fontList.helpers({
 	"fonts": function(){
-		var dictToUse = getFontDict();
-
-		return window[dictToUse]
+		return window[getFontDict()]
 	},
 
 	"firstFont": function(){
-
-		var dictToUse = getFontDict();
-
-		return window[dictToUse][0]['name']
+		return window[getFontDict()][0]['name'] || Session.get('fontName')
 	},
 
 	"name": function(){
@@ -616,11 +555,10 @@ Template.fontList.helpers({
 	}
 })
 
+// this renders the font list select box for mobiles
 Template.fontSelectMobile.helpers({
 	"fonts": function(){
-		var dictToUse = getFontDict();
-
-		return window[dictToUse]
+		return window[getFontDict()]
 	},
 
 	"name": function(){
@@ -645,35 +583,13 @@ Template.fontSize.helpers({
 	}
 })
 
-Template.sidebar.helpers({
-	"numberOfStyles": function(){
-		return currentFontStyleArray.length
-	}
-})
-
 Template.downloadFont.helpers({
 	"link" : function(){
 		return fontSwitchCase("link")
 	}
 })
 
-Template.list.helpers({
-	"fonts": function(){
-		var dictToUse = getFontDict()
 
-		return window[dictToUse]
-	},
-
-	"textToStyle" : function(){
-		return textToStyle;
-	}
-})
-
-Template.text.helpers({
-	"textToStyle":function(){
-		return textToStyle;
-	}
-})
 
 ///////////// ROUTER //////////
 Router.configure({

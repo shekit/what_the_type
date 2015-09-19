@@ -13,32 +13,7 @@ textarea:focus {
 
 
 /*SIDEBAR FONT LISTS*/
-/*
-#all-list, 
-#sans-serif-list, 
-#handwriting-list, 
-#display-list, 
-#script-list, 
-#monospace-list, 
-#blackletter-list,
-#slab-serif-list,
-#calligraphic-list,
-#typewriter-list {
-	display: none;
-}*/
 
-/*#all-list-select, 
-#sans-serif-list-select, 
-#handwriting-list-select, 
-#display-list-select, 
-#script-list-select, 
-#monospace-list-select, 
-#blackletter-list-select,
-#slab-serif-list-select,
-#calligraphic-list-select,
-#typewriter-list-select {
-	display: none;
-}*/
 
 /*STYLING FOR THE FONT CLASS DROPDOWN BTN*/
 .serif {
@@ -342,7 +317,7 @@ textarea:focus {
 		border: 1px solid #ccc;
 	}
 
-	select, .btn-default{
+	select, .view-link-mobile{
 		margin-bottom: 15px;
 		border-radius: 0;
 	}

@@ -45,49 +45,41 @@
 </template>
 
 <template name="topbar">
-  <div class="col-xs-12 col-sm-4 hidden-xs">
-    <h1><a href="{{pathFor 'text'}}"><img src="/images/logo.png" alt="Font Fling" class="img-responsive" width="200"></a></h1>
-  </div>
-  <div class="col-sm-8 hidden-xs">
-    <ul class="list-inline text-right">
-    {{#if equals route 'list'}}
-      	<li><a href="{{pathFor route='text'}}" class="view-link">Single View</a></li>
-    {{/if}}
+    <div class="col-xs-12 col-sm-4 hidden-xs">
+    	<h1><a href="{{pathFor 'text'}}"><img src="/images/logo.png" alt="Font Fling" class="img-responsive" width="200"></a></h1>
+    </div>
 
-    {{#if equals route 'text'}}
-    	<li><a href="{{pathFor route='list'}}" class="view-link">List View</a></li>
-    {{/if}}
-      
-      <li><a href="#" class="top-bar-link {{route}}" data-toggle="modal" data-target="#aboutModal">about</a></li>
-      <li><a href="#" class="top-bar-link" data-toggle="modal" data-target="#feedbackModal">feedback</a></li>
-    </ul>
-  </div>
+    <div class="col-sm-8 hidden-xs">
+	    <ul class="list-inline text-right">
+	    {{#if equals route 'list'}}
+	      	<li><a href="{{pathFor route='text'}}" class="view-link">Single View</a></li>
+	    {{/if}}
 
-  <div class="col-xs-12 visible-xs-block">
-  <h1><a href="{{pathFor 'text'}}"><img src="/images/logo.png" alt="Font Fling" class="center-block img-responsive" width="150"></a></h1>
-  </div>
-   <div class="col-xs-12 visible-xs-block">
-   {{#if equals route 'list'}}
-  		<a href="{{pathFor 'text'}}" class="btn btn-block btn-default">Single View</a>
-  	{{/if}}
+	    {{#if equals route 'text'}}
+	    	<li><a href="{{pathFor route='list'}}" class="view-link">List View</a></li>
+	    {{/if}}
+	      
+	      <li><a href="#" class="top-bar-link {{route}}" data-toggle="modal" data-target="#aboutModal">about</a></li>
+	      <li><a href="#" class="top-bar-link" data-toggle="modal" data-target="#feedbackModal">feedback</a></li>
+	    </ul>
+    </div>
 
-  	{{#if equals route 'text'}}
-  		<a href="{{pathFor 'list'}}" class="btn btn-block btn-default">List View</a>
-  	{{/if}}
+    <div class="col-xs-12 visible-xs-block">
+  		<h1><a href="{{pathFor 'text'}}"><img src="/images/logo.png" alt="Font Fling" class="center-block img-responsive" width="150"></a></h1>
+    </div>
+   
+    <div class="col-xs-12 visible-xs-block">
+	    {{#if equals route 'list'}}
+	  		<a href="{{pathFor 'text'}}" class="btn btn-block btn-default view-link-mobile">Single View</a>
+	  	{{/if}}
 
-  </div>
+	  	{{#if equals route 'text'}}
+	  		<a href="{{pathFor 'list'}}" class="btn btn-block btn-default view-link-mobile">List View</a>
+	  	{{/if}}
+    </div>
 </template>
 
-<template name="list">
-	<div class="row block-div">
-		{{#each fonts}}
-		<div class="col-sm-6 list-div">
-			<textarea class="list-input {{this.class}} font-holder" placeholder="{{this.name}}">{{textToStyle}}</textarea>
-			<a href="{{this.link}}" target="blank" class="download-list-link"><span class="glyphicon glyphicon-download-alt hidden-xs"></span></a>
-        </div>
-      	{{/each}}
-	</div>
-</template>
+
 
 <template name="mobileButtons">
   <div class="row visible-xs-block fixed-to-bottom">
@@ -100,47 +92,7 @@
   </div>
 </template>
 
-<template name="aboutModal">
-<div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close text-center" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">About</h4>
-      </div>
-      <div class="modal-body">
-      <br>
-        <p>When I'm deciding on a font for one of my projects, this is how my process looks. Open up illustrator, write out some text and tab through the list of fonts till I find something that looks good.</p>
-        <br>
-        <p>But finding new fonts online and trying them is hard! So I made fontfling - to bring that same feeling of Illustrator to the web. Use the arrow keys to switch between hundreds of free fonts (thanks FontSquirrel!) and simply download the ones you love. I've also added something that Illustrator is missing - choosing fonts by classification.</p>
-        <br>
-        <p>If you have feedback or want to say hi drop me a line at <a href="mailto:fontfling@gmail.com" class="about-link">fontfling@gmail.com</a></p>
-        <br>
-        <p>Hopefully fontfling makes finding great new fonts for your projects easier. Now go find your font &lt;3</p>
-      </div>
-    </div>
-  </div>
-</div>
-</template>
 
-<template name="feedbackModal">
-<div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close text-center" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Feedback</h4>
-      </div>
-      <div class="modal-body">
-      <br>
-        <p>I'd love to hear from you so if you have any feedback or just want to say hi drop me a line at <a href="mailto:fontfling@gmail.com" class="about-link">fontfling@gmail.com</a></p>
-        <br>
-        <p>Go find your font &lt;3</p>
-      </div>
-    </div>
-  </div>
-</div>
-</template>
 
 <template name="sidebar">
   <div class="row">
@@ -202,6 +154,17 @@
   <textarea id="text" class="font-holder" placeholder="Enter Text Here">{{textToStyle}}</textarea>
 </template>
 
+<template name="list">
+	<div class="row block-div">
+		{{#each fonts}}
+		<div class="col-sm-12 col-md-6 list-div">
+			<textarea class="list-input {{this.class}} font-holder" placeholder="{{this.name}}">{{textToStyle}}</textarea>
+			<a href="{{this.link}}" target="blank" class="download-list-link"><span class="glyphicon glyphicon-download-alt hidden-xs"></span></a>
+        </div>
+      	{{/each}}
+	</div>
+</template>
+
 <template name="fontClassificationList">
 
   <div class="row hidden-xs">
@@ -241,7 +204,7 @@
 
 <template name="fontList">
 	<div id="{{name}}-list" class="btn-group">
-	    <button id="{{name}}-list-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	    <button id="{{name}}-list-btn" type="button" class="btn btn-default dropdown-toggle font-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 	     {{capitalize firstFont}}
 	    </button>
 	    <ul id='ul-{{name}}s' class="dropdown-menu">
@@ -324,6 +287,48 @@
 
 <template name="downloadFont">
   <a href="{{link}}" class="btn btn-default btn-block btn-download" target="blank">Download Font</a>
+</template>
+
+<template name="aboutModal">
+<div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close text-center" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">About</h4>
+      </div>
+      <div class="modal-body">
+      <br>
+        <p>When I'm deciding on a font for one of my projects, this is how my process looks. Open up illustrator, write out some text and tab through the list of fonts till I find something that looks good.</p>
+        <br>
+        <p>But finding new fonts online and trying them is hard! So I made fontfling - to bring that same feeling of Illustrator to the web. Use the arrow keys to switch between hundreds of free fonts (thanks FontSquirrel!) and simply download the ones you love. I've also added something that Illustrator is missing - choosing fonts by classification.</p>
+        <br>
+        <p>If you have feedback or want to say hi drop me a line at <a href="mailto:fontfling@gmail.com" class="about-link">fontfling@gmail.com</a></p>
+        <br>
+        <p>Hopefully fontfling makes finding great new fonts for your projects easier. Now go find your font &lt;3</p>
+      </div>
+    </div>
+  </div>
+</div>
+</template>
+
+<template name="feedbackModal">
+<div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close text-center" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Feedback</h4>
+      </div>
+      <div class="modal-body">
+      <br>
+        <p>I'd love to hear from you so if you have any feedback or just want to say hi drop me a line at <a href="mailto:fontfling@gmail.com" class="about-link">fontfling@gmail.com</a></p>
+        <br>
+        <p>Go find your font &lt;3</p>
+      </div>
+    </div>
+  </div>
+</div>
 </template>
 
 <template name="footer">
