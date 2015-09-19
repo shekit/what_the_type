@@ -146,13 +146,13 @@ function setFontClass(fontClassName){
 
 	$("#font-type-btn").html(capitalize(fontClassName));
 
-	//set global variables to hold the newly displayed list
-	fontListLength = $(listToDisplay + " li").length;
-	fontListId = listToDisplay;
-
 	// set which font class is selected
 	Session.set('fontClass',fontClassName)
 	Session.set('counter',counter)
+
+	//set global variables to hold the newly displayed list
+	fontListLength = window[getFontDict()].length
+	fontListId = listToDisplay;
 
 	fontClassGlobal = fontSwitchCase("class")
 
@@ -378,12 +378,13 @@ Template.sidebar.events({
 		prevFont()
 	},
 
-	"change .form-control": function(event){
+	"change .sel-mob": function(event){
 		var fontClass = $(event.target).children(":selected").attr("data-font-class");
 		counter = $(event.target).children(":selected").index()
 		Session.set('counter',counter);
 		fontClassGlobal = fontClass;
 		setFont(fontClass)
+		console.log(counter)
 		//fontClassCounter = fontClasses.indexOf(listName);
 		//setFontClass(listName);
 	}
@@ -468,11 +469,13 @@ Template.fontSize.events({
 Template.mobileButtons.events({
 	"click .prev-font-mobile":function(event){
 		event.preventDefault();
+		console.log(counter)
 		prevFont()
 	},
 
 	"click .next-font-mobile":function(event){
 		event.preventDefault();
+		console.log(counter)
 		nextFont()
 	}
 })
