@@ -188,24 +188,11 @@
   <div class="row">
     {{>prevFont}}
     <div class="col-xs-12 col-sm-6 col-md-8 hidden-xs no-padding">
-      
-      
       {{>fontList}}
-
     </div>
 
     <div class="col-xs-12 visible-xs-block">
-      {{>allListSelect}}
-      {{>serifListSelect}}
-      {{>sansSerifListSelect}}
-      {{>handwritingListSelect}}
-      {{>displayListSelect}}
-      {{>scriptListSelect}}
-      {{>monospaceListSelect}}
-      {{>blackletterListSelect}}
-      {{>calligraphicListSelect}}
-      {{>typewriterListSelect}}
-      {{>slabSerifListSelect}}
+      {{>fontSelectMobile}}
     </div>
     {{>nextFont}}
   </div>
@@ -265,248 +252,12 @@
   	</div>
 </template>
 
-<template name="allList">
-  	<div id="{{name}}-list" class="btn-group font-lists">
-	    <button id="{{name}}-list-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	     {{capitalize firstFont}}
-	    </button>
-	    <ul id='ul-{{parent.name}}s' class="dropdown-menu">
-	      {{#each fonts}}
-	        <li><a class="font-type {{this.class}}" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
-	      {{/each}}
-	    </ul>
-  	</div>
-</template>
-
-<template name="allListSelect">
-  <select id="{{name}}-list-select" class="form-control font-lists">
-    {{#each fonts}}
-      <option class="font-class-type" data-font-class="{{this.class}}">{{capitalize this.name}}</option>
-    {{/each}}
-  </select>
-</template>
-
-<template name="serifList">
-  	<div id="{{name}}-list" class="btn-group font-lists">
-	    <button id="{{name}}-list-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	     {{capitalize firstFont}}
-	    </button>
-	    <ul id='ul-{{parent.name}}s' class="dropdown-menu">
-	      {{#each fonts}}
-	        <li><a class="font-type {{this.class}}" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
-	      {{/each}}
-	    </ul>
-  	</div>
-</template>
-
-<template name="serifListSelect">
-  <select id="{{name}}-list-select" class="form-control font-lists">
-    {{#each fonts}}
-      <option class="font-class-type" data-font-class="{{this.class}}">{{capitalize this.name}}</option>
-    {{/each}}
-  </select>
-</template>
-
-<template name="sansSerifList">
-  	<div id="{{name}}-list" class="btn-group font-lists">
-	    <button id="{{name}}-list-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	     {{capitalize firstFont}}
-	    </button>
-	    <ul id='ul-{{parent.name}}s' class="dropdown-menu">
-	      {{#each fonts}}
-	        <li><a class="font-type {{this.class}}" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
-	      {{/each}}
-	    </ul>
-  	</div>
-</template>
-
-<template name="sansSerifListSelect">
-  <select id="{{name}}-list-select" class="form-control font-lists">
-    {{#each fonts}}
-      <option class="font-class-type" data-font-class="{{this.class}}">{{capitalize this.name}}</option>
-    {{/each}}
-  </select>
-</template>
-
-<template name="handwritingList">
-  	<div id="{{name}}-list" class="btn-group font-lists">
-	    <button id="{{name}}-list-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	     {{capitalize firstFont}}
-	    </button>
-	    <ul id='ul-{{parent.name}}s' class="dropdown-menu">
-	      {{#each fonts}}
-	        <li><a class="font-type {{this.class}}" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
-	      {{/each}}
-	    </ul>
-  	</div>
-</template>
-
-<template name="handwritingListSelect">
-  <select id="{{name}}-list-select" class="form-control font-lists">
-    {{#each fonts}}
-      <option class="font-class-type" data-font-class="{{this.class}}">{{capitalize this.name}}</option>
-    {{/each}}
-  </select>
-</template>
-
-<template name="scriptList">
-  	<div id="{{name}}-list" class="btn-group font-lists">
-	    <button id="{{name}}-list-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	     {{capitalize firstFont}}
-	    </button>
-	    <ul id='ul-{{parent.name}}s' class="dropdown-menu">
-	      {{#each fonts}}
-	        <li><a class="font-type {{this.class}}" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
-	      {{/each}}
-	    </ul>
-  	</div>
-</template>
-
-<template name="scriptListSelect">
-  <select id="{{name}}-list-select" class="form-control font-lists">
-    {{#each fonts}}
-      <option class="font-class-type" data-font-class="{{this.class}}">{{capitalize this.name}}</option>
-    {{/each}}
-  </select>
-</template>
-
-<template name="displayList">
-  	<div id="{{name}}-list" class="btn-group font-lists">
-	    <button id="{{name}}-list-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	     {{capitalize firstFont}}
-	    </button>
-	    <ul id='ul-{{parent.name}}s' class="dropdown-menu">
-	      {{#each fonts}}
-	        <li><a class="font-type {{this.class}}" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
-	      {{/each}}
-	    </ul>
-  	</div>
-</template>
-
-<template name="displayListSelect">
-  <select id="{{name}}-list-select" class="form-control font-lists">
-    {{#each fonts}}
-      <option class="font-class-type" data-font-class="{{this.class}}">{{capitalize this.name}}</option>
-    {{/each}}
-  </select>
-</template>
-
-<template name="monospaceList">
-  	<div id="{{name}}-list" class="btn-group font-lists">
-	    <button id="{{name}}-list-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	     {{capitalize firstFont}}
-	    </button>
-	    <ul id='ul-{{parent.name}}s' class="dropdown-menu">
-	      {{#each fonts}}
-	        <li><a class="font-type {{this.class}}" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
-	      {{/each}}
-	    </ul>
-  	</div>
-</template>
-
-<template name="monospaceListSelect">
-  <select id="{{name}}-list-select" class="form-control font-lists">
-    {{#each fonts}}
-      <option class="font-class-type" data-font-class="{{this.class}}">{{capitalize this.name}}</option>
-    {{/each}}
-  </select>
-</template>
-
-<template name="blackletterList">
-  	<div id="{{name}}-list" class="btn-group font-lists">
-	    <button id="{{name}}-list-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	     {{capitalize firstFont}}
-	    </button>
-	    <ul id='ul-{{parent.name}}s' class="dropdown-menu">
-	      {{#each fonts}}
-	        <li><a class="font-type {{this.class}}" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
-	      {{/each}}
-	    </ul>
-  	</div>
-</template>
-
-<template name="blackletterListSelect">
-  <select id="{{name}}-list-select" class="form-control font-lists">
-    {{#each fonts}}
-      <option class="font-class-type" data-font-class="{{this.class}}">{{capitalize this.name}}</option>
-    {{/each}}
-  </select>
-</template>
-
-<template name="calligraphicList">
-  	<div id="{{name}}-list" class="btn-group font-lists">
-	    <button id="{{name}}-list-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	     {{capitalize firstFont}}
-	    </button>
-	    <ul id='ul-{{parent.name}}s' class="dropdown-menu">
-	      {{#each fonts}}
-	        <li><a class="font-type {{this.class}}" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
-	      {{/each}}
-	    </ul>
-  	</div>
-</template>
-
-<template name="calligraphicListSelect">
-  <select id="{{name}}-list-select" class="form-control font-lists">
-    {{#each fonts}}
-      <option class="font-class-type" data-font-class="{{this.class}}">{{capitalize this.name}}</option>
-    {{/each}}
-  </select>
-</template>
-
-<template name="typewriterList">
-  	<div id="{{name}}-list" class="btn-group font-lists">
-	    <button id="{{name}}-list-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	     {{capitalize firstFont}}
-	    </button>
-	    <ul id='ul-{{parent.name}}s' class="dropdown-menu">
-	      {{#each fonts}}
-	        <li><a class="font-type {{this.class}}" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
-	      {{/each}}
-	    </ul>
-  	</div>
-</template>
-
-<template name="typewriterListSelect">
-  <select id="{{name}}-list-select" class="form-control font-lists">
-    {{#each fonts}}
-      <option class="font-class-type" data-font-class="{{this.class}}">{{capitalize this.name}}</option>
-    {{/each}}
-  </select>
-</template>
-
-<template name="slabSerifList">
-  	<div id="{{name}}-list" class="btn-group font-lists">
-	    <button id="{{name}}-list-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	     {{capitalize firstFont}}
-	    </button>
-	    <ul id='ul-{{parent.name}}s' class="dropdown-menu">
-	      {{#each fonts}}
-	        <li><a class="font-type {{this.class}}" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
-	      {{/each}}
-	    </ul>
-  	</div>
-</template>
-
-<template name="slabSerifListSelect">
-  <select id="{{name}}-list-select" class="form-control font-lists">
-    {{#each fonts}}
-      <option class="font-class-type" data-font-class="{{this.class}}">{{capitalize this.name}}</option>
-    {{/each}}
-  </select>
-</template>
-
-<template name="fontBtn">
-	<div id="{{name}}-list" class="btn-group font-lists">
-	    <button id="{{name}}-list-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	     {{capitalize firstFont}}
-	    </button>
-	    <ul id='ul-{{parent.name}}s' class="dropdown-menu">
-	      {{#each fonts}}
-	        <li><a class="font-type {{this.class}}" data-font-class="{{this.class}}" href="#">{{capitalize this.name}}</a></li>
-	      {{/each}}
-	    </ul>
-  	</div>
+<template name="fontSelectMobile">
+	<select id="{{name}}-list-select" class="form-control">
+	    {{#each fonts}}
+	      <option class="font-class-type" data-font-class="{{this.class}}">{{capitalize this.name}}</option>
+	    {{/each}}
+ 	</select>
 </template>
 
 <template name="fontStyleList">
@@ -534,8 +285,6 @@
 
   </div>
 </template>
-
-
 
 <template name="fontSize">
   <div class="row hidden-xs">
@@ -582,5 +331,3 @@
  <p class="small text-center block-center muted">Built by <a href="https://twitter.com/ashekshek" class="twitter_link" target="blank">@ashekshek</a></p>
 </template>
 
-<template name="ga">
-</template>

@@ -27,7 +27,7 @@ textarea:focus {
 	display: none;
 }*/
 
-#all-list-select, 
+/*#all-list-select, 
 #sans-serif-list-select, 
 #handwriting-list-select, 
 #display-list-select, 
@@ -38,7 +38,7 @@ textarea:focus {
 #calligraphic-list-select,
 #typewriter-list-select {
 	display: none;
-}
+}*/
 
 /*STYLING FOR THE FONT CLASS DROPDOWN BTN*/
 .serif {
