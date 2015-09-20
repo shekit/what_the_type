@@ -77,7 +77,7 @@ function prevFont(){
 
 function setFontOnKeyPress(){
 	Session.set('counter',counter)
-	console.log(counter);
+	//console.log(counter);
 	//get current list element
 	var listElement = $(fontListId + ' li').eq(counter)[0];
 	// find data attr of a tag in li to set font class and btn name
