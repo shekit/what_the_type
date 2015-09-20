@@ -136,6 +136,15 @@ textarea:focus {
 	color: #f05a28;
 }
 
+.btn-custom-two, .btn-custom-two:active, .btn-custom-two:visited, .btn-custom-two:focus {
+	background: #ffffff;
+	margin-bottom: 30px;
+}
+
+.btn-custom-two:hover {
+	background: #f1f1f1;
+}
+
 .btn-download{
 	border-radius: 0;
 	background: #fff;
@@ -262,7 +271,11 @@ textarea:focus {
 		margin-bottom: 10px;
 	}
 
-	.list-div {
+	.list-input {
+		min-height: 150px;
+	}
+
+	.text-div, .list-div {
 		position: relative;
 	}
 
@@ -336,6 +349,27 @@ textarea:focus {
 		border: 1px solid #f05a28;
 	}
 
+	.dummy-text-ul {
+		position: absolute;
+		bottom: 20px;
+		right: 20px;
+	}
+
+	.dummy-text, .dummy-text:active , .dummy-text:visited, .dummy-text:focus{
+		background: #ffffff;
+		font-size: 12px;
+		color: #f05a28;
+		border: 1px solid #ccc;
+		padding: 5px 10px;
+		text-decoration: none;
+	}
+
+	.dummy-text:hover {
+		background: #e5e5e5;
+		color: #f05a28;
+		text-decoration: none;
+		border: 1px solid #aaa;	
+	}
 }
 
 @media(max-width: 768px){

@@ -40,6 +40,13 @@ var textToStyle = '';
 
 var nightView = false;
 
+var dummyWord = "Word";
+var dummyPara = "Hey I'm a paragraph. I'm way cooler than that dull Lorem Ipsum piece of text. Atleast you know what I am saying! Look I also have some shiny numbers for you 1,2,3,4,5. Am I not way better? (subtle inclusion of a punctuation mark). Lorem ipsum had its day as did that damn brown fox but I think it's time for us to move on. You with me?\n\nAs a final little push let me throw in a joke for you as well...What did the Buffalo say to his son when he left for college? Bison. In your face fellow dummy texts"
+var dummyParaShort = "Hey I'm a paragraph. I'm way cooler than that dull Lorem Ipsum piece of text. Look I also have some shiny numbers.. Ah whatever, these small boxes are really cramping my style! I'm better ok!"
+var dummyWordSet = false;
+var dummyParaSet = false;
+
+
 function capitalize(str){
 	return str.replace(/\w\S*/g, function(txt){
 		return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
@@ -248,6 +255,13 @@ function setFontSizeOnKeyPress(increase){
 	$("#font-size-list-btn").html(currentFontSize + " px");
 }
 
+function setFontSize(size){
+	currentFontSize = size;
+	$(".font-holder").css('font-size',currentFontSize);
+	//set btn text to current font size
+	$("#font-size-list-btn").html(currentFontSize + " px");
+}
+
 $.fn.inView = function(inViewType){
     var viewport = {};
     viewport.top = $(window).scrollTop();
@@ -275,16 +289,40 @@ Template.registerHelper('equals', function(route, currentRoute){
 })
 
 Template.text.onRendered(function(){
-	$("#text").focus();
+	var self = $("#text")
+	self.focus();
 
 	if(nightView){
-		$("#text").addClass('inverted')
+		self.addClass('inverted')
+	}
+
+	if(dummyWordSet){
+		self.val(dummyWord)
+		setFontSize(64)
+	}
+
+	if(dummyParaSet){
+		self.val(dummyPara)
+		setFontSize(18)
 	}
 })
 
 Template.list.onRendered(function(){
+
+	var self = $(".list-input");
+
 	if(nightView){
-		$(".list-input").addClass('inverted')
+		self.addClass('inverted')
+	}
+
+	if(dummyWordSet){
+		self.val(dummyWord)
+		setFontSize(64)
+	}
+
+	if(dummyParaSet){
+		self.val(dummyParaShort)
+		setFontSize(18)
 	}
 })
 
@@ -341,7 +379,35 @@ Template.body.events({
 			event.preventDefault();
 			prevFontClass()
 		}
+	},
+
+	"click .dummy-word": function(event){
+		event.preventDefault();
+		$("#text").val(dummyWord);
+		$(".list-input").val(dummyWord);
+		dummyWordSet = true;
+		dummyParaSet = false;
+		setFontSize(64);
+	},
+
+	"click .dummy-para": function(event){
+		event.preventDefault();
+		$("#text").val(dummyPara);
+		$(".list-input").val(dummyParaShort);
+		dummyWordSet = false;
+		dummyParaSet = true;
+		setFontSize(18);
+	},
+
+	"click .dummy-clear": function(event){
+		event.preventDefault();
+		$("#text").val("");
+		$(".list-input").val("");
+		dummyWordSet = false;
+		dummyParaSet = false;
+		setFontSize(64);
 	}
+
 })
 
 Template.topbar.events({
@@ -528,6 +594,8 @@ Template.text.events({
 		// save to global variable so that it persists between single and list view
 		textToStyle = event.target.value;
 	}
+
+	
 })
 
 

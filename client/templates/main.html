@@ -117,6 +117,15 @@
       {{>fontSize}}
     </div>
   </div>
+
+  {{#if equals route 'list'}}
+  <div class="row hidden-xs">
+    <div class="col-sm-12">
+      {{>dummyButtons}}
+    </div>
+  </div>
+  {{/if}}
+
   {{#if equals route 'text'}}
   <div class="row hidden-xs">
     <div class="col-sm-12">
@@ -151,6 +160,11 @@
 
 <template name="text">
   <textarea id="text" class="font-holder" placeholder="Enter Text Here">{{textToStyle}}</textarea>
+  <ul class="list-inline text-right dummy-text-ul hidden-xs">
+    <li><a href="#" class="dummy-text dummy-word">Dummy Word</a></li>
+    <li><a href="#" class="dummy-text dummy-para">Dummy Para</a></li>
+    <li><a href="#" class="dummy-text dummy-clear"><span class="glyphicon glyphicon-trash"></span></a></li>
+  </ul>
 </template>
 
 <template name="list">
@@ -270,6 +284,20 @@
     </div>
   </div>
 	
+</template>
+
+<template name="dummyButtons">
+  <div class="row">
+    <div class="col-sm-5 col-md-5 no-padding-right">
+      <a href="#" class="btn btn-default btn-block btn-custom btn-custom-two dummy-word">Dummy Word</a>
+    </div>
+    <div class="col-sm-5 col-md-5 no-padding">
+      <a href="#" class="btn btn-default btn-block btn-custom btn-custom-two dummy-para">Dummy Para</a>
+    </div>
+    <div class="col-sm-2 col-md-2 no-padding-left">
+      <a href="#" class="btn btn-default btn-block btn-custom btn-custom-two dummy-clear"><span class="glyphicon glyphicon-trash"></span></a>
+    </div>
+  </div>  
 </template>
 
 <template name="prevFont">
