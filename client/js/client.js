@@ -182,6 +182,9 @@ function setFont(fontClass){
 	fontStyleLength = currentFontStyleArray.length;
 	checkForStyles(fontStyleLength);
 	$("#text").removeClass();
+	if(nightView){
+		$("#text").addClass('inverted');
+	}
 	$("#text").addClass(fontClass);
 }
 
