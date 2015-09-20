@@ -77,7 +77,7 @@ function prevFont(){
 
 function setFontOnKeyPress(){
 	Session.set('counter',counter)
-	//console.log(counter);
+	console.log(counter);
 	//get current list element
 	var listElement = $(fontListId + ' li').eq(counter)[0];
 	// find data attr of a tag in li to set font class and btn name
@@ -181,8 +181,8 @@ function setFont(fontClass){
 	currentFontStyleArray = fontSwitchCase("styles");
 	fontStyleLength = currentFontStyleArray.length;
 	checkForStyles(fontStyleLength);
-	$(".single-input").removeClass(fontClassGlobal);
-	$(".single-input").addClass(fontClass);
+	$("#text").removeClass();
+	$("#text").addClass(fontClass);
 }
 
 // reset font list when font class is changed
@@ -238,7 +238,7 @@ function checkForStyles(styleLength){
 
 // change size of text in textarea
 function setFontSizeOnKeyPress(increase){
-	var currentFontSize = parseInt($(".font-holder").css('font-size'));
+	var currentFontSize = parseInt($("#text").css('font-size')) || parseInt($(".list-input").css('font-size'));
 
 	if(increase){
 		if(currentFontSize <= 100){
@@ -250,7 +250,8 @@ function setFontSizeOnKeyPress(increase){
 		}
 	}
 	
-	$(".font-holder").css('font-size',currentFontSize);
+	$("#text").css('font-size',currentFontSize);
+	$(".list-input").css('font-size',currentFontSize);
 	//set btn text to current font size
 	$("#font-size-list-btn").html(currentFontSize + " px");
 }
@@ -259,8 +260,8 @@ function setFontSize(size){
 	console.log("SIZE SENT IN: "+ size);
 	var currentFontSize = size;
 	console.log("CURRENT FONT SIZE: "+ currentFontSize)
-	console.log($(".font-holder").css('font-size'))
-	$(".font-holder").css('font-size',currentFontSize);
+	$("#text").css('font-size',currentFontSize);
+	$(".list-input").css('font-size',currentFontSize);
 	//set btn text to current font size
 	$("#font-size-list-btn").html(currentFontSize + " px");
 }
@@ -292,7 +293,7 @@ Template.registerHelper('equals', function(route, currentRoute){
 })
 
 Template.text.onRendered(function(){
-	var self = $(".single-input")
+	var self = $("#text")
 	self.focus();
 
 	if(nightView){
@@ -362,7 +363,7 @@ Template.body.events({
 		// RIGHT KEY
 		if(event.keyCode == 39 && route=='text'){
 			event.preventDefault()
-			$(".single-input").blur()
+			$("#text").blur()
 			nextFont()	
 		}
 
@@ -374,7 +375,7 @@ Template.body.events({
 		// LEFT KEY
 		if(event.keyCode == 37 && route=='text'){
 			event.preventDefault()
-			$(".single-input").blur()
+			$("#text").blur()
 			prevFont()
 		}
 
@@ -386,7 +387,7 @@ Template.body.events({
 
 	"click .dummy-word": function(event){
 		event.preventDefault();
-		$(".single-input").val(dummyWord);
+		$("#text").val(dummyWord);
 		$(".list-input").val(dummyWord);
 		dummyWordSet = true;
 		dummyParaSet = false;
@@ -395,7 +396,7 @@ Template.body.events({
 
 	"click .dummy-para": function(event){
 		event.preventDefault();
-		$(".single-input").val(dummyPara);
+		$("#text").val(dummyPara);
 		$(".list-input").val(dummyParaShort);
 		dummyWordSet = false;
 		dummyParaSet = true;
@@ -404,7 +405,7 @@ Template.body.events({
 
 	"click .dummy-clear": function(event){
 		event.preventDefault();
-		$(".single-input").val("");
+		$("#text").val("");
 		$(".list-input").val("");
 		dummyWordSet = false;
 		dummyParaSet = false;
@@ -431,7 +432,7 @@ Template.topbar.events({
 
 	"click .night-view-link": function(event){
 		event.preventDefault();
-		var textField = $(".single-input");
+		var textField = $("#text");
 		var textListFields = $(".list-input")
 		var nightBtn = $(event.target)
 
@@ -556,7 +557,8 @@ Template.fontSize.events({
 		event.preventDefault();
 		var fontSize = parseInt(event.target.innerHTML);
 		//console.log(fontSize);
-		$(".font-holder").css('font-size',fontSize);
+		$("#text").css('font-size',fontSize);
+		$(".list-input").css('font-size',fontSize);
 		$(event.target).parents("ul").siblings("button").html(fontSize + " px");
 	},
 
@@ -593,7 +595,7 @@ Template.list.events({
 })
 
 Template.text.events({
-	"keyup .single-input": function(event){
+	"keyup #text": function(event){
 		// save to global variable so that it persists between single and list view
 		textToStyle = event.target.value;
 	}

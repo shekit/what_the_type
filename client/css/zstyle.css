@@ -1,6 +1,6 @@
 /****** MY STYLES ******/
 
-.single-input, .list-input {
+#text, .list-input {
 	text-align: center;
 	width: 100%;
 }
@@ -252,7 +252,7 @@ textarea:focus {
 
 @media(min-width: 768px){
 	/*makes columns of same height and stretch to fill parent container*/
-	.row, .text-div, .single-input {
+	.row, .text-div, #text {
 	  	display: -webkit-box;
 	  	display: -webkit-flex;
 	  	display: -ms-flexbox;
@@ -263,7 +263,7 @@ textarea:focus {
 		display: block;
 	}
 
-	.single-input, .list-input {
+	#text, .list-input {
 		font-size: 64px;
 		border: 1px solid #f1f1f1;
 		padding: 20px;
@@ -373,7 +373,7 @@ textarea:focus {
 }
 
 @media(max-width: 768px){
-	.single-input, .font-holder{
+	#text, .font-holder{
 		font-size: 48px;
 		border: 1px solid #ccc;
 	}
