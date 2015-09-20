@@ -361,6 +361,7 @@ Template.topbar.events({
 	},
 
 	"click .night-view-link": function(event){
+		event.preventDefault();
 		var textField = $("#text");
 		var textListFields = $(".list-input")
 		var nightBtn = $(event.target)
